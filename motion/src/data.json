@@ -1,0 +1,71 @@
+{
+  "request": "Write a Slack DM to Priya telling her I blocked PR #412 on payments-api because the scan found a live Stripe secret key hardcoded in config/billing.js. The key starts with sk_live_51 and was committed on Nov 14, so it must be treated as exposed and rotated today. I've already asked the Stripe admin, Marcus Lee, to roll it, and I need her team to move the key to the secrets manager and re-push by Thursday Nov 20.",
+  "reader": "Priya Raman, the engineering manager of the payments team, who works with the writer regularly and owns the service that was flagged in a code scan.",
+  "plain": {
+    "text": "Priya,\n\nI've blocked PR #412 on payments-api. The secret scan flagged a live Stripe secret key hardcoded in config/billing.js. The key starts with sk_live_51 and has been in the repo since it was committed on Nov 14.\n\nTreat that key as exposed. It needs to be rotated today. I've already asked Marcus Lee, our Stripe admin, to roll it.\n\nCould your team do two things by Thursday, Nov 20:\n1. Move the key into the secrets manager and remove it from config/billing.js.\n2. Re-push the PR with the key read from the secrets manager at runtime.\n\nI'm happy to pair on the change or review it once it's up. Let me know if anything about the rotation or the secrets manager setup is unclear.\n\nThanks,\n[Your name]",
+    "made_up": [
+      "Re-push the PR with the key read from the secrets manager at runtime.",
+      "remove it from config/billing.js",
+      "I'm happy to pair on the change or review it once it's up."
+    ]
+  },
+  "brogue": {
+    "text": "Hi Priya,\n\nI've blocked PR #412 on payments-api. The scan found a live Stripe secret key (starts with sk_live_51) hardcoded in config/billing.js. It was committed on Nov 14, so we have to treat it as exposed and rotate it today. I've already asked Marcus Lee, our Stripe admin, to roll it.\n\nCould your team move the key into the secrets manager and re-push by Nov 20?\n\nThanks"
+  },
+  "rows": [
+    {
+      "name": "Brogue",
+      "mean": 0.94,
+      "lo": 0.6,
+      "hi": 1.31,
+      "ours": true
+    },
+    {
+      "name": "no-ai-slop",
+      "mean": 1.44,
+      "lo": 1.08,
+      "hi": 1.81,
+      "ours": false
+    },
+    {
+      "name": "humanize-writing",
+      "mean": 1.8,
+      "lo": 1.37,
+      "hi": 2.26,
+      "ours": false
+    },
+    {
+      "name": "stop-slop",
+      "mean": 2.15,
+      "lo": 1.79,
+      "hi": 2.5,
+      "ours": false
+    },
+    {
+      "name": "humanizer",
+      "mean": 2.19,
+      "lo": 1.65,
+      "hi": 2.73,
+      "ours": false
+    },
+    {
+      "name": "unslop",
+      "mean": 2.29,
+      "lo": 1.77,
+      "hi": 2.85,
+      "ours": false
+    },
+    {
+      "name": "no skill",
+      "mean": 2.31,
+      "lo": 1.75,
+      "hi": 2.85,
+      "ours": false
+    }
+  ],
+  "texts": 48,
+  "tasks": 24,
+  "headline": "Writing that says only what you told it.",
+  "sub": "Brogue: 0.94 made-up details per text. Next best skill: 1.44.",
+  "install": "npx skills add KAIFQ1/brogue"
+}

@@ -1,0 +1,25 @@
+# Brogue against other writing skills in promptfoo.
+#   cd evals/promptfoo && npx promptfoo@latest eval && npx promptfoo@latest view
+# Rival skills: clone them and point `skill` at their SKILL.md (see evals/README.md).
+description: Made-up details per text, by writing skill
+prompts:
+  - "{{brief}}\n\nThe reader: {{reader}}\n\nReply with only the finished text: no preamble, no notes, no list of changes."
+providers:
+  - id: file://provider.py
+    label: no skill
+    config: {model: haiku}
+  - id: file://provider.py
+    label: Brogue
+    config: {model: haiku, skill: skills/brogue/SKILL.md}
+  # - id: file://provider.py
+  #   label: no-ai-slop
+  #   config: {model: haiku, skill: /path/to/no-ai-slop/SKILL.md}
+tests:
+  - path: file://tests.py:generate_tests
+    config: {files: [tasks-agency-2.json, tasks-agency-3.json]}
+defaultTest:
+  assert:
+    - type: python
+      value: file://assert_fidelity.py
+evaluateOptions:
+  maxConcurrency: 4

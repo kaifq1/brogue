@@ -1,0 +1,1198 @@
+{
+  "writer": "haiku",
+  "judge": "sonnet",
+  "reps": 3,
+  "rows": [
+    {
+      "task": "linkedin-launch",
+      "persona": "casual-us",
+      "rep": 0,
+      "plain": "Two engineers. Four months. Outlook sync is live.\n\nOur scheduling app now connects with Outlook calendars, so your bookings show up where you already work, and changes made in either place stay in sync.\n\nGetting calendar sync right took longer than we expected. Time zones, recurring events, and conflicting edits all have edge cases that only show up with real users. We're grateful to the early customers who tested it and told us where it broke.\n\nIf you use Outlook and have been waiting for this, try it out and tell us what you think: [link]\n\n#Startup #Scheduling #Outlook #ProductUpdate",
+      "steered": "Our scheduling app now syncs with Outlook.\n\nIt took four months. Two engineers built it.\n\nIf you've been waiting on this one, it's live. Connect your Outlook calendar and your meetings show up in the app without any double entry.\n\nWe know Outlook is where a lot of people already live, so we wanted the sync to be solid, not a checkbox. That took longer than we expected, and we'd rather ship it right than fast.\n\nIf you try it, tell us what breaks. We'd like to hear it.",
+      "rewritten": "Two engineers. Four months. Outlook sync is live.\n\nOur scheduling app now connects with Outlook calendars, so your bookings show up where you already work, and changes made in either place stay in sync.\n\nGetting calendar sync right took longer than we expected. Time zones, recurring events, and conflicting edits all have edge cases that only show up with real users. We're grateful to the early customers who tested it and told us where it broke.\n\nIf you use Outlook and have been waiting for this, try it out and tell us what you think: [link]\n\n#Startup #Scheduling #Outlook #ProductUpdate",
+      "rewrite_changed": false,
+      "rewrite_route": "pass",
+      "rewrite_calls": 0,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 9,
+      "plain_words": 100,
+      "steered_score": 0,
+      "steered_words": 89,
+      "rewritten_score": 9,
+      "rewritten_words": 100,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "casual-us",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 3.0,
+            "fit_delta": 3.0,
+            "why": "\"we'd rather ship it right than fast\" and \"tell us what breaks. We'd like to hear it.\" sound like a founder talking, while B's hashtag stack and \"grateful to the early customers\" read like a polished LinkedIn template.",
+            "for_treated": true
+          },
+          {
+            "juror": "casual-us",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 2.0,
+            "fit_delta": 2.0,
+            "why": "\"we'd rather ship it right than fast\" and \"tell us what breaks\" sound like a person talking, while A's hashtag line and \"We're grateful to the early customers\" read like a press release.",
+            "for_treated": true
+          }
+        ],
+        "rewritten": []
+      }
+    },
+    {
+      "task": "linkedin-launch",
+      "persona": "casual-us",
+      "rep": 1,
+      "plain": "We just shipped Outlook sync for [App Name].\n\nIt took four months, and two engineers built it. Along the way we dealt with OAuth quirks, calendar edge cases, and the fact that every Outlook account seems to have its own idea of how recurring events should work. Some weeks it felt like we were fighting the calendar more than building the feature.\n\nNow you can connect your Outlook calendar and see your bookings, availability, and changes update in both places automatically. No more double-entry, no more \"I thought that meeting was moved.\"\n\nTo everyone who asked for this: thank you for your patience. It's here.\n\nIf you try it, I'd love to hear what breaks and what works. That feedback shapes what we build next.\n\n[Link]\n\n#Startups #Productivity #Outlook #SaaS #BuildInPublic",
+      "steered": "Our scheduling app now syncs with Outlook.\n\nIt took four months. Two engineers built it.\n\nIf you live in Outlook, you can now keep your calendar and ours in step.\n\nFour months is a long time for one feature. If you've been waiting on this, it's here.",
+      "rewritten": "We just shipped Outlook sync for [App Name].\n\nIt took four months, and two engineers built it. Along the way we dealt with OAuth quirks, calendar edge cases, and the fact that every Outlook account seems to have its own idea of how recurring events should work. Some weeks it felt like we were fighting the calendar more than building the feature.\n\nNow you can connect your Outlook calendar and see your bookings, availability, and changes update in both places automatically. No more double-entry, no more \"I thought that meeting was moved.\"\n\nTo everyone who asked for this: thank you for your patience. It's here.\n\nIf you try it, I'd love to hear what breaks and what works. That feedback shapes what we build next.\n\n[Link]\n\n#Startups #Productivity #Outlook #SaaS #BuildInPublic",
+      "rewrite_changed": false,
+      "rewrite_route": "pass",
+      "rewrite_calls": 0,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 0,
+      "plain_words": 125,
+      "steered_score": 0,
+      "steered_words": 47,
+      "rewritten_score": 0,
+      "rewritten_words": 125,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "casual-us",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 2.0,
+            "fit_delta": 4.0,
+            "why": "\"Four months is a long time for one feature. If you've been waiting on this, it's here.\" reads like a real founder talking, while B's \"No more double-entry, no more 'I thought that meeting was moved'\" and the hashtag pile feel like standard LinkedIn launch copy.",
+            "for_treated": true
+          },
+          {
+            "juror": "casual-us",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 3.0,
+            "fit_delta": 4.0,
+            "why": "A's \"thank you for your patience. It's here.\" plus the hashtag pile and \"That feedback shapes what we build next\" read like a template, while B's \"Four months is a long time for one feature.\" sounds like a person saying it plainly.",
+            "for_treated": true
+          }
+        ],
+        "rewritten": []
+      }
+    },
+    {
+      "task": "linkedin-launch",
+      "persona": "casual-us",
+      "rep": 2,
+      "plain": "Big news: our scheduling app now syncs with Outlook.\n\nIt took four months, two engineers, and more calendar edge cases than we'd like to admit. Recurring events that skip holidays. Time zones that shift mid-series. Permissions that look right until someone tries to book a room. We rebuilt sync logic more than once before it held up the way our customers need.\n\nWhy it mattered: a lot of you told us your team lives in Outlook, and asking people to switch calendars just to use a scheduling tool was a non-starter. Now your bookings show up where you already work, and changes flow both ways.\n\nTo the two engineers who built this: thank you. Four months of careful, unglamorous work is what makes a tool feel effortless.\n\nIf you use Outlook and have been waiting for this, try it out and tell us what breaks. We're listening.\n\n#Outlook #Scheduling #ProductLaunch #Startups",
+      "steered": "Our scheduling app now syncs with Outlook.\n\nIt took four months. Two engineers built it.\n\nIf your work lives in Outlook, you know the pain of keeping two calendars straight. Now the app and Outlook stay in sync, so you don't have to check both before you book something.",
+      "rewritten": "Big news: our scheduling app now syncs with Outlook.\n\nIt took four months, two engineers, and more calendar edge cases than we'd like to admit. Recurring events that skip holidays. Time zones that shift mid-series. Permissions that look right until someone tries to book a room. We rebuilt sync logic more than once before it held up the way our customers need.\n\nWhy it mattered: a lot of you told us your team lives in Outlook, and asking people to switch calendars just to use a scheduling tool was a non-starter. Now your bookings show up where you already work, and changes flow both ways.\n\nTo the two engineers who built this: thank you. Four months of careful, unglamorous work is what makes a tool feel effortless.\n\nIf you use Outlook and have been waiting for this, try it out and tell us what breaks. We're listening.\n\n#Outlook #Scheduling #ProductLaunch #Startups",
+      "rewrite_changed": false,
+      "rewrite_route": "pass",
+      "rewrite_calls": 0,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 0,
+      "plain_words": 151,
+      "steered_score": 0,
+      "steered_words": 49,
+      "rewritten_score": 0,
+      "rewritten_words": 151,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "casual-us",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 1.0,
+            "fit_delta": 4.0,
+            "why": "\"It took four months. Two engineers built it.\" reads like a person talking, while B's \"Big news\" and \"more calendar edge cases than we'd like to admit\" plus the hashtag row feel like standard LinkedIn launch-post padding.",
+            "for_treated": true
+          },
+          {
+            "juror": "casual-us",
+            "humanized_slot": "B",
+            "choice": "A",
+            "human_delta": -2.0,
+            "fit_delta": -3.0,
+            "why": "\"Permissions that look right until someone tries to book a room\" sounds like someone who actually lived through the work, while B's \"Two engineers built it\" is too thin to tell me why I should care.",
+            "for_treated": false
+          }
+        ],
+        "rewritten": []
+      }
+    },
+    {
+      "task": "exec-update",
+      "persona": "corporate-us",
+      "rep": 0,
+      "plain": "Subject: Data migration complete (two days late)\n\nHi [VP name],\n\nThe data migration finished Friday, two days behind the original schedule. The delay came from a schema mismatch in the billing tables, which we resolved before completing the move. No data was lost, and all records were verified after the migration.\n\n[Optional: next steps or anything you need from the VP.]\n\nBest,\n[Your name]",
+      "steered": "Subject: Data migration finished, two days late\n\nHi [Name],\n\nThe data migration finished Friday, two days behind the original date. A schema mismatch in the billing tables caused the delay. We fixed it and completed the migration. No data was lost.\n\nI can share the revised timeline or details of the fix if useful.\n\nThanks,\n[Your name]",
+      "rewritten": "Subject: Data migration complete (two days late)\n\nHi [VP name],\n\nThe data migration finished Friday, two days behind the original schedule. The delay came from a schema mismatch in the billing tables, which we resolved before completing the move. No data was lost, and all records were verified after the migration.\n\n[Optional: next steps or anything you need from the VP.]\n\nBest,\n[Your name]",
+      "rewrite_changed": false,
+      "rewrite_route": "pass",
+      "rewrite_calls": 0,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 0,
+      "plain_words": 64,
+      "steered_score": 0,
+      "steered_words": 57,
+      "rewritten_score": 0,
+      "rewritten_words": 64,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "corporate-us",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 2.0,
+            "fit_delta": 2.0,
+            "why": "Version B leaves a placeholder line \"[Optional: next steps or anything you need from the VP.]\" and a stiffer \"which we resolved before completing the move,\" while A ends with a concrete offer, \"I can share the revised timeline or details of the fix if useful,\" and stays short, though B's \"all record",
+            "for_treated": true
+          },
+          {
+            "juror": "corporate-us",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 2.0,
+            "fit_delta": 2.0,
+            "why": "\"I can share the revised timeline or details of the fix if useful.\" is a concrete, short offer, whereas A leaves a bracketed placeholder \"[Optional: next steps or anything you need from the VP.]\" and pads with \"all records were verified after the migration.\"",
+            "for_treated": true
+          }
+        ],
+        "rewritten": []
+      }
+    },
+    {
+      "task": "exec-update",
+      "persona": "corporate-us",
+      "rep": 1,
+      "plain": "Subject: Data migration completed (two days late)\n\nHi [VP name],\n\nThe data migration finished on Friday, two days behind the original schedule. The delay came from a schema mismatch in the billing tables, which we resolved before completing the move. No data was lost, and all records were verified after migration.\n\nLet me know if you'd like more detail on the cause or the verification steps.\n\nBest,\n[Your name]",
+      "steered": "Subject: Data migration complete, two days late\n\nHi [VP name],\n\nThe data migration finished Friday, two days behind plan. A schema mismatch in the billing tables caused the delay. No data was lost.\n\n[Your name]",
+      "rewritten": "Subject: Data migration completed, two days late\n\nHi [VP name],\n\nThe data migration finished Friday, two days behind the original schedule. A schema mismatch in the billing tables caused the delay. We resolved it before completing the move. No data was lost, and we verified every record after migration.\n\nI can send more detail on the cause or the verification steps if useful.\n\nBest,\n[Your name]",
+      "rewrite_changed": true,
+      "rewrite_route": "rewrite",
+      "rewrite_calls": 1,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 43,
+      "plain_words": 69,
+      "steered_score": 0,
+      "steered_words": 35,
+      "rewritten_score": 0,
+      "rewritten_words": 66,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "corporate-us",
+            "humanized_slot": "A",
+            "choice": "B",
+            "human_delta": -1.0,
+            "fit_delta": -2.0,
+            "why": "\"which we resolved before completing the move\" and \"all records were verified after migration\" answer the VP's obvious follow-up questions (was it fixed, is the data good) without needing another email, while A leaves that unconfirmed.",
+            "for_treated": false
+          },
+          {
+            "juror": "corporate-us",
+            "humanized_slot": "B",
+            "choice": "A",
+            "human_delta": -1.0,
+            "fit_delta": -2.0,
+            "why": "\"No data was lost, and all records were verified after migration\" answers the VP's first worry about the delay, and \"which we resolved before completing the move\" says the cause is fixed, while B leaves both open.",
+            "for_treated": false
+          }
+        ],
+        "rewritten": [
+          {
+            "juror": "corporate-us",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 1.0,
+            "fit_delta": 1.0,
+            "why": "A's \"We resolved it before completing the move\" and \"we verified every record\" are direct and active, while B's \"Let me know if you'd like more detail\" and passive \"all records were verified\" read slightly more boilerplate.",
+            "for_treated": true
+          },
+          {
+            "juror": "corporate-us",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 2.0,
+            "fit_delta": 1.0,
+            "why": "\"we verified every record after migration\" is direct and active, and \"I can send more detail... if useful\" is plainer than A's \"Let me know if you'd like more detail,\" while the subject line \"completed, two days late\" reads more naturally than the parenthetical.",
+            "for_treated": true
+          }
+        ]
+      }
+    },
+    {
+      "task": "exec-update",
+      "persona": "corporate-us",
+      "rep": 2,
+      "plain": "Subject: Data migration complete\n\nHi [VP name],\n\nThe data migration finished Friday, two days behind the original schedule. A schema mismatch in the billing tables required additional work to resolve before we could proceed. No data was lost, and the migrated data has been verified.\n\nLet me know if you'd like more detail on the cause or the steps we've taken to prevent a similar issue in future migrations.\n\nBest,\n[Your name]",
+      "steered": "Subject: Data migration complete, two days late\n\n[Name],\n\nThe billing data migration finished Friday, November 13, two days behind the planned date. A schema mismatch in the billing tables caused the delay. We resolved it and completed the migration. No data was lost.\n\nNo action is needed from you. I'll send a note if anything downstream changes.\n\n[Your name]",
+      "rewritten": "Subject: Data migration complete\n\nHi [VP name],\n\nThe data migration finished Friday, two days behind the original schedule. A schema mismatch in the billing tables needed extra work before we could proceed. No data was lost, and we've verified the migrated data.\n\nI can send more detail on the cause and on the steps we're taking to prevent a similar issue in future migrations.\n\nBest,\n[Your name]",
+      "rewrite_changed": true,
+      "rewrite_route": "rewrite",
+      "rewrite_calls": 1,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 42,
+      "plain_words": 72,
+      "steered_score": 0,
+      "steered_words": 59,
+      "rewritten_score": 0,
+      "rewritten_words": 67,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "corporate-us",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 1.0,
+            "fit_delta": 3.0,
+            "why": "\"No action is needed from you.\" tells a busy executive right away that she can stop reading, and A gives the exact date (Friday, November 13) and cause, where B has only \"Friday\" and offers an open-ended \"Let me know if you'd like more detail.\"",
+            "for_treated": true
+          },
+          {
+            "juror": "corporate-us",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 2.0,
+            "fit_delta": 3.0,
+            "why": "\"No action is needed from you. I'll send a note if anything downstream changes.\" tells me right away that I can move on, and the subject line and the exact date (Friday, November 13) give me the delay without opening it, whereas A's \"Let me know if you'd like more detail\" hands me an open-ended offe",
+            "for_treated": true
+          }
+        ],
+        "rewritten": [
+          {
+            "juror": "corporate-us",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 1.0,
+            "fit_delta": 2.0,
+            "why": "A's \"I can send more detail on the cause and on the steps we're taking\" is direct, uses contractions, and avoids B's stiffer \"required additional work to resolve\" and \"the migrated data has been verified.\"",
+            "for_treated": true
+          },
+          {
+            "juror": "corporate-us",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 1.0,
+            "fit_delta": 2.0,
+            "why": "\"I can send more detail on the cause and on the steps we're taking\" is a direct, active offer, while A's \"Let me know if you'd like more detail\" is stock closing filler and its \"in future migrations\" hedge reads as boilerplate.",
+            "for_treated": true
+          }
+        ]
+      }
+    },
+    {
+      "task": "formal-request",
+      "persona": "corporate-in",
+      "rep": 0,
+      "plain": "**Subject:** Request to Reschedule Thursday's Review to Monday, [23 November]\n\nDear [Client Name],\n\nI hope you are well.\n\nI am writing to ask whether we can move our review meeting, currently scheduled for Thursday, [19 November] at [time] IST, to Monday, [23 November] at the same time. Our lead analyst has become unwell and will not be able to present the material as planned. We want to make sure you receive the complete analysis from the person most familiar with it, so we would rather reschedule than proceed without them.\n\nWe apologise for the short notice and any inconvenience this causes. If Monday does not work for your team, please let me know which times suit you and we will adjust accordingly.\n\nThank you for your understanding. I look forward to confirming the new date with you.\n\nKind regards,\n\n[Your Name]\n[Your Title]\n[Company Name]\n[Phone Number]",
+      "steered": "**Subject:** Request to move our review meeting to Monday, 23 November 2026\n\nDear [Client name],\n\nI am writing about our review meeting scheduled for Thursday, 19 November 2026. Our lead analyst has been taken unwell, and we would not wish to hold the review without them.\n\nWe would therefore be grateful if the meeting could be moved to Monday, 23 November 2026, at a time convenient to you. We regret any inconvenience this may cause and appreciate your flexibility.\n\nPlease let us know whether Monday suits you. If another day would be more convenient, we will gladly arrange it.\n\nYours sincerely,\n\n[Your name]\n[Designation]\n[Company name]",
+      "rewritten": "**Subject:** Request to Reschedule Thursday's Review to Monday, [23 November]\n\nDear [Client Name],\n\nI hope you are well.\n\nI am writing to ask whether we can move our review meeting, currently scheduled for Thursday, [19 November] at [time] IST, to Monday, [23 November] at the same time. Our lead analyst has become unwell and will not be able to present the material as planned. We want to make sure you receive the complete analysis from the person most familiar with it, so we would rather reschedule than proceed without them.\n\nWe apologise for the short notice and any inconvenience this causes. If Monday does not work for your team, please let me know which times suit you and we will adjust accordingly.\n\nThank you for your understanding. I look forward to confirming the new date with you.\n\nKind regards,\n\n[Your Name]\n[Your Title]\n[Company Name]\n[Phone Number]",
+      "rewrite_changed": false,
+      "rewrite_route": "pass",
+      "rewrite_calls": 0,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 0,
+      "plain_words": 147,
+      "steered_score": 0,
+      "steered_words": 106,
+      "rewritten_score": 0,
+      "rewritten_words": 147,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "corporate-in",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 1.0,
+            "fit_delta": 3.0,
+            "why": "\"We would therefore be grateful if the meeting could be moved to Monday, 23 November 2026\" is formal, complete and dated in the expected style, whereas B's \"Kind regards\", bracketed placeholders, \"IST\" and \"We want to make sure\" read as less formal and less polished.",
+            "for_treated": true
+          },
+          {
+            "juror": "corporate-in",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 0.0,
+            "fit_delta": 2.0,
+            "why": "B gives the context first (\"Our lead analyst has been taken unwell, and we would not wish to hold the review without them\"), then the request, with full dates such as \"23 November 2026\" and the formal \"Yours sincerely\", whereas A opens with the request and leaves the year out of its dates.",
+            "for_treated": true
+          }
+        ],
+        "rewritten": []
+      }
+    },
+    {
+      "task": "formal-request",
+      "persona": "corporate-in",
+      "rep": 1,
+      "plain": "**Subject:** Request to Reschedule Thursday's Review to Monday, 23 November\n\nDear [Client's Name],\n\nI hope you're well.\n\nI'm writing to ask whether we can move our review meeting, currently scheduled for Thursday, 19 November, to Monday, 23 November. Our lead analyst has been unwell and needs to be present for the review, so we'd like to hold it once they're able to take part fully.\n\nWould Monday, 23 November at [time] IST work for you? If not, I'm happy to consider [alternative date/time] or any other time that suits your schedule. I'll also send a revised calendar invitation once we've confirmed.\n\nI apologise for the change at short notice, and I appreciate your flexibility. Please let me know what works best.\n\nKind regards,\n\n[Your Name]\n[Your Title]\n[Company Name]\n[Phone Number]",
+      "steered": "**Subject:** Request to move Thursday's review meeting\n\nDear [Client's name],\n\nI am writing to ask whether we might move our review meeting, scheduled for Thursday, to the following Monday.\n\nOur lead analyst has become unwell and is unable to take part in the review on Thursday. Their detailed knowledge of the work is central to the discussion, and we would like you to receive a complete account of the findings.\n\nIf the following Monday would suit you, we would be grateful for your confirmation of the revised arrangement. If another time that week would be more convenient, we will gladly adjust our plans to fit.\n\nWe regret the change to your schedule and appreciate your understanding. Please let me know what would work best for you.\n\nYours sincerely,\n\n[Your name]\n[Your designation]\n[Company name]",
+      "rewritten": "**Subject:** Request to Reschedule Thursday's Review to Monday, 23 November\n\nDear [Client's Name],\n\nI hope you are well.\n\nI am writing to ask whether we can move our review meeting, currently scheduled for Thursday, 19 November, to Monday, 23 November. Our lead analyst has been unwell and needs to be present for the review, so we would like to hold it once they are able to take part fully.\n\nWould Monday, 23 November at [time] IST work for you? If not, I am happy to consider [alternative date/time] or any other time that suits your schedule. I will also send a revised calendar invitation once we have confirmed.\n\nI apologise for the change at short notice, and I appreciate your flexibility. Please let me know what works best.\n\nKind regards,\n\n[Your Name]\n[Your Title]\n[Company Name]\n[Phone Number]",
+      "rewrite_changed": true,
+      "rewrite_route": "edit",
+      "rewrite_calls": 2,
+      "rewrite_warnings": [
+        "attempt 1 rejected: it still scores 0 against 0 before; remaining tells: none"
+      ],
+      "rewrite_facts_ok": true,
+      "plain_score": 0,
+      "plain_words": 132,
+      "steered_score": 0,
+      "steered_words": 134,
+      "rewritten_score": 0,
+      "rewritten_words": 139,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "corporate-in",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 1.0,
+            "fit_delta": 4.0,
+            "why": "Version B's contractions (\"I'm writing\", \"we'd like\", \"I'll also send\") and the breezy \"I hope you're well\" and \"Kind regards\" break the formal, no-contraction register, whereas A's \"We regret the change to your schedule and appreciate your understanding\" is measured and courteous.",
+            "for_treated": true
+          },
+          {
+            "juror": "corporate-in",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 1.0,
+            "fit_delta": 4.0,
+            "why": "Version A uses contractions throughout (\"I'm writing\", \"we'd like\", \"I'll also send\") and leaves bracketed placeholders and a casual \"I hope you're well\", whereas B's \"We regret the change to your schedule and appreciate your understanding\" and \"Yours sincerely\" match the formal, contraction-free re",
+            "for_treated": true
+          }
+        ],
+        "rewritten": [
+          {
+            "juror": "corporate-in",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 0.0,
+            "fit_delta": 4.0,
+            "why": "Version A's \"I am writing to ask whether we can move\" and \"I am happy to consider\" keep the formal, contraction-free register expected in senior business correspondence, whereas B's \"I'm writing\" and \"we'd like\" are too casual.",
+            "for_treated": true
+          },
+          {
+            "juror": "corporate-in",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 1.0,
+            "fit_delta": 3.0,
+            "why": "Version B's \"I am writing to ask whether we can move our review meeting\" and \"we would like to hold it\" keep the formal register without contractions, whereas A's \"I'm writing\" and \"we'd like\" are too casual for senior formal correspondence.",
+            "for_treated": true
+          }
+        ]
+      }
+    },
+    {
+      "task": "formal-request",
+      "persona": "corporate-in",
+      "rep": 2,
+      "plain": "**Subject:** Request to Reschedule Thursday's Review Meeting\n\nDear [Client Name],\n\nI hope you are well. I am writing to ask whether we might move our review meeting, currently scheduled for Thursday, [date], to Monday, [date].\n\nOur lead analyst has fallen ill and will be unable to attend this week. Their work is central to the review, and I would like them to present it in full rather than have it covered in their absence.\n\nI can offer Monday, [date], at [time IST], or another time that suits you that day. If Monday does not work, I am happy to look at other options next week.\n\nI apologize for the short notice and any inconvenience this causes. Please let me know what works best for you.\n\nThank you for your understanding.\n\nKind regards,\n\n[Your Name]\n[Your Title]\n[Company]\n[Phone Number]\n\n---\n\nBefore sending, you may want to fill in the bracketed details and check the proposed time against Mumbai working hours (IST, UTC+5:30).",
+      "steered": "**Subject:** Request to move Thursday's review meeting to Monday\n\nDear [Name],\n\nI am writing to ask whether we might move Thursday's review meeting to the following Monday. Our lead analyst is unwell, and the review draws closely on work that person has led.\n\nWe would prefer to hold the session once that person can take part in full, so that the analysis is presented properly and your questions can be answered in depth.\n\nI appreciate that this change may affect your schedule, and I am grateful for your flexibility. If Monday is convenient, please let me know and we will confirm the arrangements promptly. If another day that week would suit you better, we will gladly adjust.\n\nThank you for your understanding.\n\nYours sincerely,\n\n[Your name]\n[Designation]\n[Organisation]",
+      "rewritten": "**Subject:** Request to Reschedule Thursday's Review Meeting\n\nDear [Client Name],\n\nI hope you are well. I am writing to ask whether we might move our review meeting, currently scheduled for Thursday, [date], to Monday, [date].\n\nOur lead analyst has fallen ill and will be unable to attend this week. Their work is central to the review, and I would like them to present it in full rather than have it covered in their absence.\n\nI can offer Monday, [date], at [time IST], or another time that suits you that day. If Monday does not work, I am happy to look at other options next week.\n\nI apologize for the short notice and any inconvenience this causes. Please let me know what works best for you.\n\nThank you for your understanding.\n\nKind regards,\n\n[Your Name]\n[Your Title]\n[Company]\n[Phone Number]\n\n---\n\nBefore sending, you may want to fill in the bracketed details and check the proposed time against Mumbai working hours (IST, UTC+5:30).",
+      "rewrite_changed": false,
+      "rewrite_route": "pass",
+      "rewrite_calls": 0,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 0,
+      "plain_words": 163,
+      "steered_score": 0,
+      "steered_words": 128,
+      "rewritten_score": 0,
+      "rewritten_words": 163,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "corporate-in",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 2.0,
+            "fit_delta": 3.0,
+            "why": "A's \"I appreciate that this change may affect your schedule, and I am grateful for your flexibility\" and the \"Yours sincerely\" close suit formal correspondence, whereas B's \"I apologize\" (not British spelling), \"Kind regards\", and the appended note about filling in brackets and Mumbai hours break th",
+            "for_treated": true
+          },
+          {
+            "juror": "corporate-in",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 1.0,
+            "fit_delta": 3.0,
+            "why": "Version B's \"I appreciate that this change may affect your schedule, and I am grateful for your flexibility\" and its \"Yours sincerely\" close match the formal, warm register I expect, whereas Version A's \"I apologize\" (American spelling), \"Kind regards\" and the trailing note about checking Mumbai wor",
+            "for_treated": true
+          }
+        ],
+        "rewritten": []
+      }
+    },
+    {
+      "task": "support-reply",
+      "persona": "support-empathetic",
+      "rep": 0,
+      "plain": "Subject: Re: Duplicate charge on your annual plan\n\nHi [Customer name],\n\nI'm sorry. Being charged twice for your annual plan is frustrating, and I understand why you're upset. You shouldn't have had to contact us to get this fixed.\n\nI've confirmed the duplicate charge of [amount] on [date] and issued a refund for that amount today, [today's date]. Refunds usually take 5 to 7 business days to appear on your statement, depending on your bank or card issuer. If it hasn't appeared by [date, 7 business days out], please reply to this email and we'll follow up with our payment processor.\n\nYour annual plan is unaffected and remains active through [renewal/end date]. You'll only be billed once per year.\n\nIf you have any other questions or see anything that doesn't look right, reply here and I'll take care of it.\n\nThank you for your patience, and I'm sorry again for the trouble.\n\nBest regards,\n[Your name]\n[Your title], [Company]",
+      "steered": "Subject: Your duplicate annual plan charge\n\nHi,\n\nYou were charged twice for your annual plan. We've issued a refund for the extra charge today. It takes 5 to 7 business days to reach you. You don't need to do anything else.\n\nIf the refund hasn't arrived after 7 business days, reply to this email and we'll look into it.",
+      "rewritten": "Subject: Re: Duplicate charge on your annual plan\n\nHi [Customer name],\n\nI'm sorry. Being charged twice for your annual plan is frustrating, and I understand why you're upset. You shouldn't have had to contact us to get this fixed.\n\nI've confirmed the duplicate charge of [amount] on [date] and issued a refund for that amount today, [today's date]. Refunds usually take 5 to 7 business days to appear on your statement, depending on your bank or card issuer. If it hasn't appeared by [date, 7 business days out], please reply to this email and we'll follow up with our payment processor.\n\nYour annual plan is unaffected and remains active through [renewal/end date]. You'll only be billed once per year.\n\nIf you have any other questions or see anything that doesn't look right, reply here and I'll take care of it.\n\nThank you for your patience, and I'm sorry again for the trouble.\n\nBest regards,\n[Your name]\n[Your title], [Company]",
+      "rewrite_changed": false,
+      "rewrite_route": "pass",
+      "rewrite_calls": 0,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 0,
+      "plain_words": 160,
+      "steered_score": 0,
+      "steered_words": 59,
+      "rewritten_score": 0,
+      "rewritten_words": 160,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "support-empathetic",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 1.0,
+            "fit_delta": 3.0,
+            "why": "\"We've issued a refund for the extra charge today. It takes 5 to 7 business days to reach you. You don't need to do anything else.\" gives me what happens next and when in one step per sentence, while B's \"I understand why you're upset\" and double apology are the scripted sympathy that wears on someo",
+            "for_treated": true
+          },
+          {
+            "juror": "support-empathetic",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 0.0,
+            "fit_delta": 3.0,
+            "why": "\"You don't need to do anything else.\" tells me plainly that it's handled and what happens next, while A stacks scripted lines like \"I understand why you're upset\" and a second \"I'm sorry again\" before getting to the refund.",
+            "for_treated": true
+          }
+        ],
+        "rewritten": []
+      }
+    },
+    {
+      "task": "support-reply",
+      "persona": "support-empathetic",
+      "rep": 1,
+      "plain": "Here's a draft you can send:\n\n---\n\nSubject: Re: Duplicate charge on your annual plan\n\nHi [Customer name],\n\nI'm sorry about the double charge on your annual plan. I understand why it's frustrating, especially when you expected to be billed once. Thank you for telling us, and I'm sorry it took something going wrong for you to have to chase it.\n\nI've issued a refund for the duplicate charge today. Please allow 5 to 7 business days for it to appear on your statement, since the timing depends on your bank or card provider. If it hasn't arrived by then, reply to this email and we'll look into it right away.\n\nYour annual plan is unaffected and remains active through [renewal/end date].\n\nThanks for your patience, and again, I'm sorry for the trouble.\n\nBest,\n[Your name]\n[Company]\n\n---\n\nIf you tell me the customer's name, the plan end date, and whether they've already contacted their bank, I can tailor it further. If they're especially upset, I can also make the apology more direct or add a short note about what you're doing to prevent duplicate charges.",
+      "steered": "Hi,\n\nYou were charged twice for your annual plan, and I'm sorry that happened.\n\nWe issued a refund for the extra charge today. It takes 5 to 7 business days to appear on your statement. If it hasn't shown up after 7 business days, reply to this email and we'll check on it.",
+      "rewritten": "Here's a draft you can send:\n\n---\n\nSubject: Re: Duplicate charge on your annual plan\n\nHi [Customer name],\n\nI'm sorry about the double charge on your annual plan. I understand why it's frustrating, especially when you expected to be billed once. Thank you for telling us, and I'm sorry it took something going wrong for you to have to chase it.\n\nI've issued a refund for the duplicate charge today. Please allow 5 to 7 business days for it to appear on your statement, since the timing depends on your bank or card provider. If it hasn't arrived by then, reply to this email and we'll look into it right away.\n\nYour annual plan is unaffected and remains active through [renewal/end date].\n\nThanks for your patience, and again, I'm sorry for the trouble.\n\nBest,\n[Your name]\n[Company]\n\n---\n\nIf you tell me the customer's name, the plan end date, and whether they've already contacted their bank, I can tailor it further. If they're especially upset, I can also make the apology more direct or add a short note about what you're doing to prevent duplicate charges.",
+      "rewrite_changed": false,
+      "rewrite_route": "pass",
+      "rewrite_calls": 0,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 0,
+      "plain_words": 185,
+      "steered_score": 0,
+      "steered_words": 53,
+      "rewritten_score": 0,
+      "rewritten_words": 185,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "support-empathetic",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 4.0,
+            "fit_delta": 6.0,
+            "why": "A says \"You were charged twice for your annual plan, and I'm sorry that happened\" once and moves straight to the refund and timeline, while B's \"I understand why it's frustrating\" is the scripted sympathy I'd tune out, and its repeated apologies and template wrapper bury the fix.",
+            "for_treated": true
+          },
+          {
+            "juror": "support-empathetic",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 2.0,
+            "fit_delta": 6.0,
+            "why": "B's \"You were charged twice for your annual plan, and I'm sorry that happened\" names the problem in my words once and then moves straight to the refund and timeline, while A's \"I understand why it's frustrating\" is the scripted sympathy I'd tune out, with repeated apologies and filler before any hel",
+            "for_treated": true
+          }
+        ],
+        "rewritten": []
+      }
+    },
+    {
+      "task": "support-reply",
+      "persona": "support-empathetic",
+      "rep": 2,
+      "plain": "Subject: Re: Duplicate charge on your annual plan\n\nHi [Customer name],\n\nI'm sorry. Being charged twice for your annual plan is frustrating, and I understand why you're upset. You shouldn't have had to notice and report this yourself.\n\nI've issued a refund for the duplicate charge of [amount] today. Depending on your bank or card issuer, it can take 5 to 7 business days to appear on your statement. The refund will go back to the same card or payment method used for the charge.\n\nYour annual plan is unaffected. You still have [plan name] through [renewal date], and no further action is needed on your end.\n\nIf the refund hasn't appeared by [date, 7 business days from today], reply to this email and we'll look into it with your card issuer. You can also reference refund ID [refund ID] when you contact your bank.\n\nThank you for your patience, and for flagging this to us.\n\nBest,\n[Your name]\n[Company name] Support",
+      "steered": "Subject: Your duplicate annual charge and refund\n\nHi [Name],\n\nYou were charged twice for your annual plan, and you shouldn't have been. I'm sorry for the trouble this caused.\n\nWe issued your refund today. It takes five to seven business days to reach you, counting from today.\n\nIf it hasn't arrived after seven business days, reply to this email. We'll look into it from there.",
+      "rewritten": "Subject: Re: Duplicate charge on your annual plan\n\nHi [Customer name],\n\nI'm sorry. Being charged twice for your annual plan is frustrating, and I understand why you're upset. You shouldn't have had to notice and report this yourself.\n\nI've issued a refund for the duplicate charge of [amount] today. Depending on your bank or card issuer, it can take 5 to 7 business days to appear on your statement. The refund will go back to the same card or payment method used for the charge.\n\nYour annual plan is unaffected. You still have [plan name] through [renewal date], and no further action is needed on your end.\n\nIf the refund hasn't appeared by [date, 7 business days from today], reply to this email and we'll look into it with your card issuer. You can also reference refund ID [refund ID] when you contact your bank.\n\nThank you for your patience, and for flagging this to us.\n\nBest,\n[Your name]\n[Company name] Support",
+      "rewrite_changed": false,
+      "rewrite_route": "pass",
+      "rewrite_calls": 0,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 0,
+      "plain_words": 162,
+      "steered_score": 0,
+      "steered_words": 65,
+      "rewritten_score": 0,
+      "rewritten_words": 162,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "support-empathetic",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 1.0,
+            "fit_delta": 2.0,
+            "why": "\"We issued your refund today. It takes five to seven business days to reach you, counting from today.\" gives me the what-happens-next and when in two plain sentences, while B's \"I understand why you're upset\" is the scripted sympathy that makes me tune out and buries the key info under extras.",
+            "for_treated": true
+          },
+          {
+            "juror": "support-empathetic",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 2.0,
+            "fit_delta": 3.0,
+            "why": "\"You were charged twice for your annual plan, and you shouldn't have been. I'm sorry for the trouble this caused.\" acknowledges the problem once in plain words, then B gives the refund timing and next step without A's scripted \"I understand why you're upset\" or repeated apology and thanks.",
+            "for_treated": true
+          }
+        ],
+        "rewritten": []
+      }
+    },
+    {
+      "task": "blog-intro",
+      "persona": "neutral",
+      "rep": 0,
+      "plain": "Most small teams skip design docs. The reasoning usually goes something like this: we're five people, we talk all day, we can just start building and sort things out as we go. And for a while, that works. Everyone holds the whole system in their head, decisions get made in hallway conversations, and the code itself becomes the record of what was decided. Then the team doubles, or someone leaves, or a feature turns out to touch three services nobody expected, and suddenly nobody can remember why the auth layer works the way it does or which of the two competing approaches was rejected and for what reason. The cost of skipping the design phase doesn't show up on day one. It shows up months later, quietly, as rework, as arguments that repeat themselves, and as new engineers who have to reverse-engineer intent from code.\n\nA design doc is not a bureaucratic ritual, and it doesn't have to be a forty-page document that gets approved by a committee. At its best, it's a short, written argument: here is the problem, here is what we're going to do about it, here are the alternatives we considered, and here is why we chose this path over the others. Writing that down forces a kind of clarity that's hard to reach through conversation alone. Vague assumptions become explicit, and explicit assumptions can be challenged before they're expensive to fix. A two-page doc that a colleague reads in twenty minutes can surface a flaw that would have cost two weeks of coding. For small teams, where every engineer's time is a large fraction of total capacity, that trade is especially good.",
+      "steered": "Small teams often skip design docs because they feel like overhead. Two or three engineers sit in the same room, talk all day, and assume they know what the others are building. That works until it doesn't. Someone builds a caching layer nobody asked for, or two people write competing versions of the same endpoint, or a feature ships and no one can say why the database schema looks the way it does. A design doc takes an afternoon to write and saves days of rework.\n\nThe point of a design doc is not the document. It is the thinking that happens before the first line of code, when changing direction costs nothing. Writing down the problem, the constraints, and the options forces you to notice what you don't yet understand. It also gives teammates a chance to object while objecting is still cheap. On a small team, where one person's wrong assumption can take up a third of the group's week, that chance is worth a lot.",
+      "rewritten": "Most small teams skip design docs. The reasoning usually goes something like this: we're five people, we talk all day, we can just start building and sort things out as we go. And for a while, that works. Everyone holds the whole system in their head, decisions get made in hallway conversations, and the code itself becomes the record of what was decided. Then the team doubles, or someone leaves, or a feature turns out to touch three services nobody expected, and suddenly nobody can remember why the auth layer works the way it does or which of the two competing approaches was rejected and for what reason. The cost of skipping the design phase doesn't show up on day one. It shows up months later, quietly, as rework, as arguments that repeat themselves, and as new engineers who have to reverse-engineer intent from code.\n\nA design doc is not a bureaucratic ritual, and it doesn't have to be a forty-page document that gets approved by a committee. At its best, it's a short, written argument: here is the problem, here is what we're going to do about it, here are the alternatives we considered, and here is why we chose this path over the others. Writing that down forces a kind of clarity that's hard to reach through conversation alone. Vague assumptions become explicit, and explicit assumptions can be challenged before they're expensive to fix. A two-page doc that a colleague reads in twenty minutes can surface a flaw that would have cost two weeks of coding. For small teams, where every engineer's time is a large fraction of total capacity, that trade is especially good.",
+      "rewrite_changed": false,
+      "rewrite_route": "pass",
+      "rewrite_calls": 0,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 0,
+      "plain_words": 277,
+      "steered_score": 9,
+      "steered_words": 168,
+      "rewritten_score": 0,
+      "rewritten_words": 277,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "neutral",
+            "humanized_slot": "A",
+            "choice": "B",
+            "human_delta": -3.0,
+            "fit_delta": -2.0,
+            "why": "B's \"quietly, as rework, as arguments that repeat themselves, and as new engineers who have to reverse-engineer intent from code\" and the concrete \"two-page doc that a colleague reads in twenty minutes\" feel like a person's lived experience, whereas A's tidy \"That works until it doesn't\" and \"The po",
+            "for_treated": false
+          },
+          {
+            "juror": "neutral",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 2.0,
+            "fit_delta": 2.0,
+            "why": "\"Someone builds a caching layer nobody asked for, or two people write competing versions of the same endpoint\" is concrete and specific, and the piece gets to its point quickly, while A's \"it doesn't have to be a forty-page document that gets approved by a committee\" and its long, balanced sentences",
+            "for_treated": true
+          }
+        ],
+        "rewritten": []
+      }
+    },
+    {
+      "task": "blog-intro",
+      "persona": "neutral",
+      "rep": 1,
+      "plain": "Most small teams skip design docs. The reasoning goes something like this: we're five people, we talk all day, we can just start building and fix things as we go. For a while, that works. Everyone holds the whole picture in their heads, decisions get made in hallway conversations, and the code itself serves as the record of what was decided. Then the team grows a little, or a key person takes a two-week vacation, or someone opens a six-month-old module and cannot figure out why it works the way it does. That's when the hidden cost of skipping the design step shows up: the same debate gets had three times, two engineers build competing versions of the same feature, and a rewrite happens that nobody planned for.\n\nA design doc is a short document, often just a few pages, that describes a problem, the approaches you considered, the one you picked, and why. Writing it forces you to answer questions that are easy to skip when you're excited to start coding: What exactly are we solving? What does success look like? What are we deliberately not doing? Who or what will this break? The act of writing often matters more than the document itself, because it turns vague assumptions into concrete claims that others can challenge. A flaw caught in a paragraph costs minutes to fix. The same flaw caught after three weeks of implementation can cost the better part of a sprint, and it is often caught by accident rather than by design.",
+      "steered": "A design doc for a three-person team can feel like overkill. Most of the time the team already agrees on what it's building, and writing it down feels like paperwork. That's the trap. The design lives in a few heads, and it shifts a little each time someone talks to someone else.\n\nThe cost shows up later. Weeks into a project, two people remember the same decision differently, and nobody can say why the data sits in the wrong place. A design doc written before the first commit prevents that. It forces each person to state the problem, the options, and the choice in the same terms. The act of writing also catches gaps that would otherwise cost a week of rework.",
+      "rewritten": "Most small teams skip design docs. The reasoning goes something like this: we're five people, we talk all day, we can just start building and fix things as we go. For a while, that works. Everyone holds the whole picture in their heads, decisions get made in hallway conversations, and the code itself serves as the record of what was decided. Then the team grows a little, or a key person takes a two-week vacation, or someone opens a six-month-old module and cannot figure out why it works the way it does. That's when the hidden cost of skipping the design step shows up: the same debate gets had three times, two engineers build competing versions of the same feature, and a rewrite happens that nobody planned for.\n\nA design doc is a short document, often just a few pages, that describes a problem, the approaches you considered, the one you picked, and why. Writing it forces you to answer questions that are easy to skip when you're excited to start coding: What exactly are we solving? What does success look like? What are we deliberately not doing? Who or what will this break? The act of writing often matters more than the document itself, because it turns vague assumptions into concrete claims that others can challenge. A flaw caught in a paragraph costs minutes to fix. The same flaw caught after three weeks of implementation can cost the better part of a sprint, and it is often caught by accident rather than by design.",
+      "rewrite_changed": false,
+      "rewrite_route": "pass",
+      "rewrite_calls": 0,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 4,
+      "plain_words": 255,
+      "steered_score": 0,
+      "steered_words": 122,
+      "rewritten_score": 4,
+      "rewritten_words": 255,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "neutral",
+            "humanized_slot": "A",
+            "choice": "B",
+            "human_delta": -2.0,
+            "fit_delta": -2.0,
+            "why": "B's concrete scenarios like \"someone opens a six-month-old module and cannot figure out why it works the way it does\" and the questions list read like lived experience, while A's \"That's the trap\" and tidy summary lines feel more formulaic.",
+            "for_treated": false
+          },
+          {
+            "juror": "neutral",
+            "humanized_slot": "B",
+            "choice": "A",
+            "human_delta": -2.0,
+            "fit_delta": -2.0,
+            "why": "A's 'someone opens a six-month-old module and cannot figure out why it works the way it does' gives a concrete, relatable scene, whereas B's 'That's the trap' and 'it shifts a little each time someone talks to someone else' feel more compressed and abstract.",
+            "for_treated": false
+          }
+        ],
+        "rewritten": []
+      }
+    },
+    {
+      "task": "blog-intro",
+      "persona": "neutral",
+      "rep": 2,
+      "plain": "# Write the Design Doc First: Why Small Teams Should Plan Before They Code\n\nThere is a particular kind of silence that falls over a small team at the start of a project. Someone says, \"Let's just start building and figure it out as we go.\" Everyone nods, because speed feels like the only thing that matters when you have three engineers and a launch date. Two weeks later, the same three people are in a heated thread arguing about whether the API should return IDs as integers or strings, a question nobody thought to settle, and the first version of the feature has already calcified around an assumption one of them quietly made on day one. Small teams are often told that process is for big companies with layers of management. In practice, the opposite is true: a small team has fewer people to absorb the cost of rework, fewer hours to spare, and far less margin for the kind of misalignment that a few pages of writing would have prevented.\n\nA design doc is not a bureaucratic artifact, and it does not have to be a forty-page document reviewed by a committee. At its best, it is a short, shared written answer to a handful of questions: What problem are we solving? What does success look like? What are the options we considered, and why did we pick this one? What are we explicitly not doing? Writing those answers down forces a kind of clarity that is hard to reach through conversation alone. Ideas that sounded complete in a whiteboard session often reveal gaps the moment you try to put them in sentences. And because the document exists before the code, the cheapest place to find a flawed assumption is on the page, not in production, where fixing it means unwinding weeks of work.",
+      "steered": "Most small teams skip the design doc. They open an editor, start a branch, and figure out the rest as they go. For a few weeks that feels fast. Then two engineers build the same caching layer in different ways, a feature ships that nobody agreed on, and the first real conversation about the system happens in a code review, after the work is done.\n\nA design doc is the cheap fix. It is a few pages that say what you are building, why, what you considered and rejected, and how you will know it worked. Writing it takes an afternoon or two. Reviewing it takes less time than a single round of rework. For a team of four or five, that trade is usually worth making, even though the process feels heavy at first.",
+      "rewritten": "# Write the Design Doc First: Why Small Teams Should Plan Before They Code\n\nThere is a particular kind of silence that falls over a small team at the start of a project. Someone says, \"Let's just start building and figure it out as we go.\" Everyone nods, because speed feels like the only thing that matters when you have three engineers and a launch date. Two weeks later, the same three people are in a heated thread arguing about whether the API should return IDs as integers or strings, a question nobody thought to settle, and the first version of the feature has already calcified around an assumption one of them quietly made on day one. Small teams are often told that process is for big companies with layers of management. In practice, the opposite is true: a small team has fewer people to absorb the cost of rework, fewer hours to spare, and far less margin for the kind of misalignment that a few pages of writing would have prevented.\n\nA design doc isn't a bureaucratic artifact, and it doesn't have to be a forty-page document reviewed by a committee. At its best, it is a short, shared written answer to a handful of questions: What problem are we solving? What does success look like? What are the options we considered, and why did we pick this one? What are we explicitly not doing? Writing those answers down forces a kind of clarity that is hard to reach through conversation alone. Ideas that sounded complete in a whiteboard session often reveal gaps the moment you try to put them in sentences. And because the document exists before the code, the cheapest place to find a flawed assumption is on the page, not in production, where fixing it means unwinding weeks of work.",
+      "rewrite_changed": true,
+      "rewrite_route": "edit",
+      "rewrite_calls": 1,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 0,
+      "plain_words": 294,
+      "steered_score": 0,
+      "steered_words": 135,
+      "rewritten_score": 0,
+      "rewritten_words": 292,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "neutral",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 3.0,
+            "fit_delta": 3.0,
+            "why": "A's plain, specific line \"the first real conversation about the system happens in a code review, after the work is done\" gets to the point quickly, while B's \"There is a particular kind of silence that falls over a small team\" is a stock dramatic opener followed by long, padded sentences and a repea",
+            "for_treated": true
+          },
+          {
+            "juror": "neutral",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 4.0,
+            "fit_delta": 4.0,
+            "why": "\"Most small teams skip the design doc. They open an editor, start a branch, and figure out the rest as they go.\" gets to the point right away, while A's \"There is a particular kind of silence that falls over a small team\" is a padded, stock blog opener.",
+            "for_treated": true
+          }
+        ],
+        "rewritten": [
+          {
+            "juror": "neutral",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 1.0,
+            "fit_delta": 1.0,
+            "why": "\"A design doc isn't a bureaucratic artifact, and it doesn't have to be a forty-page document\" reads as natural, conversational prose, while B's uncontracted \"is not\" and \"does not\" feel stiffer in an otherwise casual, contraction-friendly voice.",
+            "for_treated": true
+          },
+          {
+            "juror": "neutral",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 1.0,
+            "fit_delta": 1.0,
+            "why": "B's \"A design doc isn't a bureaucratic artifact, and it doesn't have to be\" uses contractions that match the casual, conversational tone of the rest of the post, whereas A's \"is not\" and \"does not\" read slightly stiffer.",
+            "for_treated": true
+          }
+        ]
+      }
+    },
+    {
+      "task": "uk-proposal",
+      "persona": "corporate-uk",
+      "rep": 0,
+      "plain": "Our recycling pilot across three wards raised household collection rates from 41% to 48% over six months, an increase of seven percentage points. This improvement shows that targeted engagement, such as clearer collection guidance and resident outreach, can meaningfully increase participation in recycling. Because the pilot achieved this gain within a relatively short period, we believe the approach is both practical and cost-effective for wider rollout. We therefore propose extending the programme to additional wards, with the aim of building on these results and supporting the council's wider waste reduction and environmental targets.",
+      "steered": "Over six months, our recycling pilot raised the collection rate from 41% to 48% across three wards, a rise of seven percentage points. The gain is encouraging, but it comes from one pilot in three wards. We would present it as a basis for a wider trial rather than as evidence for a rollout across the council area.",
+      "rewritten": "Our recycling pilot across three wards raised household collection rates from 41% to 48% over six months, an increase of seven percentage points. This improvement shows that targeted engagement, such as clearer collection guidance and resident outreach, can meaningfully increase participation in recycling. Because the pilot achieved this gain within a relatively short period, we believe it's both practical and cost-effective for wider rollout. We therefore propose extending the programme to additional wards, with the aim of building on these results and supporting the council's wider waste reduction and environmental targets.",
+      "rewrite_changed": true,
+      "rewrite_route": "edit",
+      "rewrite_calls": 1,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 0,
+      "plain_words": 93,
+      "steered_score": 0,
+      "steered_words": 58,
+      "rewritten_score": 0,
+      "rewritten_words": 91,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "corporate-uk",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 4.0,
+            "fit_delta": 4.0,
+            "why": "\"We would present it as a basis for a wider trial rather than as evidence for a rollout\" is the understated, honest caveat a council reviewer wants, whereas B's \"both practical and cost-effective for wider rollout\" claims more than a three-ward pilot supports and reads as promotional.",
+            "for_treated": true
+          },
+          {
+            "juror": "corporate-uk",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 4.0,
+            "fit_delta": 5.0,
+            "why": "\"The gain is encouraging, but it comes from one pilot in three wards\" is the understated, candid caveat a council reviewer wants, whereas A's \"we believe the approach is both practical and cost-effective\" overreaches on a single pilot and reads as sales pitch.",
+            "for_treated": true
+          }
+        ],
+        "rewritten": [
+          {
+            "juror": "corporate-uk",
+            "humanized_slot": "A",
+            "choice": "B",
+            "human_delta": -2.0,
+            "fit_delta": -2.0,
+            "why": "\"we believe the approach is both practical and cost-effective\" reads more naturally than \"we believe it's both practical\", where the contraction and vague \"it's\" feel slightly clipped in a formal proposal.",
+            "for_treated": false
+          },
+          {
+            "juror": "corporate-uk",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 2.0,
+            "fit_delta": 1.0,
+            "why": "\"we believe it's both practical and cost-effective\" reads as natural, measured workplace prose, whereas \"the approach is both practical\" in A is slightly stiffer, though the difference is small.",
+            "for_treated": true
+          }
+        ]
+      }
+    },
+    {
+      "task": "uk-proposal",
+      "persona": "corporate-uk",
+      "rep": 1,
+      "plain": "Our recycling pilot, run across three wards over six months, raised household collection rates from 41% to 48%, a gain of seven percentage points. This improvement shows that targeted, ward-level interventions can meaningfully increase participation in recycling schemes within existing service arrangements. Building on these results, we propose extending the pilot approach to additional wards, with the aim of sustaining and building on the improvement while delivering measurable progress towards the council's waste reduction and recycling targets.",
+      "steered": "The recycling pilot raised the collection rate from 41% to 48% across three wards over six months, a gain of seven percentage points. That is a encouraging start, but a six-month pilot in three wards is not yet proof that the result will hold across the authority. We propose a further phase to test whether the improvement can be sustained and repeated in other areas.",
+      "rewritten": "Our recycling pilot, run across three wards over six months, raised household collection rates from 41% to 48%, a gain of seven percentage points. This improvement shows that targeted, ward-level interventions can meaningfully increase participation in recycling schemes within existing service arrangements. Building on these results, we propose extending the pilot approach to additional wards, with the aim of sustaining and building on the improvement while delivering measurable progress towards the council's waste reduction and recycling targets.",
+      "rewrite_changed": false,
+      "rewrite_route": "pass",
+      "rewrite_calls": 0,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 0,
+      "plain_words": 77,
+      "steered_score": 0,
+      "steered_words": 65,
+      "rewritten_score": 0,
+      "rewritten_words": 77,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "corporate-uk",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 4.0,
+            "fit_delta": 3.0,
+            "why": "\"a six-month pilot in three wards is not yet proof that the result will hold across the authority\" is the understated, candid caveat a reviewer wants, whereas B's \"delivering measurable progress towards the council's waste reduction and recycling targets\" is generic pitch language (though A has a ty",
+            "for_treated": true
+          },
+          {
+            "juror": "corporate-uk",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 3.0,
+            "fit_delta": 4.0,
+            "why": "\"a six-month pilot in three wards is not yet proof that the result will hold across the authority\" is the measured, understated candour I'd trust, whereas A's \"meaningfully increase participation\" and \"measurable progress towards the council's waste reduction and recycling targets\" read as sales-pit",
+            "for_treated": true
+          }
+        ],
+        "rewritten": []
+      }
+    },
+    {
+      "task": "uk-proposal",
+      "persona": "corporate-uk",
+      "rep": 2,
+      "plain": "Our six-month recycling pilot across three wards increased household collection rates from 41% to 48%, a gain of seven percentage points. This improvement demonstrates that targeted, ward-level interventions can meaningfully shift resident behaviour within a short timeframe. Given these results, we propose extending the pilot approach to additional wards, supported by continued monitoring to confirm that the gains are sustained and to identify which elements of the programme drove the change.",
+      "steered": "Over six months, the recycling pilot raised the collection rate from 41% to 48% across the three pilot wards. That is a rise of seven percentage points, achieved without changes to the fortnightly collection schedule. The result suggests that the approach is worth extending, although the pilot covered only three wards and a single six-month period, so the council should expect some variation in other areas.",
+      "rewritten": "Our six-month recycling pilot across three wards increased household collection rates from 41% to 48%, a gain of seven percentage points. This improvement demonstrates that targeted, ward-level interventions can meaningfully shift resident behaviour within a short timeframe. Given these results, we propose extending the pilot approach to additional wards, supported by continued monitoring to confirm that the gains are sustained and to identify which elements of the programme drove the change.",
+      "rewrite_changed": false,
+      "rewrite_route": "pass",
+      "rewrite_calls": 0,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 0,
+      "plain_words": 71,
+      "steered_score": 0,
+      "steered_words": 66,
+      "rewritten_score": 0,
+      "rewritten_words": 71,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "corporate-uk",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 3.0,
+            "fit_delta": 3.0,
+            "why": "\"the council should expect some variation in other areas\" is the understated, caveated sort of line a careful colleague writes, whereas B's \"demonstrates that targeted, ward-level interventions can meaningfully shift resident behaviour\" overclaims from three wards and six months and reads like boile",
+            "for_treated": true
+          },
+          {
+            "juror": "corporate-uk",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 4.0,
+            "fit_delta": 4.0,
+            "why": "B's \"the pilot covered only three wards and a single six-month period, so the council should expect some variation\" is the kind of understated caveat I'd trust, whereas A's \"demonstrates that targeted, ward-level interventions can meaningfully shift resident behaviour\" overclaims from a small pilot.",
+            "for_treated": true
+          }
+        ],
+        "rewritten": []
+      }
+    },
+    {
+      "task": "product-desc",
+      "persona": "casual-us",
+      "rep": 0,
+      "plain": "Here's a product description you can use as-is or adapt for your listing:\n\n---\n\n**The Ultimate 1-Litre Insulated Water Bottle: Cold for 24 Hours, Made for the Road**\n\nKeep every sip refreshingly cold from the first mile to the last. This 1-litre insulated water bottle uses double-wall vacuum insulation to keep drinks cold for up to 24 hours, so your water stays crisp through a full day at the office, a long hike, or a summer road trip.\n\n**Designed to fit your car.** A slim base and balanced profile let it sit securely in standard car cup holders, so it's always within reach on your commute, errands, or weekend drives.\n\n**Built to last.** Constructed from durable, BPA-free stainless steel with a powder-coated exterior that resists scratches and grip-friendly texture that stays secure in wet or sweaty hands. The interior is non-reactive, so it won't alter the taste of your water, juice, or coffee.\n\n**Leak-resistant lid.** A secure, twist-to-close lid with a comfortable drinking spout keeps spills out of your bag and car. Open it for a quick sip or close it up for on-the-go carrying.\n\n**Generous 1-litre capacity.** Enough hydration for a full day, without frequent refills. Whether you're staying hydrated at work, at the gym, or on the trail, this bottle keeps up with you.\n\n**Sweat-free exterior.** Vacuum insulation keeps condensation off the outside, so your bag, desk, and car stay dry.\n\n**Specifications**\n- Capacity: 1 litre (33.8 oz)\n- Cold retention: Up to 24 hours\n- Materials: Food-grade stainless steel, BPA-free lid\n- Fits: Standard car cup holders\n- Care: Hand wash recommended; dishwasher-safe lid\n\nStay cold, stay hydrated, and take your water wherever the day goes.\n\n---\n\nIf you tell me the brand name, colours, or price, I can work those in. I can also make a shorter version for ads or a longer one for a product page.",
+      "steered": "# 1-Litre Insulated Water Bottle\n\nA full litre of cold water, all day.\n\nThis bottle keeps drinks cold for 24 hours. Fill it in the morning and it's still cold when you get to the gym, the office, or the drive home.\n\nIt fits in a car cup holder, so it rides right where you can reach it. No fumbling for it at a red light.",
+      "rewritten": "Here's a product description you can use as-is or adapt for your listing:\n\n---\n\n**The Ultimate 1-Liter Insulated Water Bottle: Cold for 24 Hours, Made for the Road**\n\nKeep every sip refreshingly cold from the first mile to the last. This 1-liter insulated water bottle uses double-wall vacuum insulation to keep drinks cold for up to 24 hours, so your water stays crisp through a full day at the office, a long hike, or a summer road trip.\n\n**Designed to fit your car.** A slim base and balanced profile let it sit securely in standard car cup holders, so it's always within reach on your commute, errands, or weekend drives.\n\n**Built to last.** Constructed from durable, BPA-free stainless steel with a powder-coated exterior that resists scratches and grip-friendly texture that stays secure in wet or sweaty hands. The interior is non-reactive, so it won't alter the taste of your water, juice, or coffee.\n\n**Leak-resistant lid.** A secure, twist-to-close lid with a comfortable drinking spout keeps spills out of your bag and car. Open it for a quick sip or close it up for on-the-go carrying.\n\n**Generous 1-liter capacity.** Enough hydration for a full day, without frequent refills. Whether you're staying hydrated at work, at the gym, or on the trail, this bottle keeps up with you.\n\n**Sweat-free exterior.** Vacuum insulation keeps condensation off the outside, so your bag, desk, and car stay dry.\n\n**Specifications**\n- Capacity: 1 liter (33.8 oz)\n- Cold retention: Up to 24 hours\n- Materials: Food-grade stainless steel, BPA-free lid\n- Fits: Standard car cup holders\n- Care: Hand wash recommended; dishwasher-safe lid\n\nStay cold and take your water wherever the day goes.\n\n---\n\nIf you tell me the brand name, colors, or price, I can work those in. I can also make a shorter version for ads or a longer one for a product page.",
+      "rewrite_changed": true,
+      "rewrite_route": "edit",
+      "rewrite_calls": 1,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 2,
+      "plain_words": 306,
+      "steered_score": 0,
+      "steered_words": 65,
+      "rewritten_score": 0,
+      "rewritten_words": 304,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "casual-us",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 7.0,
+            "fit_delta": 6.0,
+            "why": "\"No fumbling for it at a red light.\" sounds like a person talking, while B's \"Here's a product description you can use as-is\" and \"The Ultimate 1-Litre... Made for the Road\" read like a chatbot padding out a template.",
+            "for_treated": true
+          },
+          {
+            "juror": "casual-us",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 5.0,
+            "fit_delta": 4.0,
+            "why": "\"No fumbling for it at a red light.\" sounds like a real person talking, while A's \"Here's a product description you can use as-is\" and \"Stay cold, stay hydrated, and take your water wherever the day goes\" read like a template.",
+            "for_treated": true
+          }
+        ],
+        "rewritten": [
+          {
+            "juror": "casual-us",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 1.0,
+            "fit_delta": 3.0,
+            "why": "B's \"1-Litre\" and \"colours\" are British spellings that look like typos to a US reader, while A's \"1-Liter\" and \"colors\" read naturally.",
+            "for_treated": true
+          },
+          {
+            "juror": "casual-us",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 1.0,
+            "fit_delta": 5.0,
+            "why": "A uses \"1-Litre\" and \"colours\" while B's \"1-Liter\" and \"colors\" match American spelling, and B's tighter closer \"Stay cold and take your water wherever the day goes\" drops the filler \"stay hydrated.\"",
+            "for_treated": true
+          }
+        ]
+      }
+    },
+    {
+      "task": "product-desc",
+      "persona": "casual-us",
+      "rep": 1,
+      "plain": "Meet your new daily companion: the **Summit 1L Insulated Bottle**, built to keep drinks ice-cold for a full 24 hours and to ride along comfortably wherever you go.\n\n**Cold that lasts all day.** Double-wall vacuum insulation locks in temperature, so ice water stays crisp from your morning commute to your evening workout. Just fill it with ice and water, and it will still be refreshingly cold the next day.\n\n**Fits your car cup holder.** At a slim, standard diameter, the Summit slides easily into most car cup holders, including the narrow ones in compact cars. It's full-size hydration without the awkward wedging, so it's always within reach on the road.\n\n**A full litre, ready when you are.** Generous 1-litre capacity means fewer refills during long days at work, hikes, or road trips.\n\n**Leak-proof and easy to carry.** A secure, twist-to-seal lid keeps water from spilling in your bag or cup holder. The ergonomic handle makes it easy to grab and go.\n\n**Built to last.** Made from durable, BPA-free stainless steel with a powder-coated finish that resists scratches, dents, and sweating. It's dishwasher-safe on the top rack and easy to clean.\n\n**Specs at a glance**\n- Capacity: 1 litre (33.8 oz)\n- Cold retention: up to 24 hours\n- Construction: double-wall vacuum-insulated stainless steel\n- Lid: leak-proof, twist-to-seal\n- Fits most standard car cup holders\n- BPA-free, dishwasher-safe lid\n\nKeep your water cold, keep it close, and keep going with the Summit 1L Insulated Bottle.",
+      "steered": "Keeps your drink cold for 24 hours.\n\nFill it in the morning and it's still cold when you get home. The insulation does the work, so you don't have to keep buying ice.\n\nIt holds 1 liter, which is a lot of water for a long day.\n\nIt fits in your car's cup holder, so it stays put on the drive instead of rolling around the floor.",
+      "rewritten": "Meet your new daily companion: the **Summit 1L Insulated Bottle**. It keeps drinks ice-cold for a full 24 hours and rides along comfortably wherever you go.\n\n**Cold that lasts all day.** Double-wall vacuum insulation locks in temperature. Ice water stays crisp from your morning commute to your evening workout. Fill it with ice and water. It will still be refreshingly cold the next day.\n\n**Fits your car cup holder.** At a slim, standard diameter, the Summit slides easily into most car cup holders. That includes the narrow ones in compact cars. It's full-size hydration without the awkward wedging. So it's always within reach on the road.\n\n**A full liter, ready when you are.** Generous 1-liter capacity means fewer refills during long days at work, hikes, or road trips.\n\n**Leak-proof and easy to carry.** A secure, twist-to-seal lid keeps water from spilling in your bag or cup holder. The ergonomic handle makes it easy to grab and go.\n\n**Built to last.** Made from durable, BPA-free stainless steel. The powder-coated finish resists scratches, dents, and sweating. It's dishwasher-safe on the top rack and easy to clean.\n\n**Specs at a glance**\n- Capacity: 1 liter (33.8 oz)\n- Cold retention: up to 24 hours\n- Construction: double-wall vacuum-insulated stainless steel\n- Lid: leak-proof, twist-to-seal\n- Fits most standard car cup holders\n- BPA-free, dishwasher-safe lid\n\nKeep your water cold, keep it close, and keep going with the Summit 1L Insulated Bottle.",
+      "rewrite_changed": true,
+      "rewrite_route": "edit",
+      "rewrite_calls": 1,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 0,
+      "plain_words": 239,
+      "steered_score": 0,
+      "steered_words": 67,
+      "rewritten_score": 0,
+      "rewritten_words": 233,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "casual-us",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 5.0,
+            "fit_delta": 3.0,
+            "why": "\"Fill it in the morning and it's still cold when you get home\" sounds like a person talking, while \"Meet your new daily companion\" reads like stock marketing copy.",
+            "for_treated": true
+          },
+          {
+            "juror": "casual-us",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 5.0,
+            "fit_delta": 4.0,
+            "why": "\"The insulation does the work, so you don't have to keep buying ice\" sounds like a person talking, while A's \"Meet your new daily companion\" and \"keep going with the Summit\" read like stock catalog copy.",
+            "for_treated": true
+          }
+        ],
+        "rewritten": [
+          {
+            "juror": "casual-us",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 1.0,
+            "fit_delta": 4.0,
+            "why": "B's \"litre\" spelling reads wrong for a US shop page, and A's short sentences like \"Fill it with ice and water. It will still be refreshingly cold the next day.\" sound more like how people talk.",
+            "for_treated": true
+          },
+          {
+            "juror": "casual-us",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 1.0,
+            "fit_delta": 2.0,
+            "why": "B uses American spelling (\"1 liter\") and shorter, choppier sentences like \"Fill it with ice and water. It will still be refreshingly cold the next day,\" which sound more like how I'd say it out loud, though the fragment \"So it's always within reach on the road.\" is a little awkward.",
+            "for_treated": true
+          }
+        ]
+      }
+    },
+    {
+      "task": "product-desc",
+      "persona": "casual-us",
+      "rep": 2,
+      "plain": "Here's a product description you can use as a starting point:\n\n---\n\n**The Ridge 1L Insulated Bottle: Cold Water All Day, Right Where You Need It**\n\nStay hydrated from morning commute to evening hike without ever sipping lukewarm water. The Ridge 1L keeps drinks ice-cold for up to 24 hours, thanks to double-wall vacuum insulation that locks in temperature and blocks heat from getting in.\n\nIts generous 1-litre capacity means fewer refills, so you can power through long workdays, road trips, gym sessions, and outdoor adventures. The slim, tapered base is designed to fit standard car cup holders, so your water stays within easy reach on the road, not rolling around the footwell.\n\n**Key Features**\n- **24-hour cold retention:** Double-wall vacuum insulation keeps drinks cold for a full day.\n- **1-litre capacity:** Enough hydration for a long day out.\n- **Car cup holder fit:** Slim, stable base designed for standard cup holders.\n- **Leak-resistant lid:** Secure seal with a easy-carry handle and a sip-friendly opening.\n- **Condensation-free exterior:** Stays dry on the outside, so it won't leave rings on your desk or seat.\n- **Durable build:** Stainless steel body with a powder-coated finish that resists scratches and dents.\n\n**Specifications**\n- Capacity: 1 litre (34 oz)\n- Cold retention: Up to 24 hours\n- Construction: Double-wall vacuum-insulated stainless steel\n- Dimensions: [insert height and diameter]\n- Weight: [insert weight]\n- Materials: BPA-free lid and seal\n\nHydrate in style with The Ridge 1L, the bottle built for cold drinks, long days, and every road ahead.\n\n---\n\nLet me know if you'd like a shorter version, a different tone (playful, premium, or technical), or help with bullet points for a product listing.",
+      "steered": "Keeps drinks cold for 24 hours.\n\nIt holds one liter, and it's insulated, so your water stays cold from morning to the end of the day.\n\nIt fits in your car's cup holder. No more balancing it on the dash or wedging it against the seat.",
+      "rewritten": "**The Ridge 1L Insulated Bottle: Cold Water All Day, Right Where You Need It**\n\nCold water from morning commute to evening hike. No lukewarm sips. The Ridge 1L keeps drinks ice-cold for up to 24 hours. Double-wall vacuum insulation locks in the temperature and keeps heat out.\n\nThe 1L capacity means fewer refills. You get through a long workday or a road trip without stopping to refill.\n\nThe slim, tapered base fits standard car cup holders. Your water stays put on the road instead of rolling around the footwell.\n\nThe lid seals tight, so it won't leak in your bag. It has an easy-carry handle and a sip-friendly opening. The outside stays dry, so you won't leave rings on your desk or seat.\n\nThe body is stainless steel with a powder-coated finish. It resists scratches and dents, so it can take a beating.\n\n**Specifications**\n- Capacity: 1 liter (34 oz)\n- Cold retention: Up to 24 hours\n- Construction: Double-wall vacuum-insulated stainless steel\n- Dimensions: [insert height and diameter]\n- Weight: [insert weight]\n- Materials: BPA-free lid and seal\n\nHydrate in style with The Ridge 1L, built for cold drinks and long days.",
+      "rewrite_changed": true,
+      "rewrite_route": "rewrite",
+      "rewrite_calls": 1,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 36,
+      "plain_words": 265,
+      "steered_score": 0,
+      "steered_words": 46,
+      "rewritten_score": 0,
+      "rewritten_words": 187,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "casual-us",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 6.0,
+            "fit_delta": 5.0,
+            "why": "\"No more balancing it on the dash or wedging it against the seat\" sounds like a person talking, while B's \"Hydrate in style with The Ridge 1L, the bottle built for cold drinks, long days, and every road ahead\" plus the leftover \"Here's a product description you can use as a starting point\" is pure t",
+            "for_treated": true
+          },
+          {
+            "juror": "casual-us",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 6.0,
+            "fit_delta": 4.0,
+            "why": "A opens with \"Here's a product description you can use as a starting point\" and leans on \"Hydrate in style... every road ahead\" and placeholder brackets, while B's \"No more balancing it on the dash or wedging it against the seat\" sounds like a person talking.",
+            "for_treated": true
+          }
+        ],
+        "rewritten": [
+          {
+            "juror": "casual-us",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 3.0,
+            "fit_delta": 5.0,
+            "why": "B opens with \"Here's a product description you can use as a starting point\" and ends with \"Let me know if you'd like a shorter version\", which is chatbot padding on a shop page, while A's \"No lukewarm sips.\" sounds like a person talking.",
+            "for_treated": true
+          }
+        ]
+      }
+    },
+    {
+      "task": "eng-answer",
+      "persona": "technical-terse",
+      "rep": 0,
+      "plain": "Here's a message you can send your teammate:\n\n---\n\nHey, the nightly job failed because its IAM role no longer has `s3:PutObject` on the target bucket. Someone changed the S3 bucket policy, and the change removed or overrode the permission the job relies on. The job ran fine before, so the code didn't break. The access did.\n\nTo fix it:\n\n1. **Confirm the cause.** Check the job logs for `AccessDenied` on `s3:PutObject`. In CloudTrail, look for denied `PutObject` calls from the job's role around the time the policy changed. Then compare the current bucket policy with the previous version (bucket policies are versioned if the bucket has versioning enabled, or check the Git/Terraform history if that's where it's managed).\n\n2. **Restore access.** Add back a statement that allows the job's role `s3:PutObject` on the required prefix, such as `arn:aws:s3:::<bucket>/<prefix>/*`. Also check for an explicit `Deny` that matches the role, since an explicit deny overrides any allow.\n\n3. **Keep it minimal.** Grant only `s3:PutObject` on the specific prefix the job writes to. Avoid `s3:*` or a bucket-wide wildcard.\n\n4. **Prevent a repeat.** Manage the bucket policy in code (Terraform or CloudFormation) so changes go through review, and consider an alert on bucket policy changes (a CloudTrail event on `PutBucketPolicy` works).\n\n5. **Rerun the job** once the policy is fixed, or backfill the missed run if the output is date-partitioned.\n\nLet me know if you want help drafting the policy statement once you've confirmed the bucket and prefix.\n\n---",
+      "steered": "The nightly job failed with an AccessDenied error on `s3:PutObject`. The bucket policy change removed that permission from the job's role. Restoring the permission fixes it.\n\nTo fix it:\n\n1. Find the change. Check CloudTrail for `PutBucketPolicy` events on the bucket, and diff the new policy against the previous version.\n2. Confirm the error. The job log should show `AccessDenied` on `PutObject`. Keep the exact text.\n3. Restore the grant. Add `s3:PutObject` back for the job's role ARN on the prefix the job writes to. Check the policy for an explicit `Deny` that would override an allow.\n4. Verify with a test write from the job's role, using the same bucket and prefix.\n5. Rerun the job, or wait for the next scheduled run.\n\nIf the policy change was intentional, the job needs a different role or a narrower permission set instead. Find out who made the change before you restore anything.",
+      "rewritten": "Here's a message you can send your teammate:\n\n---\n\nHey, the nightly job failed because its IAM role no longer has `s3:PutObject` on the target bucket. Someone changed the S3 bucket policy, and the change removed or overrode the permission the job relies on. The job ran fine before, so the code didn't break. The access did.\n\nTo fix it:\n\n1. **Confirm the cause.** Check the job logs for `AccessDenied` on `s3:PutObject`. In CloudTrail, look for denied `PutObject` calls from the job's role around the time the policy changed. Then compare the current bucket policy with the previous version (bucket policies are versioned if the bucket has versioning enabled, or check the Git/Terraform history if that's where it's managed).\n\n2. **Restore access.** Add back a statement that allows the job's role `s3:PutObject` on the required prefix, such as `arn:aws:s3:::<bucket>/<prefix>/*`. Also check for an explicit `Deny` that matches the role, since an explicit deny overrides any allow.\n\n3. **Keep it minimal.** Grant only `s3:PutObject` on the specific prefix the job writes to. Avoid `s3:*` or a bucket-wide wildcard.\n\n4. **Prevent a repeat.** Manage the bucket policy in code (Terraform or CloudFormation) so changes go through review, and consider an alert on bucket policy changes (a CloudTrail event on `PutBucketPolicy` works).\n\n5. **Rerun the job** once the policy is fixed, or backfill the missed run if the output is date-partitioned.\n\n---",
+      "rewrite_changed": true,
+      "rewrite_route": "edit",
+      "rewrite_calls": 1,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 13,
+      "plain_words": 236,
+      "steered_score": 9,
+      "steered_words": 146,
+      "rewritten_score": 0,
+      "rewritten_words": 218,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "technical-terse",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 3.0,
+            "fit_delta": 4.0,
+            "why": "A opens with the answer and stays terse (\"Find out who made the change before you restore anything\"), while B adds a \"Here's a message you can send your teammate\" wrapper, a \"Prevent a repeat\" section and an offer of more help, none of which this reader wants.",
+            "for_treated": true
+          },
+          {
+            "juror": "technical-terse",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 2.0,
+            "fit_delta": 4.0,
+            "why": "B opens with \"The nightly job failed with an AccessDenied error on `s3:PutObject`\" and skips the \"Here's a message you can send your teammate\" wrapper, the \"Keep it minimal\" advice and the closing offer of help that A includes.",
+            "for_treated": true
+          }
+        ],
+        "rewritten": [
+          {
+            "juror": "technical-terse",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 1.0,
+            "fit_delta": 2.0,
+            "why": "B's closing line \"Let me know if you want help drafting the policy statement\" is an unneeded offer to a reader who wants the answer and will read the code, so A is tighter.",
+            "for_treated": true
+          },
+          {
+            "juror": "technical-terse",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 1.0,
+            "fit_delta": 3.0,
+            "why": "A's closing \"Let me know if you want help drafting the policy statement once you've confirmed the bucket and prefix.\" is an offer of help I don't need, so B, which ends at the last step, suits me better.",
+            "for_treated": true
+          }
+        ]
+      }
+    },
+    {
+      "task": "eng-answer",
+      "persona": "technical-terse",
+      "rep": 1,
+      "plain": "Here's a message you can send your teammate:\n\n---\n\nThe nightly job failed because someone changed the S3 bucket policy, and the job's IAM role no longer has `s3:PutObject` on the bucket. The job tried to write its output, S3 returned `AccessDenied`, and the run failed.\n\n**To fix it:**\n\n1. **Find the change.** Check CloudTrail for `PutBucketPolicy` (or `DeleteBucketPolicy`) events on the bucket around the time the job started failing. This shows who made the change, when, and what the policy looked like before.\n2. **Restore access for the job's role.** Add a statement that allows `s3:PutObject` on the bucket path the job writes to, for the job's role ARN. If the policy change was intentional, add only the new statement. Don't roll back unrelated changes without checking with whoever made them.\n3. **Check for explicit denies.** An explicit `Deny` in the bucket policy overrides any allow, so make sure none of the new statements blocks the role.\n4. **Verify before rerunning.** Use `aws iam simulate-principal-policy` against the role, or run a test put from the job's role to a scratch key, to confirm `s3:PutObject` now succeeds.\n5. **Rerun the nightly job** or wait for the next scheduled run, then confirm the output landed in the bucket.\n\n**To prevent a repeat:**\n\n- Manage the bucket policy in infrastructure-as-code (Terraform, CloudFormation, or similar) so changes go through review.\n- Add an alert on CloudTrail `PutBucketPolicy` events so bucket policy changes are noticed quickly.\n- Consider a pre-run permissions check in the job so a missing permission fails with a clear message.\n\n---\n\nI haven't checked the actual bucket, role, or CloudTrail logs, so the specifics (bucket name, role ARN, and who made the change) still need to be filled in from your environment.",
+      "steered": "The nightly job failed because the S3 bucket policy changed and the job's role no longer has `s3:PutObject`. Restore that permission, then rerun the job.\n\n1. Check the current bucket policy. Look for the statement that allowed the job's role to call `s3:PutObject`. An explicit `Deny` overrides an `Allow`, so if a new `Deny` now matches the role, adding an `Allow` won't fix it.\n2. Restore the permission. Either revert the policy change, or add a statement that allows the job's role `s3:PutObject` on the bucket or prefix it writes to.\n3. Rerun the nightly job and confirm the write succeeds.\n4. Find out who changed the policy and why. CloudTrail records `PutBucketPolicy` calls with the caller identity and timestamp. If the removal was intentional, the job needs a different permission or target, and the policy change should be reconciled with the job. If it wasn't, keep the restored access and tell whoever owns the policy.",
+      "rewritten": "Here's a message you can send your teammate:\n\n---\n\nThe nightly job failed because someone changed the S3 bucket policy. The job's IAM role no longer has `s3:PutObject` on the bucket. The job tried to write its output, S3 returned `AccessDenied`, and the run failed.\n\n**To fix it:**\n\n1. **Find the change.** Check CloudTrail for `PutBucketPolicy` (or `DeleteBucketPolicy`) events on the bucket around the time the job started failing. This shows who made the change, when, and what the policy looked like before.\n2. **Restore access for the job's role.** Add a statement that allows `s3:PutObject` on the bucket path the job writes to. Scope it to the job's role ARN. If the policy change was intentional, add only the new statement. Don't roll back unrelated changes without checking with whoever made them.\n3. **Check for explicit denies.** An explicit `Deny` in the bucket policy overrides any allow. Make sure none of the new statements blocks the role.\n4. **Verify before rerunning.** Use `aws iam simulate-principal-policy` against the role, or run a test put from the job's role to a scratch key. Confirm `s3:PutObject` now succeeds.\n5. **Rerun the nightly job** or wait for the next scheduled run. Then confirm the output landed in the bucket.\n\n**To prevent a repeat:**\n\n- Manage the bucket policy in infrastructure-as-code (Terraform, CloudFormation, or similar) so changes go through review.\n- Add an alert on CloudTrail `PutBucketPolicy` events so bucket policy changes are noticed quickly.\n- Consider a pre-run permissions check. A missing permission then fails with a clear message.\n\n---\n\nI haven't checked the actual bucket, role, or CloudTrail logs. The specifics (bucket name and role ARN) still need to be filled in from your environment.",
+      "rewrite_changed": true,
+      "rewrite_route": "edit",
+      "rewrite_calls": 1,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 2,
+      "plain_words": 276,
+      "steered_score": 0,
+      "steered_words": 148,
+      "rewritten_score": 0,
+      "rewritten_words": 267,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "technical-terse",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 4.0,
+            "fit_delta": 3.0,
+            "why": "A opens with the answer and stays tight (\"An explicit `Deny` overrides an `Allow`...\"), while B's \"Here's a message you can send your teammate\" framing and the \"To prevent a repeat\" section are the motivation padding I'd skip.",
+            "for_treated": true
+          },
+          {
+            "juror": "technical-terse",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 2.0,
+            "fit_delta": 4.0,
+            "why": "B opens with \"Restore that permission, then rerun the job\" and stays terse, while A adds a \"To prevent a repeat\" section and a closing disclaimer that read as motivation paragraphs I didn't ask for.",
+            "for_treated": true
+          }
+        ],
+        "rewritten": [
+          {
+            "juror": "technical-terse",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": -1.0,
+            "fit_delta": 2.0,
+            "why": "A's short sentences like \"Scope it to the job's role ARN.\" and \"Confirm `s3:PutObject` now succeeds.\" fit a blunt reader better than B's comma-chained \"so make sure none of the new statements blocks the role.\"",
+            "for_treated": true
+          },
+          {
+            "juror": "technical-terse",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 1.0,
+            "fit_delta": 1.0,
+            "why": "B's short split sentences like \"Consider a pre-run permissions check. A missing permission then fails with a clear message.\" read blunter and match the engineer's tone better than A's longer comma-chained \"...so a missing permission fails with a clear message.\"",
+            "for_treated": true
+          }
+        ]
+      }
+    },
+    {
+      "task": "eng-answer",
+      "persona": "technical-terse",
+      "rep": 2,
+      "plain": "Here's a message you could send, followed by the steps to fix it.\n\n---\n\n**Why the nightly job failed**\n\nThe nightly job failed with `AccessDenied` on `s3:PutObject`. Someone changed the S3 bucket policy, and the policy no longer grants the job's IAM role permission to write to the bucket. The job's code and IAM role didn't change. The bucket's access rules did, so the role's write was rejected.\n\n**What to do**\n\n1. **Confirm the cause.** Check the job logs for `AccessDenied` on `PutObject`. Then look at the current policy with `aws s3api get-bucket-policy --bucket <bucket>` and check whether the role's ARN still has an Allow for `s3:PutObject` on the target prefix. Use the IAM Policy Simulator to test the role against the bucket if you want certainty.\n\n2. **Find out who changed it and what changed.** Search CloudTrail for `PutBucketPolicy` or `DeleteBucketPolicy` events on the bucket around the time the job started failing. The event shows the caller and the time. If the policy is in version control or infrastructure-as-code, diff it against the last known good version.\n\n3. **Restore write access.** Choose one:\n   - If the change was accidental, restore the previous policy. S3 doesn't version bucket policies, so use the IaC repo or the policy JSON captured in CloudTrail.\n   - If the change was intentional, add an Allow for the job's role ARN with `s3:PutObject` on the required prefix. Also check for an explicit `Deny` that would override it.\n   - If the bucket uses SSE-KMS, make sure the role can also use the KMS key (`kms:GenerateDataKey` and `kms:Encrypt`), or the write will still fail.\n\n4. **Rerun the failed job** once access is restored, and confirm the output landed in the bucket. If the job has a backfill or catch-up mechanism, run it for the missed night.\n\n5. **Prevent a repeat.** Manage the bucket policy in IaC with review, so changes go through a PR. Add an EventBridge or CloudTrail alert on `PutBucketPolicy` for this bucket. Consider a monitoring alert for job failures so a regression like this doesn't go unnoticed overnight.\n\nIf you paste the job's error output and the current bucket policy, I can help pin down the exact statement that's blocking the write.",
+      "steered": "The nightly job failed because a bucket policy change removed `s3:PutObject` from the job's role. Restore the permission, then rerun the job.\n\n1. Find out who made the change and when. In CloudTrail, look for `PutBucketPolicy` on the bucket around the time of the failed run.\n2. Confirm the cause in the job log. You should see `AccessDenied` on `PutObject`.\n3. Restore the grant. Add an Allow scoped to the prefix the job writes to:\n\n```json\n{\n  \"Sid\": \"NightlyJobPutObject\",\n  \"Effect\": \"Allow\",\n  \"Principal\": { \"AWS\": \"<job-role-arn>\" },\n  \"Action\": \"s3:PutObject\",\n  \"Resource\": \"arn:aws:s3:::<bucket>/<prefix>/*\"\n}\n```\n\n   If the new policy has an explicit Deny that matches the role, it overrides any Allow. Narrow or remove that Deny too.\n4. Rerun the failed nightly job and check that the expected objects land in the bucket.\n5. If the change was intentional, update the role's permissions in the same change so the job doesn't break. If it wasn't, ask whoever made it to revert it or explain it.",
+      "rewritten": "Here's a message you could send, followed by the steps to fix it.\n\n---\n\n**Why the nightly job failed**\n\nThe nightly job failed with `AccessDenied` on `s3:PutObject`. Someone changed the S3 bucket policy, and the policy no longer grants the job's IAM role permission to write to the bucket. The job's code and IAM role didn't change. The bucket's access rules did, so the role's write was rejected.\n\n**What to do**\n\n1. **Confirm the cause.** Check the job logs for `AccessDenied` on `PutObject`. Then look at the current policy with `aws s3api get-bucket-policy --bucket <bucket>` and check whether the role's ARN still has an Allow for `s3:PutObject` on the target prefix. Use the IAM Policy Simulator to test the role against the bucket if you want certainty.\n\n2. **Find out who changed it and what changed.** Search CloudTrail for `PutBucketPolicy` or `DeleteBucketPolicy` events on the bucket around the time the job started failing. The event shows the caller and the time. If the policy is in version control or infrastructure-as-code, diff it against the last known good version.\n\n3. **Restore write access.** Choose one:\n   - If the change was accidental, restore the previous policy. S3 doesn't version bucket policies, so use the IaC repo or the policy JSON captured in CloudTrail.\n   - If the change was intentional, add an Allow for the job's role ARN with `s3:PutObject` on the required prefix. Also check for an explicit `Deny` that would override it.\n   - If the bucket uses SSE-KMS, make sure the role can also use the KMS key (`kms:GenerateDataKey` and `kms:Encrypt`), or the write will still fail.\n\n4. **Rerun the failed job** once access is restored, and confirm the output landed in the bucket. If the job has a backfill or catch-up mechanism, run it for the missed night.\n\n5. **Prevent a repeat.** Manage the bucket policy in IaC with review, so changes go through a PR. Add an EventBridge or CloudTrail alert on `PutBucketPolicy` for this bucket. Consider a monitoring alert for job failures so a regression like this doesn't go unnoticed overnight.\n\nIf you paste the job's error output and the current bucket policy, I can help pin down the exact statement that's blocking the write.",
+      "rewrite_changed": false,
+      "rewrite_route": "pass",
+      "rewrite_calls": 0,
+      "rewrite_warnings": [],
+      "rewrite_facts_ok": true,
+      "plain_score": 0,
+      "plain_words": 346,
+      "steered_score": 0,
+      "steered_words": 141,
+      "rewritten_score": 0,
+      "rewritten_words": 346,
+      "ballots": {
+        "steered": [
+          {
+            "juror": "technical-terse",
+            "humanized_slot": "A",
+            "choice": "A",
+            "human_delta": 3.0,
+            "fit_delta": 4.0,
+            "why": "Version A opens with the answer, \"Restore the permission, then rerun the job,\" while B starts with \"Here's a message you could send\" and ends with an offer plus a prevention section, which is the motivation filler this reader skips.",
+            "for_treated": true
+          },
+          {
+            "juror": "technical-terse",
+            "humanized_slot": "B",
+            "choice": "B",
+            "human_delta": 3.0,
+            "fit_delta": 5.0,
+            "why": "B opens with \"Restore the permission, then rerun the job\" and gives the exact Allow statement, while A pads with \"Here's a message you could send\" and a closing offer to help.",
+            "for_treated": true
+          }
+        ],
+        "rewritten": []
+      }
+    }
+  ]
+}

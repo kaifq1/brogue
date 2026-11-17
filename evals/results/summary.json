@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "writer": "Claude Haiku",
+    "judge": "Claude Sonnet",
+    "tasks": 24,
+    "texts": 48
+  },
+  "made_up": [
+    {
+      "name": "Brogue",
+      "key": "brogue",
+      "ours": true,
+      "mean": 0.94,
+      "lo": 0.6,
+      "hi": 1.31,
+      "clean": 24,
+      "total": 48
+    },
+    {
+      "name": "no-ai-slop",
+      "key": "no-ai-slop",
+      "ours": false,
+      "mean": 1.44,
+      "lo": 1.08,
+      "hi": 1.81,
+      "clean": 13,
+      "total": 48
+    },
+    {
+      "name": "humanize-writing",
+      "key": "humanize-writing",
+      "ours": false,
+      "mean": 1.8,
+      "lo": 1.37,
+      "hi": 2.26,
+      "clean": 11,
+      "total": 46
+    },
+    {
+      "name": "stop-slop",
+      "key": "stop-slop",
+      "ours": false,
+      "mean": 2.15,
+      "lo": 1.79,
+      "hi": 2.5,
+      "clean": 8,
+      "total": 48
+    },
+    {
+      "name": "humanizer",
+      "key": "humanizer",
+      "ours": false,
+      "mean": 2.19,
+      "lo": 1.65,
+      "hi": 2.73,
+      "clean": 16,
+      "total": 48
+    },
+    {
+      "name": "unslop",
+      "key": "unslop",
+      "ours": false,
+      "mean": 2.29,
+      "lo": 1.77,
+      "hi": 2.85,
+      "clean": 7,
+      "total": 48
+    },
+    {
+      "name": "no skill",
+      "key": "plain",
+      "ours": false,
+      "mean": 2.31,
+      "lo": 1.75,
+      "hi": 2.85,
+      "clean": 10,
+      "total": 48
+    }
+  ],
+  "paired": [
+    {
+      "name": "no skill",
+      "diff": -1.38,
+      "lo": -1.92,
+      "hi": -0.81,
+      "p": 0.0003,
+      "better": 20,
+      "same": 1,
+      "worse": 3
+    },
+    {
+      "name": "unslop",
+      "diff": -1.35,
+      "lo": -1.83,
+      "hi": -0.88,
+      "p": 0.0002,
+      "better": 19,
+      "same": 2,
+      "worse": 3
+    },
+    {
+      "name": "humanizer",
+      "diff": -1.25,
+      "lo": -1.65,
+      "hi": -0.83,
+      "p": 0.0002,
+      "better": 20,
+      "same": 1,
+      "worse": 3
+    },
+    {
+      "name": "stop-slop",
+      "diff": -1.21,
+      "lo": -1.52,
+      "hi": -0.9,
+      "p": 0.0001,
+      "better": 21,
+      "same": 3,
+      "worse": 0
+    },
+    {
+      "name": "humanize-writing",
+      "diff": -0.83,
+      "lo": -1.28,
+      "hi": -0.39,
+      "p": 0.0026,
+      "better": 15,
+      "same": 6,
+      "worse": 3
+    },
+    {
+      "name": "no-ai-slop",
+      "diff": -0.5,
+      "lo": -0.81,
+      "hi": -0.19,
+      "p": 0.0105,
+      "better": 15,
+      "same": 4,
+      "worse": 5
+    }
+  ],
+  "prefs": [
+    {
+      "name": "no skill",
+      "wins": 21,
+      "total": 48,
+      "lo": 0.307,
+      "hi": 0.577,
+      "p": 0.471
+    },
+    {
+      "name": "humanize-writing",
+      "wins": 19,
+      "total": 48,
+      "lo": 0.27,
+      "hi": 0.537,
+      "p": 0.193
+    },
+    {
+      "name": "humanizer",
+      "wins": 17,
+      "total": 48,
+      "lo": 0.234,
+      "hi": 0.496,
+      "p": 0.059
+    },
+    {
+      "name": "no-ai-slop",
+      "wins": 17,
+      "total": 48,
+      "lo": 0.234,
+      "hi": 0.496,
+      "p": 0.059
+    },
+    {
+      "name": "stop-slop",
+      "wins": 13,
+      "total": 48,
+      "lo": 0.166,
+      "hi": 0.41,
+      "p": 0.002
+    },
+    {
+      "name": "unslop",
+      "wins": 5,
+      "total": 47,
+      "lo": 0.046,
+      "hi": 0.226,
+      "p": 0.0
+    },
+    {
+      "name": "All, together",
+      "wins": 92,
+      "total": 287,
+      "lo": 0.269,
+      "hi": 0.377,
+      "p": 0.0
+    }
+  ],
+  "omitted": [
+    {
+      "name": "no skill",
+      "mean": 0.04,
+      "missing": 1,
+      "total": 23
+    },
+    {
+      "name": "humanizer",
+      "mean": 0.04,
+      "missing": 1,
+      "total": 24
+    },
+    {
+      "name": "humanize-writing",
+      "mean": 0.05,
+      "missing": 1,
+      "total": 22
+    },
+    {
+      "name": "stop-slop",
+      "mean": 0.05,
+      "missing": 1,
+      "total": 22
+    },
+    {
+      "name": "no-ai-slop",
+      "mean": 0.12,
+      "missing": 2,
+      "total": 24
+    },
+    {
+      "name": "unslop",
+      "mean": 0.17,
+      "missing": 3,
+      "total": 23
+    },
+    {
+      "name": "Brogue",
+      "mean": 0.18,
+      "missing": 4,
+      "total": 22
+    }
+  ]
+}

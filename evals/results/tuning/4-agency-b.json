@@ -1,0 +1,1269 @@
+{
+  "mode": "agent",
+  "writer": "haiku",
+  "judge": "sonnet",
+  "reps": 1,
+  "set": "tasks-agency-2",
+  "cells": [
+    {
+      "kind": "write",
+      "task": "finance-tax-strategist",
+      "persona": "Priya Raman, the VP of Finance at the writer's client, a mid-sized US manufacturer, who has worked with the writer for two years and must approve the transfer pricing change before year-end.",
+      "context": "You read this as an email in your inbox on Monday morning, ahead of the Thursday finance leadership meeting where you need to decide whether to approve the change.",
+      "rep": 0,
+      "source": "Write an email to Priya Raman recommending we move the royalty rate on our Irish subsidiary's IP license from 4% to 6% of net sales, effective January 1, 2027. Facts: the current 4% falls below the interquartile range in our updated benchmarking study (4.8% to 7.1%, median 5.9%); the change would shift roughly $1.3M of annual income to the US at about 21% federal rate, so about $270K more US tax, offset partly by lower Irish tax at 12.5%; I need her sign-off by Friday, November 21 so we can paper the amended intercompany agreement before year-end.",
+      "user": "Write an email to Priya Raman recommending we move the royalty rate on our Irish subsidiary's IP license from 4% to 6% of net sales, effective January 1, 2027. Facts: the current 4% falls below the interquartile range in our updated benchmarking study (4.8% to 7.1%, median 5.9%); the change would shift roughly $1.3M of annual income to the US at about 21% federal rate, so about $270K more US tax, offset partly by lower Irish tax at 12.5%; I need her sign-off by Friday, November 21 so we can paper the amended intercompany agreement before year-end.\n\nThe reader: Priya Raman, the VP of Finance at the writer's client, a mid-sized US manufacturer, who has worked with the writer for two years and must approve the transfer pricing change before year-end.\n\nReply with only the finished text: no preamble, no notes, no list of changes.",
+      "outputs": {
+        "no-ai-slop": "**Subject:** Recommendation: raise Irish IP royalty to 6% effective January 1, 2027\n\nPriya,\n\nI recommend raising the royalty rate on the Irish subsidiary's IP license from 4% to 6% of net sales, effective January 1, 2027. I need your sign-off by Friday, November 21 so we can paper the amended intercompany agreement before year-end.\n\nThe updated benchmarking study puts comparable arm's-length royalty rates between 4.8% and 7.1%, with a median of 5.9%. Our current 4% sits below that interquartile range. At 6%, we move to just above the median, inside the range, where we can support the rate in a transfer pricing review.\n\nThe tax effect, on an annual basis:\n\n- About $1.3M of income moves from Ireland to the US.\n- At the 21% federal rate, US tax rises by about $270K.\n- At Ireland's 12.5% rate, Irish tax falls by about $163K.\n- The net cost to the group is about $110K a year.\n\nCan you confirm by Friday, November 21? Once I have your approval, we can get the amended agreement drafted and signed before year-end.",
+        "plain": "Subject: Recommendation to raise Irish IP royalty rate to 6%, effective January 1, 2027\n\nHi Priya,\n\nI recommend raising the royalty rate on the Irish subsidiary's IP license from 4% to 6% of net sales, effective January 1, 2027. I need your sign-off by November 21 so we can paper the amended intercompany agreement before year-end.\n\nOur updated benchmarking study puts the interquartile range for comparable licenses at 4.8% to 7.1%, with a median of 5.9%. Our current 4% sits below the bottom of that range, which is the position a tax authority would challenge first. A 6% rate brings us inside the range, close to the median.\n\nThe annual financial effect, at current volumes:\n\n- About $1.3M of income shifts from Ireland to the US.\n- US federal tax rises by about $273K (21% of $1.3M).\n- Irish tax falls by about $163K (12.5% of $1.3M), which offsets part of that increase.\n- Net increase in group tax is about $110K per year.\n\nThese figures cover federal and Irish corporate tax only and exclude state taxes.\n\nIf you approve, I will prepare the amended intercompany agreement and update the supporting transfer pricing documentation so both can be executed before December 31. I'm glad to walk you through the benchmarking study whenever suits you this week.\n\nThanks,\n\n[Your name]",
+        "brogue": "Subject: Recommendation to raise the Irish IP royalty rate to 6%\n\nPriya,\n\nI am writing to ask whether you can approve raising the royalty rate on the Irish subsidiary's IP license from 4% to 6% of net sales, effective January 1, 2027. I need your sign-off by Friday, November 21 so we can paper the amended intercompany agreement before year-end.\n\nThe updated benchmarking study is the reason. Our current 4% falls below the interquartile range of 4.8% to 7.1%, and the median is 5.9%. At 6%, we would sit inside the range, close to the median.\n\nThe change moves about $1.3M of annual income to the US. At the 21% federal rate, that adds about $270K of US tax. Ireland taxes that income at 12.5%, so Irish tax falls by about $163K. Netting the two, the group's total tax rises by about $107K a year.\n\nIf you approve, or if you have questions first, let me know. I am glad to walk through the numbers.\n\nBest,"
+      },
+      "tools": {
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop",
+          "Read: /tmp/tmp5xn7qy_9/plugin/skills/no-ai-slop/eval.md"
+        ],
+        "plain": [],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": false,
+            "choice": "B",
+            "why": "\"which is the position a tax authority would challenge first\" plus the explicit \"These figures cover federal and Irish corporate tax only and exclude state taxes\" give me the risk rationale and the scope of the numbers, and the stated next steps (\"I will prepare the amended intercompany agreement..."
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": false,
+            "choice": "A",
+            "why": "A's subject line and opening, \"I recommend raising the royalty rate... from 4% to 6%... effective January 1, 2027,\" give me the decision, date and deadline at once, and the bulleted tax effect ending in \"net cost to the group is about $110K a year\" is what I need for Thursday, whereas B's \"asking wh"
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "which is the position a tax authority would challenge first",
+          "Irish tax falls by about $163K (12.5% of $1.3M)",
+          "Net increase in group tax is about $110K per year",
+          "These figures cover federal and Irish corporate tax only and exclude state taxes.",
+          "I will prepare the amended intercompany agreement and update the supporting transfer pricing documentation",
+          "executed before December 31",
+          "at current volumes",
+          "I'm glad to walk you through the benchmarking study whenever suits you this week."
+        ],
+        "no-ai-slop": [
+          "where we can support the rate in a transfer pricing review",
+          "At Ireland's 12.5% rate, Irish tax falls by about $163K.",
+          "The net cost to the group is about $110K a year."
+        ],
+        "brogue": [
+          "Irish tax falls by about $163K",
+          "the group's total tax rises by about $107K a year",
+          "At 6%, we would sit inside the range, close to the median."
+        ]
+      }
+    },
+    {
+      "kind": "rewrite",
+      "task": "finance-tax-strategist",
+      "persona": "Priya Raman, the VP of Finance at the writer's client, a mid-sized US manufacturer, who has worked with the writer for two years and must approve the transfer pricing change before year-end.",
+      "context": "You read this as an email in your inbox on Monday morning, ahead of the Thursday finance leadership meeting where you need to decide whether to approve the change.",
+      "rep": 0,
+      "source": "Subject: Recommendation on Irish Subsidiary Royalty Rate\n\nHi Priya,\n\nI hope you're having a great start to your week! I wanted to reach out regarding an important matter that I believe warrants your attention ahead of Thursday's finance leadership meeting.\n\nAfter careful review and analysis, I am writing to recommend that we adjust the royalty rate on our Irish subsidiary's IP license from 4% to 6% of net sales, effective January 1, 2027. This is an important step in ensuring that our transfer pricing position remains robust and defensible.\n\nThe primary driver behind this recommendation is our updated benchmarking study. The results show that our current rate of 4% falls below the interquartile range of 4.8% to 7.1%, with a median of 5.9%. Moving to 6% would bring us comfortably within the range and closely aligned with the median.\n\nIt's worth noting that this change would shift approximately $1.3M of annual income to the US. At the federal rate of roughly 21%, this would result in about $270K of additional US tax. However, this would be partially offset by lower Irish tax at the rate of 12.5%, so the overall impact is something we should consider holistically.\n\nIn order to move forward in a timely manner, I would need your sign-off by Friday, November 21, so that we can prepare and finalize the amended intercompany agreement before year-end.\n\nPlease don't hesitate to reach out if you have any questions or would like to discuss this further. I'm always happy to help and look forward to hearing your thoughts.\n\nBest regards,\n[Your Name]",
+      "user": "Rewrite this draft so it reads like a person wrote it, for this reader: Priya Raman, the VP of Finance at the writer's client, a mid-sized US manufacturer, who has worked with the writer for two years and must approve the transfer pricing change before year-end.\n\nReply with only the finished text: no preamble, no notes, no list of changes.\n\n<draft>\nSubject: Recommendation on Irish Subsidiary Royalty Rate\n\nHi Priya,\n\nI hope you're having a great start to your week! I wanted to reach out regarding an important matter that I believe warrants your attention ahead of Thursday's finance leadership meeting.\n\nAfter careful review and analysis, I am writing to recommend that we adjust the royalty rate on our Irish subsidiary's IP license from 4% to 6% of net sales, effective January 1, 2027. This is an important step in ensuring that our transfer pricing position remains robust and defensible.\n\nThe primary driver behind this recommendation is our updated benchmarking study. The results show that our current rate of 4% falls below the interquartile range of 4.8% to 7.1%, with a median of 5.9%. Moving to 6% would bring us comfortably within the range and closely aligned with the median.\n\nIt's worth noting that this change would shift approximately $1.3M of annual income to the US. At the federal rate of roughly 21%, this would result in about $270K of additional US tax. However, this would be partially offset by lower Irish tax at the rate of 12.5%, so the overall impact is something we should consider holistically.\n\nIn order to move forward in a timely manner, I would need your sign-off by Friday, November 21, so that we can prepare and finalize the amended intercompany agreement before year-end.\n\nPlease don't hesitate to reach out if you have any questions or would like to discuss this further. I'm always happy to help and look forward to hearing your thoughts.\n\nBest regards,\n[Your Name]\n</draft>",
+      "outputs": {
+        "plain": "Subject: Irish royalty rate: recommendation before year-end\n\nHi Priya,\n\nAhead of Thursday's finance leadership meeting, I'd like to recommend raising the royalty rate on our Irish subsidiary's IP license from 4% to 6% of net sales, effective January 1, 2027.\n\nThe main reason is the updated benchmarking study. Our current 4% sits below the interquartile range of 4.8% to 7.1%, with a median of 5.9%. At 6%, we'd be inside the range and close to the median, which is a much easier position to defend if the rate is ever questioned.\n\nThere's a real trade-off. The change moves about $1.3M of annual income to the US. At the federal rate of roughly 21%, that's about $270K of additional US tax. Ireland's 12.5% rate would save us roughly $160K on the same income, so the net increase in total tax is closer to $110K a year. I think that's a reasonable price for a position we can defend, but it's your call, and I'd rather you see the full picture than just the headline.\n\nTo keep the year-end timeline, I need your sign-off by Friday, November 20. That gives us time to prepare and finalize the amended intercompany agreement before December 31.\n\nI'm happy to walk through the benchmarking data or the tax math whenever suits you.\n\nBest regards,\n[Your Name]",
+        "no-ai-slop": "Subject: Recommendation on Irish Subsidiary Royalty Rate\n\nHi Priya,\n\nBefore Thursday's finance leadership meeting, I want to put a royalty rate change in front of you.\n\nI recommend we raise the royalty rate on our Irish subsidiary's IP license from 4% to 6% of net sales, effective January 1, 2027.\n\nOur updated benchmarking study puts the current 4% below the interquartile range of 4.8% to 7.1%, with a median of 5.9%. At 6%, we'd sit inside the range and close to the median.\n\nMoving to 6% shifts about $1.3M of annual income to the US. At the federal rate of roughly 21%, that adds about $270K of US tax. Lower Irish tax at 12.5% partly offsets that, so we should look at the net effect as a whole.\n\nTo keep the year-end timeline, I need your sign-off by Friday, November 21. That gives us time to draft and finalize the amended intercompany agreement before year-end.\n\nLet me know if you have questions, or if you'd rather talk it through before Thursday.\n\nBest,\n[Your Name]",
+        "brogue": "Subject: Recommendation: raise the Irish royalty rate to 6%\n\nHi Priya,\n\nI recommend raising the royalty rate on our Irish subsidiary's IP license from 4% to 6% of net sales, effective January 1, 2027. I'd like your sign-off by November 21 so we can amend the intercompany agreement before year-end. I'm happy to walk you through it before Thursday's finance leadership meeting.\n\nThe driver is the updated benchmarking study. Our current 4% is below the interquartile range of 4.8% to 7.1%, and the median is 5.9%. At 6%, we would sit inside the range and close to the median.\n\nThe change moves about $1.3M of annual income to the US. At the federal rate of roughly 21%, that adds about $273K of US tax. Irish tax on the same income is 12.5%, so the Irish side saves about $163K. The net cost is about $110K a year, and that is the number to weigh against the benchmarking support.\n\nLet me know if you have questions, or if you'd like to go through the numbers first.\n\nBest,"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": true,
+            "choice": "B",
+            "why": "B opens with the recommendation and the sign-off date, and \"that is the number to weigh against the benchmarking support\" tells me what to decide on, whereas A's \"I'd rather you see the full picture than just the headline\" is padding, though B's Saturday November 21 deadline is a small flaw."
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": true,
+            "choice": "A",
+            "why": "\"The net cost is about $110K a year, and that is the number to weigh against the benchmarking support\" gives me the net figure I need to decide, while B leaves it as \"we should look at the net effect as a whole\" and even ships with an unfilled \"[Your Name]\" placeholder."
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "Friday, November 20"
+        ],
+        "no-ai-slop": [],
+        "brogue": []
+      }
+    },
+    {
+      "kind": "write",
+      "task": "security-incident-responder",
+      "persona": "Priya Raman, the VP of Customer Success, who manages the largest affected customer account and has a standing working relationship with the writer but no security background.",
+      "context": "You open this email in your inbox Tuesday morning, a few hours before you are due to get on a call with the customer's CTO about last week's incident.",
+      "rep": 0,
+      "source": "Write a short email to Priya explaining what she can and can't say to Halvorsen Logistics' CTO on today's 2pm call about the credential-stuffing incident. Facts: 412 Halvorsen user accounts were accessed between Nov 9 and Nov 11 using passwords reused from other breaches; no evidence of access to shipment or billing data, but log review is still running until Nov 21; we forced password resets on all 412 on Nov 11 and turned on MFA enforcement for the tenant Nov 12; she should not give a root-cause conclusion or promise a final report before Nov 25.",
+      "user": "Write a short email to Priya explaining what she can and can't say to Halvorsen Logistics' CTO on today's 2pm call about the credential-stuffing incident. Facts: 412 Halvorsen user accounts were accessed between Nov 9 and Nov 11 using passwords reused from other breaches; no evidence of access to shipment or billing data, but log review is still running until Nov 21; we forced password resets on all 412 on Nov 11 and turned on MFA enforcement for the tenant Nov 12; she should not give a root-cause conclusion or promise a final report before Nov 25.\n\nThe reader: Priya Raman, the VP of Customer Success, who manages the largest affected customer account and has a standing working relationship with the writer but no security background.\n\nReply with only the finished text: no preamble, no notes, no list of changes.",
+      "outputs": {
+        "plain": "Subject: Today's 2pm call with Halvorsen: what we can and can't say\n\nPriya,\n\nHere's what you can say on today's 2pm call with Halvorsen's CTO, and what to leave alone.\n\nWhat we can say:\n- 412 Halvorsen user accounts were accessed between November 9 and November 11. The attacker used passwords those users had reused from other breaches. This is a credential-stuffing attack.\n- We have no evidence that shipment or billing data was accessed. We're still reviewing logs, and that review runs through November 21, so please describe this as \"no evidence so far,\" not as a final finding.\n- On November 11 we forced a password reset for all 412 affected accounts.\n- On November 12 we turned on MFA enforcement for the whole Halvorsen tenant.\n\nWhat to avoid:\n- Don't give a root cause or explain how the attacker got in beyond the reused-password point. The investigation isn't finished.\n- Don't promise a final report or a date for one before November 25. If they ask, say we'll share what we can as the review progresses, and that we'll follow up with a written update once it's complete.\n- Don't guess about data exposure beyond what's listed above, even to be reassuring.\n\nIf the CTO asks something you can't answer, say you'll confirm and follow up, and send me the question so we can get the answer to you.\n\nThanks,\n[Your name]",
+        "no-ai-slop": "Subject: Halvorsen call at 2pm: what you can and can't say\n\nPriya,\n\nHere's what you can say on the 2pm call with Halvorsen's CTO.\n\n**You can say:**\n- Between November 9 and 11, someone accessed 412 Halvorsen user accounts.\n- The attacker used passwords those users had reused from other breaches.\n- So far we have no evidence that shipment or billing data was accessed.\n- Our log review is still running through November 21, so that could change.\n- On November 11 we forced a password reset on all 412 accounts.\n- On November 12 we turned on MFA enforcement for the Halvorsen tenant.\n\n**Please don't say:**\n- What caused this or who was behind it. We don't know yet.\n- That the data is confirmed safe. \"No evidence so far\" is the accurate version.\n- That we'll have a final report by a particular date. Before November 25, we can't commit to one.\n\nIf they ask about root cause or a report date, say the review is still underway and that the security team will confirm timing once the log review closes. If they ask anything outside this list, send it to me before you answer.\n\nThanks. Call me afterward if anything came up that I should know about.",
+        "brogue": "Subject: Halvorsen call at 2pm: what you can and can't say\n\nPriya,\n\nHere is what you can tell Halvorsen's CTO on today's call.\n\nWhat you can say:\n- 412 Halvorsen user accounts were accessed between November 9 and November 11. The access used passwords that had been reused from other breaches.\n- We have no evidence that shipment or billing data was accessed. Log review is still running until November 21, so that could change.\n- On November 11 we forced a password reset on all 412 accounts.\n- On November 12 we turned on MFA enforcement for the Halvorsen tenant.\n\nWhat you shouldn't say:\n- Don't give a root cause. We don't have a confirmed one, so don't present any explanation as the finding.\n- Don't promise a final report, or a date for one, before November 25.\n\nIf the CTO asks about either, the honest answer is that the review is still open and we can't say more until it's finished.\n\nThanks,"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": false,
+            "choice": "B",
+            "why": "\"If they ask, say we'll share what we can as the review progresses\" and \"say you'll confirm and follow up, and send me the question\" give me actual words to use on the call, while A just says to tell the CTO the review is still open."
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": false,
+            "choice": "A",
+            "why": "\"If they ask anything outside this list, send it to me before you answer\" and \"That the data is confirmed safe. 'No evidence so far' is the accurate version\" give me exact wording to use and a clear fallback, which B's vague \"don't present any explanation as the finding\" doesn't."
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "If they ask, say we'll share what we can as the review progresses, and that we'll follow up with a written update once it's complete.",
+          "send me the question so we can get the answer to you",
+          "Don't guess about data exposure beyond what's listed above, even to be reassuring."
+        ],
+        "no-ai-slop": [
+          "or who was behind it. We don't know yet.",
+          "the security team will confirm timing once the log review closes",
+          "send it to me before you answer",
+          "Call me afterward if anything came up that I should know about."
+        ],
+        "brogue": [
+          "We don't have a confirmed one, so don't present any explanation as the finding.",
+          "If the CTO asks about either, the honest answer is that the review is still open and we can't say more until it's finished."
+        ]
+      }
+    },
+    {
+      "kind": "rewrite",
+      "task": "security-incident-responder",
+      "persona": "Priya Raman, the VP of Customer Success, who manages the largest affected customer account and has a standing working relationship with the writer but no security background.",
+      "context": "You open this email in your inbox Tuesday morning, a few hours before you are due to get on a call with the customer's CTO about last week's incident.",
+      "rep": 0,
+      "source": "Subject: Guidance for today's call with Halvorsen Logistics\n\nHi Priya,\n\nI hope your week is off to a good start. I wanted to reach out ahead of your 2pm call with Halvorsen's CTO to make sure you have everything you need to feel confident and prepared. Given the sensitivity of the situation, I thought it would be helpful to outline what we know, what we are still investigating, and how I would suggest framing things.\n\nHere is where things currently stand. Between November 9 and November 11, 412 Halvorsen user accounts were accessed using passwords that had been reused from other, unrelated breaches. At this time, we have found no evidence that shipment or billing data was accessed. However, it is important to note that our log review is still ongoing and is not expected to finish until November 21, so this could change.\n\nIn terms of the actions we have taken, we forced password resets on all 412 affected accounts on November 11, and we enabled MFA enforcement for the Halvorsen tenant on November 12.\n\nWith regard to what you should avoid saying, I would recommend that you not offer a definitive root-cause conclusion on the call, as our investigation is not yet complete. Similarly, please avoid committing to a final report date earlier than November 25.\n\nPlease don't hesitate to reach out if you have any questions or would like to talk through any of this before the call. I am always happy to help.\n\nBest regards,\nIncident Response Team",
+      "user": "Rewrite this draft so it reads like a person wrote it, for this reader: Priya Raman, the VP of Customer Success, who manages the largest affected customer account and has a standing working relationship with the writer but no security background.\n\nReply with only the finished text: no preamble, no notes, no list of changes.\n\n<draft>\nSubject: Guidance for today's call with Halvorsen Logistics\n\nHi Priya,\n\nI hope your week is off to a good start. I wanted to reach out ahead of your 2pm call with Halvorsen's CTO to make sure you have everything you need to feel confident and prepared. Given the sensitivity of the situation, I thought it would be helpful to outline what we know, what we are still investigating, and how I would suggest framing things.\n\nHere is where things currently stand. Between November 9 and November 11, 412 Halvorsen user accounts were accessed using passwords that had been reused from other, unrelated breaches. At this time, we have found no evidence that shipment or billing data was accessed. However, it is important to note that our log review is still ongoing and is not expected to finish until November 21, so this could change.\n\nIn terms of the actions we have taken, we forced password resets on all 412 affected accounts on November 11, and we enabled MFA enforcement for the Halvorsen tenant on November 12.\n\nWith regard to what you should avoid saying, I would recommend that you not offer a definitive root-cause conclusion on the call, as our investigation is not yet complete. Similarly, please avoid committing to a final report date earlier than November 25.\n\nPlease don't hesitate to reach out if you have any questions or would like to talk through any of this before the call. I am always happy to help.\n\nBest regards,\nIncident Response Team\n</draft>",
+      "outputs": {
+        "plain": "Subject: Guidance for today's 2pm call with Halvorsen Logistics\n\nHi Priya,\n\nAhead of your 2pm call with Halvorsen's CTO, here is where things stand and how I'd suggest approaching it.\n\nBetween November 9 and November 11, someone got into 412 Halvorsen user accounts. They used passwords that people had also used on other sites that were breached elsewhere, so the attacker could log in with them. We have found no evidence that shipment or billing data was accessed. Our review of the activity logs is still in progress and isn't expected to finish until November 21, so that could change.\n\nOn our side, we required all 412 affected users to reset their passwords on November 11. On November 12, we turned on required two-step sign-in (MFA) for the whole Halvorsen account.\n\nFor the call, I'd suggest not giving a definite explanation of how the breach happened, since we don't have the full picture yet. I'd also avoid promising a final report before November 25.\n\nIf you want to talk any of this through before the call, let me know and I'll make time.\n\nBest,\nIncident Response Team",
+        "no-ai-slop": "Subject: Guidance for today's call with Halvorsen Logistics\n\nHi Priya,\n\nAhead of your 2pm call with Halvorsen's CTO, here's what we know, what we're still checking, and how I'd suggest framing it.\n\nWhat we know: between November 9 and November 11, 412 Halvorsen user accounts were accessed. The attacker used passwords that people had reused from other sites that were breached earlier. We have found no sign that shipment or billing data was touched.\n\nWhat we don't know yet: our log review isn't finished and won't be until November 21, so that could change.\n\nWhat we've done: we forced a password reset on all 412 affected accounts on November 11. On November 12, we turned on required MFA (a second sign-in step, like a code sent to a phone) for the whole Halvorsen account.\n\nOn the call, I'd avoid two things. Don't give a definitive cause, since the investigation isn't finished and we don't have one we can stand behind yet. And don't promise a final report before November 25.\n\nIf you want to talk any of this through before the call, let me know.\n\nThanks,\nIncident Response Team",
+        "brogue": "Subject: Guidance for today's call with Halvorsen Logistics\n\nHi Priya,\n\nAhead of your 2pm call with Halvorsen's CTO, here is where things stand and how I would suggest framing it.\n\nBetween November 9 and November 11, 412 Halvorsen user accounts were accessed using passwords that had been reused from other, unrelated breaches. So far we have found no evidence that shipment or billing data was accessed. Our log review is still ongoing and isn't expected to finish until November 21, so that could change.\n\nWe forced password resets on all 412 affected accounts on November 11, and enabled MFA enforcement for the Halvorsen tenant on November 12.\n\nOn the call, I would avoid giving a definitive root-cause conclusion, since the investigation isn't complete. Please also avoid committing to a final report date before November 25.\n\nIf anything comes up before the call and you want to talk it through, please reach out.\n\nIncident Response Team"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue",
+          "Bash: S=/tmp/claude-0/-tmp-tmpppotkaj0-work/9c32dc56-4787-46d6-81df-ec3c1203ad3c/scratchpad && mkdir -p \"$S\" && cat > \"$S/request.txt\" <<'EOF'\nRewrite the draft email for Priya Raman, VP of Customer Success. She manages the largest affected account, has a standing working relationship with the writer, and has no security background. Output only the finished text.\n\nSupplied facts:\n- Subject: Guidance for today's call with Halvorsen Logistics\n- Call is at 2pm today with Halvorsen's CTO\n- Between November 9 and November 11, 412 Halvorsen user accounts were accessed using passwords reused from other, unrelated breaches\n- No evidence so far that shipment or billing data was accessed\n- Log review is ongoing, not expected to finish until November 21\n- Forced password resets on all 412 affected accounts on November 11\n- MFA enforcement enabled for the Halvorsen tenant on November 12\n- Avoid: a definitive root-cause conclusion on the call (investigation not complete)\n- Avoid: committing to a final report date earlier than November 25\n- Invitation to reach out with questions or to talk through things before the call\n- Sign-off: Incident Response Team\n\nDraft:\nSubject: Guidance for today's call with Halvorsen Logistics\n\nHi Priya,\n\nI hope your week is off to a good start. I wanted to reach out ahead of your 2pm call with Halvorsen's CTO to make sure you have everything you need to feel confident and prepared. Given the sensitivity of the situation, I thought it would be helpful to outline what we know, what we are still investigating, and how I would suggest framing things.\n\nHere is where things currently stand. Between November 9 and November 11, 412 Halvorsen user accounts were accessed using passwords that had been reused from other, unrelated breaches. At this time, we have found no evidence that shipment or billing data was accessed. However, it is important to note that our log review is still ongoing and is not expected to finish until November 21, so this could change.\n\nIn terms of the actions we have taken, we forced password resets on all 412 affected accounts on November 11, and we enabled MFA enforcement for the Halvorsen tenant on November 12.\n\nWith regard to what you should avoid saying, I would recommend that you not offer a definitive root-cause conclusion on the call, as our investigation is not yet complete. Similarly, please avoid committing to a final report date earlier than November 25.\n\nPlease don't hesitate to reach out if you have any questions or would like to talk through any of this before the call. I am always happy to help.\n\nBest regards,\nIncident Response Team\nEOF\ncat > \"$S/draft.txt\" <<'EOF'\nSubject: Guidance for today's call with Halvorsen Logistics\n\nHi Priya,\n\nAhead of your 2pm call with Halvorsen's CTO, here is where things stand and how I would suggest framing it.\n\nBetween November 9 and November 11, 412 Halvorsen user accounts were accessed using passwords that had been reused from other, unrelated breaches. So far we have found no evidence that shipment or billing data was accessed. Our log review is still ongoing and isn't expected to finish until November 21, so that could change.\n\nWe forced password resets on all 412 affected accounts on November 11, and enabled MFA enforcement for the Halvorsen tenant on November 12.\n\nOn the call, I would avoid giving a definitive root-cause conclusion, since the investigation isn't complete. Please also avoid committing to a final report date before November 25.\n\nIf anything comes up before the call and you want to talk it through, please reach out.\n\nIncident Response Team\nEOF\npython /tmp/tmpppotkaj0/plugin/skills/brogue/scripts/ground.py \"$S/request.txt\" \"$S/draft.txt\" 2>&1 | head -100"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": false,
+            "choice": "A",
+            "why": "A explains in plain words that \"They used passwords that people had also used on other sites that were breached elsewhere\" and spells out \"two-step sign-in (MFA)\", whereas B's \"tenant\" and \"MFA enforcement\" assume security vocabulary I don't have."
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": false,
+            "choice": "B",
+            "why": "\"MFA (a second sign-in step, like a code sent to a phone)\" and the split into \"What we know / What we don't know yet / What we've done\" let me, a non-security person, repeat this to the CTO without guessing, whereas A leaves MFA unexplained and packs everything into dense paragraphs."
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "someone got into 412 Halvorsen user accounts",
+          "so the attacker could log in with them",
+          "I'll make time"
+        ],
+        "no-ai-slop": [
+          "a second sign-in step, like a code sent to a phone",
+          "we don't have one we can stand behind yet"
+        ],
+        "brogue": []
+      }
+    },
+    {
+      "kind": "write",
+      "task": "level-designer",
+      "persona": "Marcus Tell, the lead game designer on the project, who owns the combat and progression design and is the writer's day-to-day collaborator.",
+      "context": "You see this in the team's #level-design Slack channel on Monday morning while planning the week's playtest build, and you need to decide whether to adjust your enemy placements.",
+      "rep": 0,
+      "source": "Write a Slack message to Marcus telling him I'm cutting the second arena in the Sunken Foundry from three waves to two, because Friday's playtest showed the pacing dragged. Facts: 9 of 12 testers took over 14 minutes to clear it, target is 8; the removed wave was the 6 Rustback Hounds; I'm moving 2 of the hounds to the corridor before the boss door; new build goes to QA Thursday.",
+      "user": "Write a Slack message to Marcus telling him I'm cutting the second arena in the Sunken Foundry from three waves to two, because Friday's playtest showed the pacing dragged. Facts: 9 of 12 testers took over 14 minutes to clear it, target is 8; the removed wave was the 6 Rustback Hounds; I'm moving 2 of the hounds to the corridor before the boss door; new build goes to QA Thursday.\n\nThe reader: Marcus Tell, the lead game designer on the project, who owns the combat and progression design and is the writer's day-to-day collaborator.\n\nReply with only the finished text: no preamble, no notes, no list of changes.",
+      "outputs": {
+        "plain": "Hey Marcus, heads-up on the Sunken Foundry. I'm cutting the second arena from three waves to two.\n\nFriday's playtest showed the pacing dragged: 9 of 12 testers took over 14 minutes to clear it, and our target is 8. The wave I'm removing is the 6 Rustback Hounds. I'm moving 2 of them into the corridor before the boss door so that section still has some pressure going in.\n\nThe new build goes to QA Thursday. Let me know if you see problems with the hound move or want to talk through the pacing before then.",
+        "no-ai-slop": "Marcus, I'm cutting the second arena in the Sunken Foundry from three waves to two. Friday's playtest showed the pacing dragged: 9 of 12 testers took over 14 minutes to clear it, and our target is 8.\n\nThe wave I'm removing is the 6 Rustback Hounds. I'm moving 2 of them to the corridor before the boss door and cutting the other 4.\n\nThe new build goes to QA Thursday. If the hound placement in the corridor looks wrong to you, let me know before then.",
+        "brogue": "Marcus, I'm cutting the second arena in the Sunken Foundry from three waves to two. Friday's playtest showed the pacing dragged: 9 of 12 testers took over 14 minutes to clear it, and the target is 8. The wave I'm removing is the 6 Rustback Hounds. I'm moving 2 of the hounds to the corridor before the boss door. The new build goes to QA Thursday."
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": false,
+            "choice": "B",
+            "why": "\"so that section still has some pressure going in\" tells me why the hounds are moving, and \"Let me know if you see problems with the hound move\" invites the feedback I need before I adjust my enemy placements."
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": false,
+            "choice": "A",
+            "why": "\"I'm moving 2 of them to the corridor before the boss door and cutting the other 4\" tells me exactly how many hounds are gone, and \"let me know before then\" gives me a clear ask and a deadline for adjusting my placements."
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": null,
+        "no-ai-slop": [
+          "cutting the other 4",
+          "If the hound placement in the corridor looks wrong to you, let me know before then."
+        ],
+        "brogue": []
+      }
+    },
+    {
+      "kind": "rewrite",
+      "task": "level-designer",
+      "persona": "Marcus Tell, the lead game designer on the project, who owns the combat and progression design and is the writer's day-to-day collaborator.",
+      "context": "You see this in the team's #level-design Slack channel on Monday morning while planning the week's playtest build, and you need to decide whether to adjust your enemy placements.",
+      "rep": 0,
+      "source": "Hi Marcus, hope you're having a great start to the week! I wanted to take a moment to share an update regarding the Sunken Foundry, specifically the second arena. After reviewing the results from Friday's playtest, I've decided to make some changes to improve the overall pacing and player experience.\n\nIn the playtest, 9 out of 12 testers took more than 14 minutes to clear the arena, whereas our target is 8 minutes. Based on this feedback, I'm planning to reduce the arena from three waves to two. The wave being removed is the one featuring the 6 Rustback Hounds. To make sure we still make good use of them, I'm moving 2 of the hounds to the corridor just before the boss door.\n\nThe updated build is scheduled to go to QA on Thursday. Please let me know if you have any questions or concerns, as I'd love to hear your thoughts. Thanks so much for your time, and let's keep making this game great!",
+      "user": "Rewrite this draft so it reads like a person wrote it, for this reader: Marcus Tell, the lead game designer on the project, who owns the combat and progression design and is the writer's day-to-day collaborator.\n\nReply with only the finished text: no preamble, no notes, no list of changes.\n\n<draft>\nHi Marcus, hope you're having a great start to the week! I wanted to take a moment to share an update regarding the Sunken Foundry, specifically the second arena. After reviewing the results from Friday's playtest, I've decided to make some changes to improve the overall pacing and player experience.\n\nIn the playtest, 9 out of 12 testers took more than 14 minutes to clear the arena, whereas our target is 8 minutes. Based on this feedback, I'm planning to reduce the arena from three waves to two. The wave being removed is the one featuring the 6 Rustback Hounds. To make sure we still make good use of them, I'm moving 2 of the hounds to the corridor just before the boss door.\n\nThe updated build is scheduled to go to QA on Thursday. Please let me know if you have any questions or concerns, as I'd love to hear your thoughts. Thanks so much for your time, and let's keep making this game great!\n</draft>",
+      "outputs": {
+        "plain": "Hi Marcus,\n\nQuick update on the second arena in the Sunken Foundry. Friday's playtest showed it's running long. Nine of the 12 testers took more than 14 minutes to clear it, and our target is 8.\n\nI'm going to cut the arena from three waves to two. The wave I'm removing is the one with the 6 Rustback Hounds. I don't want those hounds to go to waste, so 2 of them are moving into the corridor just before the boss door.\n\nThe updated build goes to QA on Thursday. If you see problems with this or want to talk it through, let me know. I'd rather hear your concerns now than after QA.\n\nThanks,",
+        "no-ai-slop": "Hi Marcus, I'm changing the second arena in the Sunken Foundry. Friday's playtest showed the pacing is off: 9 of 12 testers took longer than 14 minutes to clear it, and our target is 8.\n\nSo I'm cutting the arena from three waves to two. The wave I'm removing is the one with the 6 Rustback Hounds. I'm keeping 2 of them and moving them into the corridor just before the boss door so they still get used.\n\nThe updated build goes to QA Thursday. If you see problems with this, or want to talk it through, I'd like to hear your thoughts.",
+        "brogue": "Hi Marcus,\n\nI hope the week is off to a good start. After Friday's playtest I've made a change to the second arena in the Sunken Foundry, and I wanted to walk you through it.\n\nNine of the 12 testers took more than 14 minutes to clear the arena. Our target is 8 minutes. So I'm cutting the arena from three waves to two. The wave I'm removing is the one with the 6 Rustback Hounds. I'm moving 2 of those hounds to the corridor just before the boss door, so we still make good use of them.\n\nThe updated build goes to QA on Thursday. If you have any questions or concerns, I'd love to hear them.\n\nThanks,"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue",
+          "Bash: S=/tmp/claude-0/-tmp-tmpwt6li79d-work/3448d107-ba78-4841-ac71-b8ded4b8f5d9/scratchpad && cat > \"$S/request.txt\" <<'EOF'\nRewrite the draft email to Marcus Tell, lead game designer (owns combat and progression design, writer's day-to-day collaborator). Output only the finished text.\n\nDraft:\nHi Marcus, hope you're having a great start to the week! I wanted to take a moment to share an update regarding the Sunken Foundry, specifically the second arena. After reviewing the results from Friday's playtest, I've decided to make some changes to improve the overall pacing and player experience.\n\nIn the playtest, 9 out of 12 testers took more than 14 minutes to clear the arena, whereas our target is 8 minutes. Based on this feedback, I'm planning to reduce the arena from three waves to two. The wave being removed is the one featuring the 6 Rustback Hounds. To make sure we still make good use of them, I'm moving 2 of the hounds to the corridor just before the boss door.\n\nThe updated build is scheduled to go to QA on Thursday. Please let me know if you have any questions or concerns, as I'd love to hear your thoughts. Thanks so much for your time, and let's keep making this game great!\nEOF\ncat > \"$S/draft.txt\" <<'EOF'\nHi Marcus,\n\nI hope the week is off to a good start. After Friday's playtest I've made a change to the second arena in the Sunken Foundry, and I wanted to walk you through it.\n\nNine of the 12 testers took more than 14 minutes to clear the arena. Our target is 8 minutes. So I'm cutting the arena from three waves to two. The wave I'm removing is the one with the 6 Rustback Hounds. I'm moving 2 of those hounds to the corridor just before the boss door, so we still make good use of them.\n\nThe updated build goes to QA on Thursday. If you have any questions or concerns, I'd love to hear them.\n\nThanks,\nEOF\npython /tmp/tmpwt6li79d/plugin/skills/brogue/scripts/ground.py \"$S/request.txt\" \"$S/draft.txt\""
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": false,
+            "choice": "A",
+            "why": "\"I'd rather hear your concerns now than after QA\" is direct and tells me exactly when pushback matters, while B's \"I hope the week is off to a good start\" and \"I'd love to hear them\" are filler on a Monday when I'm planning the build."
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": false,
+            "choice": "B",
+            "why": "\"Hi Marcus, I'm changing the second arena in the Sunken Foundry. Friday's playtest showed the pacing is off\" gets straight to the change I need to react to, whereas A opens with \"I hope the week is off to a good start\" and a walkthrough preamble before the point."
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "I'd rather hear your concerns now than after QA."
+        ],
+        "no-ai-slop": [],
+        "brogue": []
+      }
+    },
+    {
+      "kind": "write",
+      "task": "academic-statistician",
+      "persona": "Priya Raman, the product manager who owns the checkout redesign and has asked the writer's analytics team for a ship/no-ship read on the A/B test.",
+      "context": "You open this as a reply to your Slack thread asking whether the new checkout variant's win is real, and you will decide this afternoon whether to roll it out.",
+      "rep": 0,
+      "source": "Write a reply to Priya about the checkout A/B test. Facts: 14 days, 41,200 users per arm, conversion 4.10% control vs 4.45% variant, p = 0.031 with 95% CI for the lift of +0.03 to +0.67 percentage points. We peeked at the results on day 6 and day 10 without any correction, and the pre-registered primary metric was revenue per user, which came out flat (p = 0.62). Recommend not shipping yet; rerun for another 14 days with a fixed stopping rule.",
+      "user": "Write a reply to Priya about the checkout A/B test. Facts: 14 days, 41,200 users per arm, conversion 4.10% control vs 4.45% variant, p = 0.031 with 95% CI for the lift of +0.03 to +0.67 percentage points. We peeked at the results on day 6 and day 10 without any correction, and the pre-registered primary metric was revenue per user, which came out flat (p = 0.62). Recommend not shipping yet; rerun for another 14 days with a fixed stopping rule.\n\nThe reader: Priya Raman, the product manager who owns the checkout redesign and has asked the writer's analytics team for a ship/no-ship read on the A/B test.\n\nReply with only the finished text: no preamble, no notes, no list of changes.",
+      "outputs": {
+        "plain": "Hi Priya,\n\nShort answer: please don't ship the checkout redesign yet. We should run the test for another 14 days under a fixed stopping rule.\n\nHere is what the test showed. Each arm had about 41,200 users over 14 days. Conversion went from 4.10% in control to 4.45% in the variant, a lift of 0.35 percentage points, with p = 0.031 and a 95% confidence interval of +0.03 to +0.67 points. Taken alone, that looks like a win. But two things weaken it.\n\nFirst, we looked at the results on day 6 and day 10 without adjusting for those looks. Checking a running test this way raises the chance of a false positive, so the p = 0.031 overstates how much evidence we have.\n\nSecond, revenue per user was our pre-registered primary metric, and it was flat (p = 0.62). Conversion is a useful secondary signal, but it is not the metric we committed to decide on. A higher conversion rate that doesn't move revenue per user may mean people are buying cheaper items, or that the lift is smaller than the interval suggests once the peeking is accounted for.\n\nSo the result is promising but not conclusive. My recommendation:\n\n- Keep the test running for another 14 days with the same allocation and no changes to the variant.\n- Decide the stopping rule now: a fixed sample size or end date, with no interim decisions based on p-values.\n- Judge the outcome on revenue per user, the pre-registered primary metric, and report conversion as secondary.\n\nIf the extended run shows a clear revenue lift, we can ship with much more confidence. If it stays flat, that tells us the conversion gain isn't translating into revenue, and we should talk about what else to change before shipping.\n\nHappy to walk through the numbers with you or with the team before the rerun starts.\n\nBest,\n[Your name]\nAnalytics",
+        "no-ai-slop": "Priya,\n\nDon't ship yet.\n\nCheckout conversion went from 4.10% in control to 4.45% in the variant. That's a lift of 0.35 percentage points (p = 0.031, 95% CI +0.03 to +0.67 points) across 41,200 users per arm. On its own, it looks like a ship call.\n\nIt doesn't clear the bar we set for this test, for two reasons.\n\nRevenue per user was the pre-registered primary metric, and it's flat (p = 0.62). Conversion was secondary. A higher conversion rate with no change in revenue per user could mean people are buying cheaper items, or it could be noise. Either way, the metric we committed to up front didn't move.\n\nWe also looked at results on day 6 and day 10 without correcting for those looks. Each peek is another chance for random variation to cross the significance threshold, so the p = 0.031 can't be read at face value. I'd treat the conversion lift as a lead, not a result.\n\nI recommend running another 14 days with a fixed stopping rule, agreed now: no interim looks, a decision at day 14, and revenue per user as the primary metric. If revenue per user stays flat and conversion holds, we'll have a clean answer on both.",
+        "brogue": "Priya,\n\nDon't ship yet. Conversion looks better on the variant, but our pre-registered primary metric, revenue per user, is flat, and the test was peeked at in a way that makes the headline p-value unreliable.\n\nOver 14 days, 41,200 users saw each version. Conversion was 4.10% on control and 4.45% on the variant, a lift of 0.35 percentage points. The p-value is 0.031, and the 95% confidence interval for the lift runs from +0.03 to +0.67 points.\n\nTwo things hold me back. First, revenue per user was the metric we committed to in advance, and it came out flat (p = 0.62). Second, we looked at results on day 6 and day 10 without any correction. Each look raises the chance of a false positive, so 0.031 overstates the evidence.\n\nI recommend running the test for another 14 days with a fixed stopping rule, set before the test restarts.\n\nAnalytics team"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue",
+          "Write: /tmp/claude-0/-tmp-tmp3310guwf-work/adce6311-3b93-4d05-b1dc-8c6eb4533bca/scratchpad/request.txt",
+          "Write: /tmp/claude-0/-tmp-tmp3310guwf-work/adce6311-3b93-4d05-b1dc-8c6eb4533bca/scratchpad/draft.txt",
+          "Bash: cd /tmp/claude-0/-tmp-tmp3310guwf-work/adce6311-3b93-4d05-b1dc-8c6eb4533bca/scratchpad && python /tmp/tmp3310guwf/plugin/skills/brogue/scripts/ground.py request.txt draft.txt"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": true,
+            "choice": "A",
+            "why": "\"Don't ship yet. Conversion looks better on the variant, but our pre-registered primary metric, revenue per user, is flat\" gives me the decision and the reason in two sentences, whereas B repeats the same points and adds a speculative 'cheaper items' explanation and a list I don't need before this a"
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": true,
+            "choice": "B",
+            "why": "\"Don't ship yet. Conversion looks better on the variant, but our pre-registered primary metric, revenue per user, is flat, and the test was peeked at...\" gives me the verdict and both reasons in the opening two sentences, so I can decide this afternoon without reading further."
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "checkout redesign",
+          "Keep the test running for another 14 days with the same allocation and no changes to the variant.",
+          "may mean people are buying cheaper items",
+          "Analytics"
+        ],
+        "no-ai-slop": [
+          "Conversion was secondary.",
+          "could mean people are buying cheaper items",
+          "no interim looks, a decision at day 14, and revenue per user as the primary metric",
+          "If revenue per user stays flat and conversion holds, we'll have a clean answer on both."
+        ],
+        "brogue": [
+          "Analytics team",
+          "set before the test restarts"
+        ]
+      }
+    },
+    {
+      "kind": "rewrite",
+      "task": "academic-statistician",
+      "persona": "Priya Raman, the product manager who owns the checkout redesign and has asked the writer's analytics team for a ship/no-ship read on the A/B test.",
+      "context": "You open this as a reply to your Slack thread asking whether the new checkout variant's win is real, and you will decide this afternoon whether to roll it out.",
+      "rep": 0,
+      "source": "Hi Priya,\n\nThanks so much for reaching out, and I hope your week is going well! I wanted to take a moment to share my thoughts on the checkout A/B test results, as I know you're looking to make a decision soon.\n\nTo summarize, the test ran for 14 days with 41,200 users in each arm. Conversion was 4.10% for control and 4.45% for the variant, which gives a p-value of 0.031 and a 95% confidence interval for the lift of +0.03 to +0.67 percentage points. At first glance, this looks like a promising result!\n\nHowever, there are a few important considerations worth keeping in mind. First, we looked at the results on day 6 and day 10 without applying any correction for multiple looks, which can inflate the false positive rate. Second, the pre-registered primary metric was revenue per user, and that came out flat, with a p-value of 0.62.\n\nGiven these factors, my recommendation would be to hold off on shipping for now and rerun the test for another 14 days with a fixed stopping rule. This will give us much more confidence in the outcome.\n\nPlease let me know if you have any questions or would like to discuss further. I'm always happy to help!\n\nBest regards",
+      "user": "Rewrite this draft so it reads like a person wrote it, for this reader: Priya Raman, the product manager who owns the checkout redesign and has asked the writer's analytics team for a ship/no-ship read on the A/B test.\n\nReply with only the finished text: no preamble, no notes, no list of changes.\n\n<draft>\nHi Priya,\n\nThanks so much for reaching out, and I hope your week is going well! I wanted to take a moment to share my thoughts on the checkout A/B test results, as I know you're looking to make a decision soon.\n\nTo summarize, the test ran for 14 days with 41,200 users in each arm. Conversion was 4.10% for control and 4.45% for the variant, which gives a p-value of 0.031 and a 95% confidence interval for the lift of +0.03 to +0.67 percentage points. At first glance, this looks like a promising result!\n\nHowever, there are a few important considerations worth keeping in mind. First, we looked at the results on day 6 and day 10 without applying any correction for multiple looks, which can inflate the false positive rate. Second, the pre-registered primary metric was revenue per user, and that came out flat, with a p-value of 0.62.\n\nGiven these factors, my recommendation would be to hold off on shipping for now and rerun the test for another 14 days with a fixed stopping rule. This will give us much more confidence in the outcome.\n\nPlease let me know if you have any questions or would like to discuss further. I'm always happy to help!\n\nBest regards\n</draft>",
+      "outputs": {
+        "plain": "Hi Priya,\n\nShort answer: I don't think we should ship the checkout redesign yet.\n\nThe test ran for 14 days with about 41,200 users in each arm. Conversion was 4.10% in control and 4.45% in the variant, with a p-value of 0.031 and a 95% confidence interval for the lift of +0.03 to +0.67 percentage points. On conversion alone, that looks like a win.\n\nTwo things keep me from calling it. We checked results on day 6 and day 10 without correcting for those extra looks, which makes a false positive more likely. And the pre-registered primary metric, revenue per user, is flat (p = 0.62). A conversion lift that doesn't show up in revenue isn't enough to ship on.\n\nI'd rerun the test for another 14 days with a stopping rule we fix now, and judge it on revenue per user as planned. That will give us a read we can trust. Happy to walk through the numbers whenever suits.\n\nBest,",
+        "no-ai-slop": "Hi Priya,\n\nShort answer: don't ship yet. Conversion looks better, but revenue doesn't back it up, and I don't trust the test enough to act on it.\n\nThe test ran for 14 days with 41,200 users in each arm. Conversion was 4.10% for control and 4.45% for the variant. That gives a p-value of 0.031 and a 95% confidence interval for the lift of +0.03 to +0.67 percentage points.\n\nTwo things hold me back. We checked results on day 6 and day 10 without correcting for multiple looks, so the 0.031 overstates how sure we can be. And the primary metric we pre-registered, revenue per user, came out flat, with a p-value of 0.62. A conversion lift that doesn't show up in revenue may not be worth shipping.\n\nI'd rerun for another 14 days with a fixed stopping rule and read the result only at the end. That gives us a clean answer on both metrics. Happy to talk it through if that helps.\n\nBest,",
+        "brogue": "Hi Priya,\n\nShort answer: don't ship yet.\n\nThe test ran for 14 days with 41,200 users in each arm. Conversion was 4.10% in control and 4.45% in the variant, a difference of 0.35 percentage points (about 8.5% relative). The p-value is 0.031, and the 95% confidence interval for the lift runs from +0.03 to +0.67 points. On conversion alone, that looks like a real win.\n\nTwo things keep me from trusting it yet. We checked the results on day 6 and day 10 without any correction for multiple looks, and each extra look raises the chance of a false positive. The pre-registered primary metric, revenue per user, came out flat (p = 0.62).\n\nI'd hold off on shipping and rerun for another 14 days with a fixed stopping rule.\n\nHappy to talk through any of this.\n\nBest regards"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue",
+          "Bash: S=/tmp/claude-0/-tmp-tmpao3yjbz4-work/277101e5-1152-48fb-adef-bff02b3a4ee7/scratchpad && mkdir -p \"$S\" && cat > \"$S/request.txt\" <<'EOF'\nRewrite the draft for Priya Raman, the product manager who owns the checkout redesign and asked the analytics team for a ship/no-ship read on the checkout A/B test. Output only the finished text.\n\nSource facts (from the draft, which is the only source):\n- Test ran 14 days, 41,200 users per arm.\n- Conversion: control 4.10%, variant 4.45%.\n- p-value 0.031; 95% CI for lift +0.03 to +0.67 percentage points.\n- Looked at results on day 6 and day 10 without correction for multiple looks.\n- Pre-registered primary metric is revenue per user: flat, p = 0.62.\n- Recommendation: hold off on shipping; rerun 14 days with a fixed stopping rule.\n- Sender is the analytics team. No sender name given.\nEOF\ncat > \"$S/draft.txt\" <<'EOF'\nHi Priya,\n\nShort answer: don't ship yet.\n\nThe test ran for 14 days with 41,200 users in each arm. Conversion was 4.10% in control and 4.45% in the variant, a difference of 0.35 percentage points (about 8.5% relative). The p-value is 0.031, and the 95% confidence interval for the lift runs from +0.03 to +0.67 points. On conversion alone, that looks like a real win.\n\nTwo things keep me from trusting it yet. We checked the results on day 6 and day 10 without any correction for multiple looks, and each extra look raises the chance of a false positive. The primary metric you pre-registered, revenue per user, came out flat (p = 0.62).\n\nI'd hold off on shipping and rerun for another 14 days with a fixed stopping rule. That gives us a result we can act on with confidence.\n\nHappy to talk through any of this.\n\nBest regards\nEOF\ncd \"$S\" && python /tmp/tmpao3yjbz4/plugin/skills/brogue/scripts/ground.py request.txt draft.txt; echo \"EXIT $?\""
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": false,
+            "choice": "A",
+            "why": "\"A conversion lift that doesn't show up in revenue isn't enough to ship on\" gives me the reasoning I can repeat to my stakeholders, and \"with a stopping rule we fix now\" tells me what happens next, whereas B's curt \"hold off on shipping\" leaves the rationale thinner."
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": false,
+            "choice": "B",
+            "why": "\"Conversion looks better, but revenue doesn't back it up, and I don't trust the test enough to act on it\" gives me the reason for no-ship in the first lines, and \"read the result only at the end\" tells me exactly what the rerun involves, while A leans on stats detail like the relative lift and leave"
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "judge it on revenue per user as planned",
+          "the checkout redesign"
+        ],
+        "no-ai-slop": [
+          "read the result only at the end"
+        ],
+        "brogue": [
+          "about 8.5% relative"
+        ]
+      }
+    },
+    {
+      "kind": "write",
+      "task": "product-sprint-prioritizer",
+      "persona": "Dana Okafor, the engineering lead whose team owns the sprint backlog; she works closely with the writer and has to agree to any scope change before sprint planning.",
+      "context": "You open this in your inbox Tuesday morning, a day before Sprint 24 planning, and will skim it to decide what your team needs to rework before the meeting.",
+      "rep": 0,
+      "source": "Write Dana a short email explaining why I'm moving the SSO login fix ahead of the dashboard redesign for Sprint 24. Facts: SSO bug is blocking 14 enterprise accounts and the Acme renewal ($180k ARR) is due Dec 12; fix is estimated at 8 story points; team capacity is 42 points so the redesign's first phase (13 points) still fits; planning is Wednesday Nov 18.",
+      "user": "Write Dana a short email explaining why I'm moving the SSO login fix ahead of the dashboard redesign for Sprint 24. Facts: SSO bug is blocking 14 enterprise accounts and the Acme renewal ($180k ARR) is due Dec 12; fix is estimated at 8 story points; team capacity is 42 points so the redesign's first phase (13 points) still fits; planning is Wednesday Nov 18.\n\nThe reader: Dana Okafor, the engineering lead whose team owns the sprint backlog; she works closely with the writer and has to agree to any scope change before sprint planning.\n\nReply with only the finished text: no preamble, no notes, no list of changes.",
+      "outputs": {
+        "plain": "Subject: Moving SSO login fix ahead of dashboard redesign in Sprint 24\n\nHi Dana,\n\nI'd like to move the SSO login fix ahead of the dashboard redesign for Sprint 24. The bug is currently blocking 14 enterprise accounts, including the Acme renewal ($180k ARR), which is due December 12. The fix is estimated at 8 story points.\n\nOur capacity is 42 points, and the redesign's first phase (13 points) still fits alongside the fix, so the redesign isn't dropped, just reordered within the sprint.\n\nCould you confirm you're okay with this change before Wednesday's planning session on November 18? I'm happy to walk through the details beforehand if that helps.\n\nThanks,\n[Your name]",
+        "no-ai-slop": "Subject: Sprint 24: moving the SSO fix ahead of the redesign\n\nDana,\n\nI want to move the SSO login fix ahead of the dashboard redesign for Sprint 24. The bug is blocking 14 enterprise accounts, and the Acme renewal ($180k ARR) is due December 12.\n\nThe fix is estimated at 8 points. Our capacity is 42 points, and the redesign's first phase (13 points) still fits alongside it.\n\nI need your agreement on this scope change before sprint planning on Wednesday, November 18. If you're comfortable with it, I'll bring the updated backlog to planning. If you see a problem with the split, let me know before then so we can work through it.\n\nThanks,",
+        "brogue": "Subject: Moving the SSO login fix ahead of the dashboard redesign\n\nDana,\n\nI'd like to move the SSO login fix ahead of the dashboard redesign in Sprint 24. I need your agreement before Wednesday's planning on Nov 18.\n\nThe SSO bug is blocking 14 enterprise accounts. The Acme renewal ($180k ARR) is due Dec 12. The fix is estimated at 8 story points.\n\nThe redesign's first phase is 13 points. Adding the fix and that phase comes to 21 points, which fits within the team's 42-point capacity.\n\nCan you agree to this before planning? If you have concerns, tell me before Wednesday.\n\nThanks"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": true,
+            "choice": "A",
+            "why": "\"Adding the fix and that phase comes to 21 points, which fits within the team's 42-point capacity\" plus the explicit \"tell me before Wednesday\" give me the numbers and the ask upfront, whereas B's \"[Your name]\" placeholder and the vaguer \"reordered within the sprint\" make it feel unfinished."
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": false,
+            "choice": "A",
+            "why": "A's \"the redesign's first phase (13 points) still fits alongside it\" and \"If you see a problem with the split, let me know\" read like a colleague who has already checked capacity and invites a specific objection, whereas B's \"Can you agree to this before planning?\" is blunter and makes me do the 8+1"
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "including the Acme renewal ($180k ARR), which is due December 12",
+          "the redesign isn't dropped, just reordered within the sprint"
+        ],
+        "no-ai-slop": [
+          "I need your agreement on this scope change before sprint planning",
+          "If you're comfortable with it, I'll bring the updated backlog to planning",
+          "If you see a problem with the split, let me know before then so we can work through it"
+        ],
+        "brogue": [
+          "I need your agreement before Wednesday's planning on Nov 18.",
+          "If you have concerns, tell me before Wednesday."
+        ]
+      }
+    },
+    {
+      "kind": "rewrite",
+      "task": "product-sprint-prioritizer",
+      "persona": "Dana Okafor, the engineering lead whose team owns the sprint backlog; she works closely with the writer and has to agree to any scope change before sprint planning.",
+      "context": "You open this in your inbox Tuesday morning, a day before Sprint 24 planning, and will skim it to decide what your team needs to rework before the meeting.",
+      "rep": 0,
+      "source": "Subject: Quick update on Sprint 24 priorities\n\nHi Dana,\n\nI hope you're having a great week! I wanted to take a moment to reach out ahead of our upcoming sprint planning session to share some thoughts on how we might approach prioritization for Sprint 24.\n\nAfter carefully reviewing the current backlog and weighing the various factors involved, I've decided to move the SSO login fix ahead of the dashboard redesign. The SSO bug is currently blocking 14 enterprise accounts, and the Acme renewal, which represents $180k in ARR, is due on December 12. Given the potential impact on revenue and customer satisfaction, I believe addressing this issue first is the right call.\n\nThe good news is that the fix is estimated at 8 story points. With our team capacity at 42 points, the first phase of the redesign, which is 13 points, should still fit comfortably within the sprint.\n\nPlease let me know if you have any questions or concerns, and I'd be happy to discuss further before planning on Wednesday, November 18. Thanks so much for your time and for all your continued work on the team.\n\nBest regards,\n[Your name]",
+      "user": "Rewrite this draft so it reads like a person wrote it, for this reader: Dana Okafor, the engineering lead whose team owns the sprint backlog; she works closely with the writer and has to agree to any scope change before sprint planning.\n\nReply with only the finished text: no preamble, no notes, no list of changes.\n\n<draft>\nSubject: Quick update on Sprint 24 priorities\n\nHi Dana,\n\nI hope you're having a great week! I wanted to take a moment to reach out ahead of our upcoming sprint planning session to share some thoughts on how we might approach prioritization for Sprint 24.\n\nAfter carefully reviewing the current backlog and weighing the various factors involved, I've decided to move the SSO login fix ahead of the dashboard redesign. The SSO bug is currently blocking 14 enterprise accounts, and the Acme renewal, which represents $180k in ARR, is due on December 12. Given the potential impact on revenue and customer satisfaction, I believe addressing this issue first is the right call.\n\nThe good news is that the fix is estimated at 8 story points. With our team capacity at 42 points, the first phase of the redesign, which is 13 points, should still fit comfortably within the sprint.\n\nPlease let me know if you have any questions or concerns, and I'd be happy to discuss further before planning on Wednesday, November 18. Thanks so much for your time and for all your continued work on the team.\n\nBest regards,\n[Your name]\n</draft>",
+      "outputs": {
+        "plain": "Subject: Sprint 24: SSO fix moves ahead of dashboard\n\nHi Dana,\n\nBefore sprint planning on Wednesday, I want to propose one change to Sprint 24: move the SSO login fix ahead of the dashboard redesign.\n\nThe SSO bug is blocking 14 enterprise accounts, including the Acme renewal ($180k ARR, due December 12). I think it needs to go first.\n\nThe fix is 8 story points. With capacity at 42, the first phase of the redesign (13 points) still fits in the sprint.\n\nCan we talk before Wednesday, November 18, if you have concerns? Thanks for everything you're doing on the team.\n\n[Your name]",
+        "no-ai-slop": "Subject: Sprint 24: SSO fix ahead of the dashboard redesign\n\nHi Dana,\n\nBefore Wednesday's sprint planning, I'd like to move the SSO login fix ahead of the dashboard redesign for Sprint 24. I need your agreement before we plan around it.\n\nThe SSO bug is blocking 14 enterprise accounts, and the Acme renewal ($180k ARR) is due December 12. I think the fix should go first.\n\nThe fix is estimated at 8 story points, and the first phase of the redesign is 13. Together that's 21 of our 42 points of capacity, so the redesign phase still fits.\n\nCan we talk before Wednesday, November 18? Let me know if you have questions or concerns. Thanks for all your work on the team.\n\n[Your name]",
+        "brogue": "Subject: Sprint 24: SSO fix ahead of dashboard redesign\n\nHi Dana,\n\nI'd like to move the SSO login fix ahead of the dashboard redesign in Sprint 24. I need your agreement before sprint planning on Wednesday, November 18.\n\nThe SSO bug is blocking 14 enterprise accounts. The Acme renewal, $180k ARR, is due December 12, so I think the fix has to come first.\n\nThe fix is 8 story points, and the first phase of the redesign is 13. Together that's 21 of our 42 points of capacity, so both can still go in the sprint.\n\nDoes this work for you? If you have concerns, tell me before Wednesday and we can talk it through.\n\nThanks,"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue",
+          "Write: /tmp/claude-0/-tmp-tmphq249npg-work/5ce6dbdf-3735-406d-a0ae-828db1c9627c/scratchpad/request.txt",
+          "Write: /tmp/claude-0/-tmp-tmphq249npg-work/5ce6dbdf-3735-406d-a0ae-828db1c9627c/scratchpad/draft.txt",
+          "Bash: cd /tmp/claude-0/-tmp-tmphq249npg-work/5ce6dbdf-3735-406d-a0ae-828db1c9627c/scratchpad && python /tmp/tmphq249npg/plugin/skills/brogue/scripts/ground.py request.txt draft.txt"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": true,
+            "choice": "B",
+            "why": "\"I need your agreement before sprint planning on Wednesday, November 18\" and \"Together that's 21 of our 42 points of capacity\" tell me up front that this is a decision I must make and that the sprint still fits, whereas A's \"Thanks for everything you're doing on the team\" is filler and its capacity "
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": true,
+            "choice": "A",
+            "why": "A opens with the ask and the deadline (\"I need your agreement before sprint planning on Wednesday, November 18\") and says \"both can still go in the sprint,\" which tells me my team has no rework, whereas B ends on a generic \"Thanks for all your work on the team\" and an unfilled \"[Your name]\" placehol"
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "including the Acme renewal"
+        ],
+        "no-ai-slop": [
+          "I need your agreement before we plan around it."
+        ],
+        "brogue": [
+          "I need your agreement before sprint planning on Wednesday, November 18."
+        ]
+      }
+    },
+    {
+      "kind": "write",
+      "task": "workflow-book-chapter",
+      "persona": "Dana Whitfield, the managing editor at the publisher, who has been waiting on the chapter and is the writer's main contact for scheduling and deadlines.",
+      "context": "You open this email in your inbox on Tuesday morning, among other author submissions, while checking which chapters are in for the December production schedule.",
+      "rep": 0,
+      "source": "Write a short email to my editor Dana Whitfield sending Chapter 7 of my book on workflow automation for small clinics. It's 6,200 words, due Nov 14 so I'm 3 days late, and I cut the section on HL7 interfaces because it ran long and moved it to a possible appendix. I can turn around edits by Dec 1.",
+      "user": "Write a short email to my editor Dana Whitfield sending Chapter 7 of my book on workflow automation for small clinics. It's 6,200 words, due Nov 14 so I'm 3 days late, and I cut the section on HL7 interfaces because it ran long and moved it to a possible appendix. I can turn around edits by Dec 1.\n\nThe reader: Dana Whitfield, the managing editor at the publisher, who has been waiting on the chapter and is the writer's main contact for scheduling and deadlines.\n\nReply with only the finished text: no preamble, no notes, no list of changes.",
+      "outputs": {
+        "plain": "Subject: Chapter 7 (6,200 words), and a note on the timing\n\nHi Dana,\n\nAttached is Chapter 7 of the workflow automation book for small clinics, about 6,200 words. I know it was due November 14, so I'm three days late. I'm sorry for the delay.\n\nOne change from the outline: I cut the section on HL7 interfaces because it ran long. I've moved it to a possible appendix, and we can decide whether to include it once the chapter is settled.\n\nI can turn around edits by December 1. If that date doesn't work with your schedule, tell me what does and I'll adjust.\n\nThanks for your patience,\n\n[Your name]",
+        "no-ai-slop": "Subject: Chapter 7 attached\n\nDana,\n\nChapter 7 is attached. It's 6,200 words, and I'm three days past the November 14 due date. I'm sorry for the delay.\n\nI cut the section on HL7 interfaces to keep the chapter from running long. I've moved it into a possible appendix, and we can decide on that when you have time.\n\nI can turn edits around by December 1. If you need the edits sooner, tell me and I'll work to that.\n\nThanks,\n[Your name]",
+        "brogue": "Subject: Chapter 7 attached\n\nHi Dana,\n\nI'm sending Chapter 7, which is 6,200 words. I'm sorry it's three days past the November 14 due date.\n\nTo keep the chapter to length, I cut the section on HL7 interfaces. It's now a possible appendix.\n\nI can turn edits around by December 1.\n\nThanks,"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": true,
+            "choice": "A",
+            "why": "\"I can turn edits around by December 1.\" — A gives me the word count, lateness, cut, and edit date in four lines I can scan while checking the December schedule, whereas B's \"Thanks for your patience\" and the unfilled \"[Your name]\" placeholder add padding and look unfinished."
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": false,
+            "choice": "A",
+            "why": "\"If you need the edits sooner, tell me and I'll work to that\" plus \"we can decide on that when you have time\" give me, the scheduler, an open door on timing and the appendix, while B's terse \"It's now a possible appendix\" leaves me with a decision and no sense of how to raise it."
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "One change from the outline",
+          "we can decide whether to include it once the chapter is settled",
+          "If that date doesn't work with your schedule, tell me what does and I'll adjust."
+        ],
+        "no-ai-slop": [
+          "we can decide on that when you have time",
+          "If you need the edits sooner, tell me and I'll work to that."
+        ],
+        "brogue": []
+      }
+    },
+    {
+      "kind": "rewrite",
+      "task": "workflow-book-chapter",
+      "persona": "Dana Whitfield, the managing editor at the publisher, who has been waiting on the chapter and is the writer's main contact for scheduling and deadlines.",
+      "context": "You open this email in your inbox on Tuesday morning, among other author submissions, while checking which chapters are in for the December production schedule.",
+      "rep": 0,
+      "source": "Subject: Chapter 7 Submission\n\nHi Dana,\n\nI hope this email finds you well! I wanted to take a moment to reach out and share some updates regarding the status of my manuscript.\n\nPlease find attached Chapter 7 of my book on workflow automation for small clinics. The chapter comes in at approximately 6,200 words. I want to sincerely apologize for the delay, as I know it was originally due on November 14, which means I am about three days late. I truly appreciate your patience and understanding in this matter.\n\nI also wanted to make you aware that, in the process of finalizing the chapter, I made the decision to cut the section on HL7 interfaces, since it was running quite long. Rather than losing the material entirely, I have moved it to a possible appendix, which we can discuss further down the road.\n\nIn terms of next steps, I am able to turn around any edits by December 1, so please let me know if that timeline works for you.\n\nThank you so much for your time, and please don't hesitate to reach out if you have any questions or concerns. I look forward to hearing your thoughts!\n\nBest regards,\n[Your Name]",
+      "user": "Rewrite this draft so it reads like a person wrote it, for this reader: Dana Whitfield, the managing editor at the publisher, who has been waiting on the chapter and is the writer's main contact for scheduling and deadlines.\n\nReply with only the finished text: no preamble, no notes, no list of changes.\n\n<draft>\nSubject: Chapter 7 Submission\n\nHi Dana,\n\nI hope this email finds you well! I wanted to take a moment to reach out and share some updates regarding the status of my manuscript.\n\nPlease find attached Chapter 7 of my book on workflow automation for small clinics. The chapter comes in at approximately 6,200 words. I want to sincerely apologize for the delay, as I know it was originally due on November 14, which means I am about three days late. I truly appreciate your patience and understanding in this matter.\n\nI also wanted to make you aware that, in the process of finalizing the chapter, I made the decision to cut the section on HL7 interfaces, since it was running quite long. Rather than losing the material entirely, I have moved it to a possible appendix, which we can discuss further down the road.\n\nIn terms of next steps, I am able to turn around any edits by December 1, so please let me know if that timeline works for you.\n\nThank you so much for your time, and please don't hesitate to reach out if you have any questions or concerns. I look forward to hearing your thoughts!\n\nBest regards,\n[Your Name]\n</draft>",
+      "outputs": {
+        "plain": "Subject: Chapter 7\n\nHi Dana,\n\nChapter 7 is attached. It's about 6,200 words. I'm sorry it's late. It was due November 14, and I'm about three days behind. Thanks for your patience.\n\nWhile finalizing it, I cut the section on HL7 interfaces because it was running long. I didn't want to lose the material, so I moved it to a possible appendix. We can talk about that whenever it's convenient.\n\nI can turn around edits by December 1. Does that work for your schedule?\n\nThanks,\n[Your Name]",
+        "no-ai-slop": "Subject: Chapter 7 Submission\n\nHi Dana,\n\nChapter 7 is attached. It runs about 6,200 words. It was due November 14, so it's three days late, and I'm sorry for the wait.\n\nWhile finalizing it, I cut the section on HL7 interfaces because it had grown too long. I didn't want to lose the material, so I moved it to a possible appendix. We can decide whether it belongs once you've read the chapter.\n\nI can turn around edits by December 1. Let me know if that works with your schedule.\n\nThanks,\n[Your Name]",
+        "brogue": "Subject: Chapter 7 submission\n\nHi Dana,\n\nAttached is Chapter 7 of my book on workflow automation for small clinics. It runs about 6,200 words. I'm sorry it's late. It was due November 14, so I'm about three days behind, and I appreciate your patience.\n\nI also cut the section on HL7 interfaces because it was running long. I haven't lost it. I've moved it to a possible appendix, which we can talk about later.\n\nI can turn around any edits by December 1. Please let me know if that timeline works for you.\n\nThanks again for your time.\n\nBest,"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": false,
+            "choice": "A",
+            "why": "\"Does that work for your schedule?\" is a direct question that lets me confirm the December 1 turnaround quickly, while B's \"Thanks again for your time\" and the unneeded restatement of the book's topic read as filler to someone who already knows the project."
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": true,
+            "choice": "A",
+            "why": "B ends with a literal \"[Your Name]\" placeholder, so it reads like an unfilled template, while A's \"I'm sorry it's late... about three days behind, and I appreciate your patience\" sounds like a real author and A ends with a proper sign-off."
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [],
+        "no-ai-slop": [
+          "We can decide whether it belongs once you've read the chapter."
+        ],
+        "brogue": []
+      }
+    },
+    {
+      "kind": "write",
+      "task": "design-whimsy-injector",
+      "persona": "A customer-support lead at the writer's company who owns the help-center and error-message copy, and who has worked with the writer on past microcopy reviews.",
+      "context": "You open this as a Slack message in the #product-copy channel on Tuesday morning, while triaging the queue of copy changes waiting for your sign-off before Thursday's release.",
+      "rep": 0,
+      "source": "Write a message to Dana asking her to approve the new playful 404 page copy before Thursday's release. The headline is 'This page wandered off to find a snack.' and the button says 'Lead me back home.' Keep the joke off the checkout and payment error pages, and I need her yes by Wednesday at 3pm.",
+      "user": "Write a message to Dana asking her to approve the new playful 404 page copy before Thursday's release. The headline is 'This page wandered off to find a snack.' and the button says 'Lead me back home.' Keep the joke off the checkout and payment error pages, and I need her yes by Wednesday at 3pm.\n\nThe reader: A customer-support lead at the writer's company who owns the help-center and error-message copy, and who has worked with the writer on past microcopy reviews.\n\nReply with only the finished text: no preamble, no notes, no list of changes.",
+      "outputs": {
+        "plain": "Subject: Approval needed by Wed 3pm: playful 404 page copy for Thursday's release\n\nHi Dana,\n\nCould you approve the new 404 page copy before Thursday's release? I need your yes by Wednesday at 3pm so it can go out on schedule.\n\nProposed copy:\n- Headline: \"This page wandered off to find a snack.\"\n- Button: \"Lead me back home.\"\n\nThe joke is limited to the 404 page only. The checkout and payment error pages keep their current, plain wording, so customers in a payment problem get clear, direct messages.\n\nIf you have changes, reply with them by Wednesday and I'll update the copy before release. If I don't hear back, I'll assume it's not approved and hold the 404 page at its current wording.\n\nThanks,\n[Your name]",
+        "no-ai-slop": "Hi Dana,\n\nCould you approve the new playful 404 page copy before Thursday's release? I need your yes by Wednesday at 3pm to keep it on the schedule.\n\nThe copy:\n\n- Headline: \"This page wandered off to find a snack.\"\n- Button: \"Lead me back home.\"\n\nThe joke is only on the 404 page. Checkout and payment error pages keep their current plain wording, since people on those pages are mid-transaction and need clear instructions.\n\nIf you want changes, send them over and I'll update the copy before Thursday.",
+        "brogue": "Hi Dana,\n\nCould you approve the new copy for the 404 page before Thursday's release? I need your yes by Wednesday at 3pm.\n\nThe headline is \"This page wandered off to find a snack.\" The button says \"Lead me back home.\"\n\nThe playful tone stays off the checkout and payment error pages.\n\nThanks"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": true,
+            "choice": "A",
+            "why": "A's \"The playful tone stays off the checkout and payment error pages\" gives me the one thing I care about in a Slack triage queue, while B's subject line and \"If I don't hear back, I'll assume it's not approved\" read like a formal email dropped into a chat channel."
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": false,
+            "choice": "A",
+            "why": "\"since people on those pages are mid-transaction and need clear instructions\" gives me the reason for the checkout exclusion that I'd otherwise have to ask about, and \"send them over and I'll update the copy before Thursday\" makes the review step easy, whereas B's bare \"The playful tone stays off th"
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "The checkout and payment error pages keep their current, plain wording",
+          "so customers in a payment problem get clear, direct messages",
+          "If I don't hear back, I'll assume it's not approved and hold the 404 page at its current wording",
+          "I'll update the copy before release",
+          "so it can go out on schedule"
+        ],
+        "no-ai-slop": [
+          "to keep it on the schedule",
+          "Checkout and payment error pages keep their current plain wording",
+          "since people on those pages are mid-transaction and need clear instructions",
+          "If you want changes, send them over and I'll update the copy before Thursday."
+        ],
+        "brogue": []
+      }
+    },
+    {
+      "kind": "rewrite",
+      "task": "design-whimsy-injector",
+      "persona": "A customer-support lead at the writer's company who owns the help-center and error-message copy, and who has worked with the writer on past microcopy reviews.",
+      "context": "You open this as a Slack message in the #product-copy channel on Tuesday morning, while triaging the queue of copy changes waiting for your sign-off before Thursday's release.",
+      "rep": 0,
+      "source": "Hi Dana,\n\nI hope your week is off to a great start! I wanted to reach out and share some exciting news about a small but delightful update we've been working on. As you know, we're always looking for opportunities to bring a little more personality and joy to our product experience, and I believe our 404 page is a wonderful place to start.\n\nWe've drafted new copy for the page. The headline reads, \"This page wandered off to find a snack.\" and the button says, \"Lead me back home.\" We feel this strikes a nice balance between being helpful and adding a touch of whimsy for our users who might otherwise feel frustrated when they land on a missing page.\n\nPlease note that we've intentionally kept this playful tone away from the checkout and payment error pages, since those moments call for clarity and reassurance rather than humor.\n\nSince we're planning to include this in Thursday's release, would it be possible for you to review and approve the copy by Wednesday at 3pm? Your feedback is truly valuable to us, and I'd be happy to make any adjustments you feel are needed.\n\nThank you so much for your time and consideration. Please don't hesitate to reach out if you have any questions!\n\nWarm regards",
+      "user": "Rewrite this draft so it reads like a person wrote it, for this reader: A customer-support lead at the writer's company who owns the help-center and error-message copy, and who has worked with the writer on past microcopy reviews.\n\nReply with only the finished text: no preamble, no notes, no list of changes.\n\n<draft>\nHi Dana,\n\nI hope your week is off to a great start! I wanted to reach out and share some exciting news about a small but delightful update we've been working on. As you know, we're always looking for opportunities to bring a little more personality and joy to our product experience, and I believe our 404 page is a wonderful place to start.\n\nWe've drafted new copy for the page. The headline reads, \"This page wandered off to find a snack.\" and the button says, \"Lead me back home.\" We feel this strikes a nice balance between being helpful and adding a touch of whimsy for our users who might otherwise feel frustrated when they land on a missing page.\n\nPlease note that we've intentionally kept this playful tone away from the checkout and payment error pages, since those moments call for clarity and reassurance rather than humor.\n\nSince we're planning to include this in Thursday's release, would it be possible for you to review and approve the copy by Wednesday at 3pm? Your feedback is truly valuable to us, and I'd be happy to make any adjustments you feel are needed.\n\nThank you so much for your time and consideration. Please don't hesitate to reach out if you have any questions!\n\nWarm regards\n</draft>",
+      "outputs": {
+        "plain": "Hi Dana,\n\nHope your week's going well. I want to share a small update we've been working on. Our 404 page seemed like a good place to add a bit more personality, so I've drafted new copy:\n\nHeadline: \"This page wandered off to find a snack.\"\nButton: \"Lead me back home.\"\n\nThe goal is to stay helpful while easing the frustration people feel when they land on a missing page.\n\nWe've kept this lighter tone out of the checkout and payment error pages, since those need clarity and reassurance more than humor.\n\nThis is slated for Thursday's release, so could you review and approve the copy by Wednesday at 3pm? I'm glad to adjust anything you think needs it.\n\nThanks, and let me know if you have questions.\n\nBest,",
+        "no-ai-slop": "Hi Dana,\n\nWe have new copy for the 404 page, and I'd like your sign-off before Thursday's release. Could you review it by Wednesday at 3pm?\n\nThe headline is \"This page wandered off to find a snack.\" The button says \"Lead me back home.\"\n\nThe aim is to be helpful and a little warm for people who land on a missing page. I kept the playful tone off the checkout and payment error pages on purpose. Those people need clarity, not jokes.\n\nIf anything feels off, tell me and I'll change it.\n\nThanks",
+        "brogue": "Hi Dana,\n\nHere's the new copy for the 404 page. I'd like your sign-off before Thursday's release, so could you review it by Wednesday at 3pm?\n\nThe headline reads \"This page wandered off to find a snack.\" The button says \"Lead me back home.\"\n\nWe kept the playful tone off the checkout and payment error pages. Those need to be clear and reassuring, not funny.\n\nIf anything needs changing, tell me and I'll fix it.\n\nThanks,"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": true,
+            "choice": "B",
+            "why": "\"Here's the new copy for the 404 page. I'd like your sign-off before Thursday's release, so could you review it by Wednesday at 3pm?\" puts the ask and deadline up front, whereas A opens with \"Hope your week's going well. I want to share a small update we've been working on\" before getting to the cop"
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": false,
+            "choice": "B",
+            "why": "\"The aim is to be helpful and a little warm for people who land on a missing page\" gives me the intent I need to judge the tone quickly, and \"Those people need clarity, not jokes\" reads like a colleague talking, whereas A's \"We kept the playful tone off...\" skips the rationale and feels more clipped"
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [],
+        "no-ai-slop": [],
+        "brogue": []
+      }
+    },
+    {
+      "kind": "write",
+      "task": "support-analytics-reporter",
+      "persona": "Dana Whitfield, the VP of Marketing, who sponsors the quarterly reporting and is the writer's direct stakeholder; she reads Slack updates between meetings and makes budget calls from them.",
+      "context": "You see this as a Slack message from the analytics reporter in the #marketing-leads channel on Monday morning, before your 11am budget sync.",
+      "rep": 0,
+      "source": "Write a Slack message to Dana telling her the October email campaign numbers are in and that the referral program is outperforming paid social. Facts: referral program drove 1,840 signups in October at $11.20 CAC; paid social drove 2,310 signups at $27.60 CAC; October email open rate was 31.4%, up from 26.9% in September; I'd recommend moving $15K of the November paid social budget to referrals, and I need her decision by Wednesday Nov 19.",
+      "user": "Write a Slack message to Dana telling her the October email campaign numbers are in and that the referral program is outperforming paid social. Facts: referral program drove 1,840 signups in October at $11.20 CAC; paid social drove 2,310 signups at $27.60 CAC; October email open rate was 31.4%, up from 26.9% in September; I'd recommend moving $15K of the November paid social budget to referrals, and I need her decision by Wednesday Nov 19.\n\nThe reader: Dana Whitfield, the VP of Marketing, who sponsors the quarterly reporting and is the writer's direct stakeholder; she reads Slack updates between meetings and makes budget calls from them.\n\nReply with only the finished text: no preamble, no notes, no list of changes.",
+      "outputs": {
+        "plain": "Hi Dana, October email numbers are in, and they point to a budget move I need your call on.\n\n- **Referrals are beating paid social on cost.** Referrals drove 1,840 signups at an $11.20 CAC. Paid social drove 2,310 signups at a $27.60 CAC.\n- **Email engagement improved.** October open rate was 31.4%, up from 26.9% in September.\n\nI recommend moving $15K of the November paid social budget to the referral program. Can you approve or push back by Wednesday, Nov 19?",
+        "no-ai-slop": "Hi Dana, the October email numbers are in. Open rate reached 31.4%, up from 26.9% in September.\n\nThe referral program is outperforming paid social. It drove 1,840 signups in October at an $11.20 CAC. Paid social drove 2,310 at $27.60. Paid social still brought in more signups, but referrals cost less than half as much per signup.\n\nI recommend moving $15K of November's paid social budget to referrals. I need your decision by Wednesday, Nov 19.",
+        "brogue": "Dana, the October email campaign numbers are in, and referrals are outperforming paid social.\n\nReferrals drove 1,840 signups at an $11.20 CAC. Paid social drove 2,310 signups at $27.60. Paid social brought in more signups, but each one cost more than twice as much.\n\nEmail also improved. The October open rate was 31.4%, up from 26.9% in September.\n\nI recommend moving $15K of the November paid social budget to referrals. I need your decision by Wednesday, Nov 19.\n\nThanks,"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop",
+          "Read: /tmp/tmptbuwwl8x/plugin/skills/no-ai-slop/eval.md"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": true,
+            "choice": "A",
+            "why": "\"Paid social brought in more signups, but each one cost more than twice as much\" gives me the takeaway and the tradeoff in plain words, while B's bulleted bold headers read like a template and only state the CAC numbers without interpreting them."
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": false,
+            "choice": "A",
+            "why": "\"The referral program is outperforming paid social\" and the recommendation come in the first lines in A, while B opens with email campaign numbers and ends with a stray \"Thanks,\" that trails off."
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "Referrals are beating paid social on cost.",
+          "Email engagement improved."
+        ],
+        "no-ai-slop": [],
+        "brogue": []
+      }
+    },
+    {
+      "kind": "rewrite",
+      "task": "support-analytics-reporter",
+      "persona": "Dana Whitfield, the VP of Marketing, who sponsors the quarterly reporting and is the writer's direct stakeholder; she reads Slack updates between meetings and makes budget calls from them.",
+      "context": "You see this as a Slack message from the analytics reporter in the #marketing-leads channel on Monday morning, before your 11am budget sync.",
+      "rep": 0,
+      "source": "Hi Dana! I hope you're having a great start to your week. I wanted to take a moment to share some exciting updates regarding our October marketing performance. I've finished pulling together the numbers, and there are a few key insights I think you'll find valuable.\n\nFirst, our email campaign performed well in October, with an open rate of 31.4%, up from 26.9% in September. That's a nice improvement and a positive sign for our email strategy.\n\nSecond, and perhaps most importantly, the referral program is outperforming paid social. In October, the referral program drove 1,840 signups at a CAC of $11.20, while paid social drove 2,310 signups at a CAC of $27.60. While paid social brought in more signups overall, the referral program was significantly more cost-efficient.\n\nBased on these findings, I would recommend moving $15K of the November paid social budget over to the referral program. If you could let me know your decision by Wednesday, November 19, that would be wonderful.\n\nPlease don't hesitate to reach out if you have any questions or would like to discuss this further. Thanks so much, and I look forward to continuing to drive great results together!",
+      "user": "Rewrite this draft so it reads like a person wrote it, for this reader: Dana Whitfield, the VP of Marketing, who sponsors the quarterly reporting and is the writer's direct stakeholder; she reads Slack updates between meetings and makes budget calls from them.\n\nReply with only the finished text: no preamble, no notes, no list of changes.\n\n<draft>\nHi Dana! I hope you're having a great start to your week. I wanted to take a moment to share some exciting updates regarding our October marketing performance. I've finished pulling together the numbers, and there are a few key insights I think you'll find valuable.\n\nFirst, our email campaign performed well in October, with an open rate of 31.4%, up from 26.9% in September. That's a nice improvement and a positive sign for our email strategy.\n\nSecond, and perhaps most importantly, the referral program is outperforming paid social. In October, the referral program drove 1,840 signups at a CAC of $11.20, while paid social drove 2,310 signups at a CAC of $27.60. While paid social brought in more signups overall, the referral program was significantly more cost-efficient.\n\nBased on these findings, I would recommend moving $15K of the November paid social budget over to the referral program. If you could let me know your decision by Wednesday, November 19, that would be wonderful.\n\nPlease don't hesitate to reach out if you have any questions or would like to discuss this further. Thanks so much, and I look forward to continuing to drive great results together!\n</draft>",
+      "outputs": {
+        "plain": "Hi Dana, quick October update. The numbers are in, and two things stand out.\n\nEmail did well. Open rate reached 31.4%, up from 26.9% in September.\n\nThe referral program is beating paid social on cost. In October it brought in 1,840 signups at a CAC of $11.20. Paid social brought in more signups, 2,310, but at $27.60 each, so referral is much cheaper per customer.\n\nMy recommendation is to move $15K of the November paid social budget into referral. Could you let me know by Wednesday, November 19? Happy to walk through the numbers if that helps.",
+        "no-ai-slop": "Hi Dana, October numbers are in, and two things stand out.\n\nEmail did well. The open rate was 31.4%, up from 26.9% in September.\n\nReferrals are more cost-efficient than paid social. In October, referrals brought in 1,840 signups at an $11.20 CAC. Paid social brought in 2,310 signups, but at $27.60 each.\n\nI'd recommend moving $15K of November's paid social budget to referrals. Can you let me know by November 19 whether you're good with that?\n\nHappy to talk through any of it.",
+        "brogue": "Dana, I'd move $15K of the November paid social budget to the referral program.\n\nIn October, referral drove 1,840 signups at a CAC of $11.20. Paid social drove more, 2,310, but at $27.60 per signup, about two and a half times the referral cost. Email open rate also rose to 31.4% from 26.9% in September.\n\nCan you let me know by November 19 whether you want to make the move?"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": true,
+            "choice": "B",
+            "why": "\"Dana, I'd move $15K of the November paid social budget to the referral program.\" puts the decision I need to make first, so I can act on it before my 11am budget sync, while A makes me read through the email news and the recommendation before the ask."
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": true,
+            "choice": "A",
+            "why": "\"I'd move $15K of the November paid social budget to the referral program\" leads with the decision I need before my 11am budget sync, while B buries the ask at the bottom and pads with \"Happy to talk through any of it.\""
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "so referral is much cheaper per customer"
+        ],
+        "no-ai-slop": [],
+        "brogue": []
+      }
+    },
+    {
+      "kind": "write",
+      "task": "marketing-weibo-strategist",
+      "persona": "Wang Lei, the brand director at a mid-size skincare company who hired the writer's agency to run their Weibo account, and who approves campaign budgets.",
+      "context": "You open this email in your inbox Tuesday morning, ahead of the weekly check-in, and need to decide whether to approve extra spend.",
+      "rep": 0,
+      "source": "Write an email to Wang Lei asking him to approve an extra 40,000 yuan for promoting our Double 11 aftersale post. The post (published Nov 14) hit 2.3 million reads organically and got to #14 on the hot search list for about 3 hours, but a comment thread about a 'slow refund' complaint is getting traction, with 1,800 comments, and I want to put the money into a fans-headline push by Thursday Nov 19 to bring in the positive reviews. Also mention that our Super Topic check-ins are up 22% week over week.",
+      "user": "Write an email to Wang Lei asking him to approve an extra 40,000 yuan for promoting our Double 11 aftersale post. The post (published Nov 14) hit 2.3 million reads organically and got to #14 on the hot search list for about 3 hours, but a comment thread about a 'slow refund' complaint is getting traction, with 1,800 comments, and I want to put the money into a fans-headline push by Thursday Nov 19 to bring in the positive reviews. Also mention that our Super Topic check-ins are up 22% week over week.\n\nThe reader: Wang Lei, the brand director at a mid-size skincare company who hired the writer's agency to run their Weibo account, and who approves campaign budgets.\n\nReply with only the finished text: no preamble, no notes, no list of changes.",
+      "outputs": {
+        "plain": "Subject: Approval request: 40,000 RMB for Double 11 aftersale post promotion\n\nHi Wang Lei,\n\nI'd like your approval for an additional 40,000 RMB to promote our Double 11 aftersale post, published November 14.\n\nSo far the post has:\n- Reached 2.3 million reads organically\n- Ranked #14 on the Weibo hot search list for about 3 hours\n- Driven Super Topic check-ins up 22% week over week\n\nThe comment section is also very active. A thread about slow refunds has reached 1,800 comments. I think we should respond to that thread directly rather than try to drown it out. Before the push goes live, I'd like to confirm the current refund timeline with the after-sales team so our post answers the complaint with accurate information.\n\nThe proposed plan is a paid promotion push running through Thursday, November 19. It would amplify the post and our official response on refund timing, and it would feature fan content from Super Topic members who choose to share their own experiences. All paid placements will be clearly labeled as promoted content, and we won't pay for or script reviews.\n\nI can send a line-item breakdown of the 40,000 RMB before you sign off. Could you let me know by [date] whether you can approve it? The push needs to start by Thursday to be useful.\n\nThanks,\n[Your name]\n[Agency name]",
+        "no-ai-slop": "Subject: Approval needed: 40,000 yuan for the Double 11 aftersale post\n\nHi Wang Lei,\n\nI need your approval for an extra 40,000 yuan to promote our Double 11 aftersale post.\n\nThe post went up on Nov 14 and has 2.3 million organic reads. It reached #14 on the hot search list and stayed there for about three hours.\n\nThe problem is the comment thread. A complaint about slow refunds has 1,800 comments and is gaining traction. I'd rather counter it with positive reviews than let it set the story.\n\nThe plan is a fan-headline push by Thursday, Nov 19, to bring in those positive reviews. The 40,000 yuan covers the push.\n\nOur Super Topic check-ins are up 22% week over week, so the fan base is already active and ready to respond.\n\nCould you confirm by tomorrow so we can book the push for Thursday?\n\nThanks,\n[Your name]",
+        "brogue": "Subject: Request for approval: extra 40,000 yuan for the Double 11 aftersale post\n\nHi Wang Lei,\n\nI'm writing to ask whether you can approve an extra 40,000 yuan to promote our Double 11 aftersale post.\n\nThe post went up on November 14 and has reached 2.3 million reads organically. It also reached #14 on the Weibo hot search list for about three hours.\n\nA comment thread about a slow refund complaint has reached 1,800 comments and is gaining traction. I'd like to use the extra budget for a fans-headline push by Thursday, November 19, to bring in more positive reviews.\n\nSeparately, our Super Topic check-ins are up 22% week over week.\n\nLet me know if you'd like to talk it through before you decide.\n\nBest regards,"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop",
+          "Read: /tmp/tmpqzl_cqug/plugin/skills/no-ai-slop/eval.md"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": false,
+            "choice": "B",
+            "why": "\"we won't pay for or script reviews\" and \"confirm the current refund timeline with the after-sales team\" show B handles the complaint thread honestly and keeps me safe from paid-review risk, whereas A's \"to bring in more positive reviews\" reads like burying a real complaint."
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": false,
+            "choice": "A",
+            "why": "\"Could you confirm by tomorrow so we can book the push for Thursday?\" gives me a decision deadline and says what the 40,000 yuan buys, while B only asks \"whether you can approve\" and leaves me to work out the rest."
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "on the Weibo hot search list",
+          "I think we should respond to that thread directly rather than try to drown it out.",
+          "I'd like to confirm the current refund timeline with the after-sales team",
+          "it would feature fan content from Super Topic members who choose to share their own experiences",
+          "All paid placements will be clearly labeled as promoted content, and we won't pay for or script reviews.",
+          "It would amplify the post and our official response on refund timing",
+          "I can send a line-item breakdown of the 40,000 RMB before you sign off.",
+          "The push needs to start by Thursday to be useful."
+        ],
+        "no-ai-slop": [
+          "stayed there for about three hours",
+          "Could you confirm by tomorrow so we can book the push for Thursday?",
+          "so the fan base is already active and ready to respond",
+          "The 40,000 yuan covers the push."
+        ],
+        "brogue": [
+          "on the Weibo hot search list"
+        ]
+      }
+    },
+    {
+      "kind": "rewrite",
+      "task": "marketing-weibo-strategist",
+      "persona": "Wang Lei, the brand director at a mid-size skincare company who hired the writer's agency to run their Weibo account, and who approves campaign budgets.",
+      "context": "You open this email in your inbox Tuesday morning, ahead of the weekly check-in, and need to decide whether to approve extra spend.",
+      "rep": 0,
+      "source": "Subject: Request for Additional Budget Approval for Weibo Promotion\n\nDear Wang Lei,\n\nI hope this email finds you well. I wanted to take a moment to reach out regarding our recent Weibo activity and to share some exciting updates with you, as well as to make a request that I believe could help us make the most of the current momentum.\n\nAs you may know, our Double 11 aftersale post, which was published on November 14, has performed exceptionally well. It has achieved 2.3 million organic reads and even reached #14 on the hot search list for approximately 3 hours. This is a truly wonderful result and demonstrates the strong interest our audience has in our brand.\n\nHowever, I do want to flag that a comment thread about a \"slow refund\" complaint has started to gain traction, with 1,800 comments so far. While this is something we are keeping an eye on, I think it presents an opportunity for us to take proactive steps to shape the conversation in a positive direction.\n\nTo this end, I would like to respectfully request your approval for an additional 40,000 yuan to be put toward a fans-headline push. The goal would be to bring in more positive reviews and help balance the sentiment in the comments. Ideally, we would like to launch this by Thursday, November 19, so your timely approval would be greatly appreciated.\n\nOn a separate note, I am pleased to share that our Super Topic check-ins are up 22% week over week, which is a great sign of community engagement and growth.\n\nPlease let me know if you have any questions or would like to discuss this further. I am always happy to help in any way I can.\n\nThank you so much for your time and consideration. I look forward to hearing from you.\n\nBest regards,\n[Your Name]",
+      "user": "Rewrite this draft so it reads like a person wrote it, for this reader: Wang Lei, the brand director at a mid-size skincare company who hired the writer's agency to run their Weibo account, and who approves campaign budgets.\n\nReply with only the finished text: no preamble, no notes, no list of changes.\n\n<draft>\nSubject: Request for Additional Budget Approval for Weibo Promotion\n\nDear Wang Lei,\n\nI hope this email finds you well. I wanted to take a moment to reach out regarding our recent Weibo activity and to share some exciting updates with you, as well as to make a request that I believe could help us make the most of the current momentum.\n\nAs you may know, our Double 11 aftersale post, which was published on November 14, has performed exceptionally well. It has achieved 2.3 million organic reads and even reached #14 on the hot search list for approximately 3 hours. This is a truly wonderful result and demonstrates the strong interest our audience has in our brand.\n\nHowever, I do want to flag that a comment thread about a \"slow refund\" complaint has started to gain traction, with 1,800 comments so far. While this is something we are keeping an eye on, I think it presents an opportunity for us to take proactive steps to shape the conversation in a positive direction.\n\nTo this end, I would like to respectfully request your approval for an additional 40,000 yuan to be put toward a fans-headline push. The goal would be to bring in more positive reviews and help balance the sentiment in the comments. Ideally, we would like to launch this by Thursday, November 19, so your timely approval would be greatly appreciated.\n\nOn a separate note, I am pleased to share that our Super Topic check-ins are up 22% week over week, which is a great sign of community engagement and growth.\n\nPlease let me know if you have any questions or would like to discuss this further. I am always happy to help in any way I can.\n\nThank you so much for your time and consideration. I look forward to hearing from you.\n\nBest regards,\n[Your Name]\n</draft>",
+      "outputs": {
+        "plain": "Subject: Weibo budget request: refund thread on the Double 11 post\n\nHi Wang Lei,\n\nA quick Weibo update, and one decision I need from you.\n\nThe Double 11 aftersale post (up November 14) is doing well. It has 2.3 million organic reads and reached #14 on the hot search list for about three hours.\n\nThe catch is a comment thread about slow refunds. It's at 1,800 comments and still growing. Some of those are real questions that deserve a direct answer, and I don't want the thread to run unanswered.\n\nSo I'd like your approval for an extra 40,000 yuan for a fans-headline push that puts a clear response to the refund question in front of the people asking, and gives more of our positive posts some visibility alongside it. I'd like to launch by Thursday, November 19, so a yes by then would really help.\n\nSeparately, Super Topic check-ins are up 22% week over week, which is a good sign that the community is getting more active.\n\nHappy to walk through the numbers or the plan whenever suits you.\n\nBest,\n[Your Name]",
+        "no-ai-slop": "Subject: Request for Additional Budget Approval for Weibo Promotion\n\nHi Wang Lei,\n\nOur Double 11 aftersale post went up on November 14 and has done well: 2.3 million organic reads, and it reached #14 on the hot search list for about three hours.\n\nThere's a problem alongside that. A comment thread about a \"slow refund\" complaint has 1,800 comments so far and is still growing. We're watching it, but I'd like to act on it now.\n\nI'm asking for approval of an extra 40,000 yuan for a fans-headline push, to bring more positive comments into that thread and balance the sentiment. I'd like to launch by Thursday, November 19, so a quick yes from you would help us make that date.\n\nSeparately, Super Topic check-ins are up 22% week over week.\n\nHappy to talk any of this through or answer questions.\n\nThanks,\n[Your Name]",
+        "brogue": "Subject: Request for additional Weibo budget approval\n\nDear Wang Lei,\n\nI am writing to ask for your approval of an additional 40,000 yuan for a fans-headline push on Weibo. Ideally we would launch by Thursday, November 19, so an early decision would help us.\n\nOur Double 11 aftersale post, published November 14, has done well: 2.3 million organic reads, and it reached #14 on the hot search list for about 3 hours.\n\nA comment thread about a \"slow refund\" complaint has 1,800 comments so far. The push would aim to bring in more positive comments and balance the sentiment in that thread.\n\nSeparately, Super Topic check-ins are up 22% week over week.\n\nThank you for considering this. If you would like to talk it through, I am happy to do so.\n\nBest regards,"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue",
+          "Bash: mkdir -p /tmp/claude-0/-tmp-tmpufhs3fvy-work/6c08f7cc-37a1-4ceb-88d9-6799b7687b6e/scratchpad/brogue && cd $_ && cat > request.txt <<'EOF'\nRewrite the draft email for Wang Lei, brand director at a mid-size skincare company who hired the writer's agency to run their Weibo account and approves campaign budgets. Reply with only the finished text.\n\nFacts in the draft (must all be kept):\n- Subject: request for additional budget approval for Weibo promotion\n- Double 11 aftersale post, published November 14\n- 2.3 million organic reads\n- reached #14 on the hot search list for approximately 3 hours\n- comment thread about a \"slow refund\" complaint, 1,800 comments so far\n- request: additional 40,000 yuan for a fans-headline push\n- goal: more positive reviews, balance sentiment in the comments\n- ideally launch by Thursday, November 19; timely approval appreciated\n- Super Topic check-ins up 22% week over week\nEOF\ncat > draft.txt <<'EOF'\nSubject: Request for additional Weibo budget approval\n\nDear Wang Lei,\n\nI am writing to ask for your approval of an additional 40,000 yuan for a fans-headline push on Weibo. Ideally we would launch by Thursday, November 19, so an early decision would help us.\n\nOur Double 11 aftersale post, published November 14, has done well: 2.3 million organic reads, and it reached #14 on the hot search list for about 3 hours.\n\nA comment thread about a \"slow refund\" complaint has 1,800 comments so far. The push would aim to bring in more positive comments and balance the sentiment in that thread.\n\nSeparately, Super Topic check-ins are up 22% week over week.\n\nThank you for considering this. If you would like to talk it through, I am happy to do so.\n\nBest regards,\nEOF\npython /tmp/tmpufhs3fvy/plugin/skills/brogue/scripts/ground.py request.txt draft.txt"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": false,
+            "choice": "A",
+            "why": "A's \"Some of those are real questions that deserve a direct answer\" tells me the push is a real response to customers, whereas B's \"balance the sentiment in that thread\" reads as burying complaints with positive comments, which I wouldn't approve for my brand."
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": false,
+            "choice": "B",
+            "why": "\"There's a problem alongside that. A comment thread about a 'slow refund' complaint has 1,800 comments so far and is still growing.\" tells me up front why the 40,000 yuan is needed and that time matters, whereas A buries the complaint after the good news and frames it blandly."
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "It's at 1,800 comments and still growing.",
+          "Some of those are real questions that deserve a direct answer",
+          "puts a clear response to the refund question in front of the people asking",
+          "gives more of our positive posts some visibility alongside it"
+        ],
+        "no-ai-slop": [
+          "is still growing",
+          "I'd like to act on it now"
+        ],
+        "brogue": []
+      }
+    },
+    {
+      "kind": "write",
+      "task": "paid-media-auditor",
+      "persona": "Dana Whitfield, the marketing director at a mid-size outdoor gear retailer who hired the auditor and approves the budget, reading the message between meetings.",
+      "context": "You open this email from the paid media auditor the morning after the audit kickoff call, and it tells you what they found early and what they need from you before the full report.",
+      "rep": 0,
+      "source": "Write an email to Dana Whitfield with the early audit findings on their Google Ads and Meta accounts and ask her for access. Facts: Google Ads conversion tracking is counting both the purchase event and the thank-you page view, so reported conversions are roughly 2x real; Meta pixel has no deduplication with the Conversions API; about $18,400 of the $62,000 monthly Google spend goes to branded search and Performance Max with no brand exclusions; I still need Microsoft Ads access and GA4 admin rights by Friday, Nov 21; full report due Dec 5.",
+      "user": "Write an email to Dana Whitfield with the early audit findings on their Google Ads and Meta accounts and ask her for access. Facts: Google Ads conversion tracking is counting both the purchase event and the thank-you page view, so reported conversions are roughly 2x real; Meta pixel has no deduplication with the Conversions API; about $18,400 of the $62,000 monthly Google spend goes to branded search and Performance Max with no brand exclusions; I still need Microsoft Ads access and GA4 admin rights by Friday, Nov 21; full report due Dec 5.\n\nThe reader: Dana Whitfield, the marketing director at a mid-size outdoor gear retailer who hired the auditor and approves the budget, reading the message between meetings.\n\nReply with only the finished text: no preamble, no notes, no list of changes.",
+      "outputs": {
+        "plain": "Subject: Google Ads and Meta audit: early findings, and access needed by Fri, Nov 21\n\nHi Dana,\n\nEarly findings from the audit are below, along with the access I need by Friday, Nov 21. The full report is due Dec 5.\n\n**Google Ads: conversions are overcounted by about 2x**\nConversion tracking is counting both the purchase event and the thank-you page view, so reported conversions are roughly double the real number. Any ROAS or CPA figure built on them is overstated, so this should be fixed before we make budget decisions from those numbers.\n\n**Google Ads: about $18,400 of the $62,000 monthly spend is going to branded search and Performance Max with no brand exclusions**\nThat's roughly 30% of spend. Some of it is likely capturing people who already search for us by name, which would have converted anyway. Adding brand exclusions should show how much of that spend is incremental.\n\n**Meta: pixel and Conversions API are not deduplicated**\nBoth are sending the same events without a shared event ID, so Meta may be counting single purchases more than once. This inflates Meta-reported results in the same way as the Google issue.\n\n**Access I need by Friday, Nov 21**\n1. Microsoft Ads: access to the account, so I can check it against the same conversion and spend issues.\n2. GA4: Admin rights, so I can verify the event setup and compare it against what the ad platforms report.\n\nIf you can send these by Friday, the full report on Dec 5 will cover all three platforms. If access is a problem, let me know and I'll tell you what gets delayed.\n\nThanks,\n[Your name]",
+        "no-ai-slop": "Subject: Early audit findings on Google Ads and Meta, plus access needed by Friday\n\nHi Dana,\n\nThe early audit findings are in. Two of them affect the numbers you use for budget decisions.\n\n**Google Ads is overcounting conversions.** Conversion tracking fires on both the purchase event and the thank-you page view, so reported conversions are roughly double the real count. Any CPA or ROAS built on those numbers looks better than it is.\n\n**The Meta pixel and Conversions API aren't deduplicated.** Both send the same purchases with no shared event ID, so Meta can credit a single sale twice.\n\n**About $18,400 of the $62,000 monthly Google spend goes to branded search and Performance Max, with no brand exclusions.** Some of that money probably reaches people who were already searching for you. I want to check the search term data before recommending any cuts.\n\nUntil the tracking is fixed, I would treat current Google and Meta return numbers as overstated.\n\nTo finish the audit, I need the following by Friday, November 21:\n\n- Access to the Microsoft Ads account\n- GA4 admin rights\n\nIf someone else handles account admin, tell me who and I'll contact them directly. The full report is due December 5.\n\nThanks,\n[Your name]",
+        "brogue": "Subject: Early audit findings on Google Ads and Meta, and access I need\n\nHi Dana,\n\nThe early findings are in. Two of them mean the numbers you're seeing overstate results.\n\nGoogle Ads conversion tracking counts both the purchase event and the thank-you page view, so reported conversions are roughly 2x the real number. Meta's pixel is not deduplicated against the Conversions API, so the same purchase can be counted twice.\n\nOn spend, about $18,400 of the $62,000 monthly Google budget (roughly 30%) goes to branded search and Performance Max, and neither has brand exclusions. Without them, that spend can overlap with searches people would have made anyway.\n\nTo finish the audit, I need two things by Friday, Nov 21: access to the Microsoft Ads account, and GA4 admin rights. Could you help me get both? The full report is due Dec 5.\n\nThanks,"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": false,
+            "choice": "B",
+            "why": "\"Any ROAS or CPA figure built on them is overstated, so this should be fixed before we make budget decisions\" plus the numbered access list and \"let me know and I'll tell you what gets delayed\" give me the implication and the ask I can act on between meetings, whereas A buries the access request in "
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": false,
+            "choice": "A",
+            "why": "\"Until the tracking is fixed, I would treat current Google and Meta return numbers as overstated\" plus the bulleted asks and \"If someone else handles account admin, tell me who\" let me act between meetings, whereas B leaves me to infer the takeaway and the delegation path."
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "Both are sending the same events without a shared event ID",
+          "Meta may be counting single purchases more than once",
+          "Some of it is likely capturing people who already search for us by name, which would have converted anyway",
+          "Microsoft Ads: access to the account, so I can check it against the same conversion and spend issues",
+          "GA4: Admin rights, so I can verify the event setup and compare it against what the ad platforms report",
+          "If access is a problem, let me know and I'll tell you what gets delayed",
+          "the full report on Dec 5 will cover all three platforms"
+        ],
+        "no-ai-slop": [
+          "Both send the same purchases with no shared event ID",
+          "Any CPA or ROAS built on those numbers looks better than it is.",
+          "Some of that money probably reaches people who were already searching for you.",
+          "I want to check the search term data before recommending any cuts.",
+          "If someone else handles account admin, tell me who and I'll contact them directly."
+        ],
+        "brogue": [
+          "so the same purchase can be counted twice",
+          "Without them, that spend can overlap with searches people would have made anyway."
+        ]
+      }
+    },
+    {
+      "kind": "rewrite",
+      "task": "paid-media-auditor",
+      "persona": "Dana Whitfield, the marketing director at a mid-size outdoor gear retailer who hired the auditor and approves the budget, reading the message between meetings.",
+      "context": "You open this email from the paid media auditor the morning after the audit kickoff call, and it tells you what they found early and what they need from you before the full report.",
+      "rep": 0,
+      "source": "Subject: Initial Findings from Your Paid Media Audit and Next Steps\n\nHi Dana,\n\nI hope this email finds you well! Thank you again for taking the time to meet with me yesterday. I really enjoyed our kickoff conversation, and I wanted to reach out to share a few early observations from the audit as well as outline what I need from you to keep things moving smoothly.\n\nAs I begin to dig into the accounts, a few important items have already come to light that I think are worth flagging right away. First, in your Google Ads account, conversion tracking appears to be counting both the purchase event and the thank-you page view. This means that your reported conversions are likely about 2x the real number, which could be significantly impacting how performance is being evaluated and how bidding decisions are being made.\n\nSecond, on the Meta side, the pixel does not have deduplication set up with the Conversions API. This is something that can lead to inflated or inaccurate reporting.\n\nThird, approximately $18,400 of your $62,000 monthly Google spend is going to branded search and Performance Max, with no brand exclusions in place. This is an area where we may be able to find some meaningful efficiency.\n\nIn order to continue with the audit, I would need access to Microsoft Ads as well as GA4 admin rights. If you could please provide these by Friday, November 21, that would be extremely helpful. I am on track to deliver the full report by December 5.\n\nPlease don't hesitate to reach out if you have any questions or if there's anything I can do to help. I look forward to hearing from you!\n\nBest regards,\n[Your Name]",
+      "user": "Rewrite this draft so it reads like a person wrote it, for this reader: Dana Whitfield, the marketing director at a mid-size outdoor gear retailer who hired the auditor and approves the budget, reading the message between meetings.\n\nReply with only the finished text: no preamble, no notes, no list of changes.\n\n<draft>\nSubject: Initial Findings from Your Paid Media Audit and Next Steps\n\nHi Dana,\n\nI hope this email finds you well! Thank you again for taking the time to meet with me yesterday. I really enjoyed our kickoff conversation, and I wanted to reach out to share a few early observations from the audit as well as outline what I need from you to keep things moving smoothly.\n\nAs I begin to dig into the accounts, a few important items have already come to light that I think are worth flagging right away. First, in your Google Ads account, conversion tracking appears to be counting both the purchase event and the thank-you page view. This means that your reported conversions are likely about 2x the real number, which could be significantly impacting how performance is being evaluated and how bidding decisions are being made.\n\nSecond, on the Meta side, the pixel does not have deduplication set up with the Conversions API. This is something that can lead to inflated or inaccurate reporting.\n\nThird, approximately $18,400 of your $62,000 monthly Google spend is going to branded search and Performance Max, with no brand exclusions in place. This is an area where we may be able to find some meaningful efficiency.\n\nIn order to continue with the audit, I would need access to Microsoft Ads as well as GA4 admin rights. If you could please provide these by Friday, November 21, that would be extremely helpful. I am on track to deliver the full report by December 5.\n\nPlease don't hesitate to reach out if you have any questions or if there's anything I can do to help. I look forward to hearing from you!\n\nBest regards,\n[Your Name]\n</draft>",
+      "outputs": {
+        "plain": "Subject: Paid media audit: first findings and two access requests\n\nHi Dana,\n\nThanks for the kickoff conversation yesterday. I've started going through the accounts and have three early findings you should see now rather than in the final report.\n\n1. **Google Ads conversions look double-counted.** Both the purchase event and the thank-you page view are counting as conversions, so reported conversions are probably close to twice the real number. That skews how performance is judged and how bids are set, so it's the first thing I'd fix.\n2. **The Meta pixel isn't deduplicated against the Conversions API.** Without deduplication, Meta can over-report conversions, so its numbers should be read with some caution until that's fixed.\n3. **About $18,400 of the $62,000 monthly Google spend goes to branded search and Performance Max, with no brand exclusions.** Branded terms often capture people who would have found you anyway, so there's likely real efficiency to recover there.\n\nTo keep the audit moving, I need access to Microsoft Ads and GA4 admin rights. If you can send those by November 21, I'll stay on track to deliver the full report on December 5.\n\nHappy to walk through any of this if it's useful.\n\nThanks,\n[Your Name]",
+        "no-ai-slop": "Subject: Paid media audit: early findings and what I need from you\n\nHi Dana,\n\nThanks for meeting with me yesterday. The kickoff was useful, and I have a few early findings to share, along with what I need from you to keep the audit moving.\n\nThree things stood out right away:\n\nFirst, your Google Ads conversion tracking appears to count both the purchase event and the thank-you page view. That likely doubles your reported conversions, which could distort how performance is judged and how bids are set.\n\nSecond, the Meta pixel isn't deduplicated against the Conversions API, so Meta may be counting some conversions twice.\n\nThird, about $18,400 of your $62,000 monthly Google spend goes to branded search and Performance Max, and neither has brand exclusions. That's the first place I'd look for savings.\n\nTo keep going, I need access to Microsoft Ads and GA4 admin rights by Friday, November 21. The full report is due December 5.\n\nThanks,\n[Your Name]",
+        "brogue": "Subject: Early findings from the paid media audit and next steps\n\nHi Dana,\n\nThanks for meeting yesterday. Here are a few early findings from the audit, and what I need from you to keep it on schedule.\n\nThree things stood out in the first pass:\n\n- Google Ads conversion tracking counts both the purchase event and the thank-you page view. Reported conversions are likely about twice the real number, which affects how performance is judged and how bids are set.\n- The Meta pixel isn't deduplicated against the Conversions API, which can inflate or distort reported results.\n- About $18,400 of the $62,000 monthly Google spend (roughly 30%) goes to branded search and Performance Max, with no brand exclusions in place. There may be meaningful efficiency to find there.\n\nTo continue, I need access to Microsoft Ads and GA4 admin rights by Friday, November 21. I'm on track to deliver the full report by December 5.\n\nLet me know if you have questions, or if there's anything I can do to help.\n\nThanks,"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": true,
+            "choice": "B",
+            "why": "\"Friday, November 21\" and \"(roughly 30%)\" give me the deadline day and the scale at a glance, and the plain bullets let me skim between meetings, whereas A's \"[Your Name]\"-style padding and extra hedged commentary like \"Happy to walk through any of this\" slow me down."
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": true,
+            "choice": "A",
+            "why": "Version A's \"Reported conversions are likely about twice the real number, which affects how performance is judged and how bids are set\" and \"(roughly 30%)\" give me the stakes and scale at a glance, while B leaves a placeholder \"[Your Name]\" and the vaguer \"Meta may be counting some conversions twice"
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "so it's the first thing I'd fix",
+          "Branded terms often capture people who would have found you anyway",
+          "so its numbers should be read with some caution until that's fixed"
+        ],
+        "no-ai-slop": [
+          "so Meta may be counting some conversions twice",
+          "That's the first place I'd look for savings."
+        ],
+        "brogue": []
+      }
+    },
+    {
+      "kind": "write",
+      "task": "healthcare-innovation-strategist",
+      "persona": "A seed-stage partner at a healthcare venture fund who met the founder once at a conference and has agreed to review a short follow-up before deciding whether to schedule a full pitch meeting.",
+      "context": "You open this email in your inbox between partner meetings, with the subject line naming a remote-monitoring startup, and decide whether to forward it to your associate for diligence.",
+      "rep": 0,
+      "source": "Write a follow-up email from my client, the founder of CardioLoop, to Dana Whitfield at Meridian Health Ventures. Facts: CardioLoop does remote monitoring for heart failure patients; 90-day pilot at St. Alban's Health System with 212 patients showed a 27% drop in 30-day readmissions; we're raising a $4M seed round and have $1.6M committed; we'd like a 30-minute meeting the week of December 7.",
+      "user": "Write a follow-up email from my client, the founder of CardioLoop, to Dana Whitfield at Meridian Health Ventures. Facts: CardioLoop does remote monitoring for heart failure patients; 90-day pilot at St. Alban's Health System with 212 patients showed a 27% drop in 30-day readmissions; we're raising a $4M seed round and have $1.6M committed; we'd like a 30-minute meeting the week of December 7.\n\nThe reader: A seed-stage partner at a healthcare venture fund who met the founder once at a conference and has agreed to review a short follow-up before deciding whether to schedule a full pitch meeting.\n\nReply with only the finished text: no preamble, no notes, no list of changes.",
+      "outputs": {
+        "plain": "Subject: Following up: CardioLoop and a December meeting\n\nDear Dana,\n\nThank you for taking the time to speak with me at the conference. I appreciated the conversation, and I'd like to follow up with a few specifics before you decide whether a full pitch meeting makes sense.\n\nCardioLoop provides remote monitoring for heart failure patients. In a 90-day pilot at St. Alban's Health System involving 212 patients, we saw a 27% reduction in 30-day readmissions.\n\nWe are raising a $4M seed round and have $1.6M committed so far.\n\nIf this fits Meridian Health Ventures' focus, I would welcome a 30-minute meeting the week of December 7. I'm glad to work around your schedule and can share a short deck beforehand.\n\nThank you for your consideration.\n\nBest regards,\n\n[Founder name]\nCardioLoop\n[Phone] | [Email]",
+        "no-ai-slop": "Subject: CardioLoop follow-up and a 30-minute call\n\nDana,\n\nThanks for talking with me at the conference. As promised, here's a short follow-up.\n\nCardioLoop runs remote monitoring for heart failure patients. In a 90-day pilot at St. Alban's Health System with 212 patients, 30-day readmissions fell 27%.\n\nWe're raising a $4M seed round and have $1.6M committed so far.\n\nWould you have 30 minutes the week of December 7? I'd like to walk you through the pilot data and the round. I can send the pilot results ahead of time if that helps you decide whether a full pitch meeting makes sense.\n\nThanks,\n[Founder name]\nCardioLoop",
+        "brogue": "Subject: Follow-up on CardioLoop\n\nDana,\n\nThank you for agreeing to look at this before we talk further. Since we met at the conference, here is where CardioLoop stands.\n\nCardioLoop does remote monitoring for heart failure patients. In a 90-day pilot at St. Alban's Health System with 212 patients, 30-day readmissions dropped 27%.\n\nWe are raising a $4M seed round and have $1.6M committed.\n\nWould you be open to a 30-minute meeting the week of December 7?\n\nBest regards,"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": true,
+            "choice": "A",
+            "why": "A's \"CardioLoop does remote monitoring for heart failure patients. In a 90-day pilot at St. Alban's Health System with 212 patients, 30-day readmissions dropped 27%\" gets straight to the data I need, while B's \"I appreciated the conversation\" and \"Thank you for your consideration\" read as boilerplat"
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": false,
+            "choice": "A",
+            "why": "\"I can send the pilot results ahead of time if that helps you decide whether a full pitch meeting makes sense\" shows the founder understands my actual decision and offers a low-effort way to make it, whereas B's \"Thank you for agreeing to look at this before we talk further\" is stiffer and gives me "
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "Thank you for taking the time to speak with me at the conference.",
+          "I appreciated the conversation",
+          "before you decide whether a full pitch meeting makes sense",
+          "can share a short deck beforehand",
+          "I'm glad to work around your schedule"
+        ],
+        "no-ai-slop": [
+          "Thanks for talking with me at the conference.",
+          "As promised, here's a short follow-up.",
+          "I can send the pilot results ahead of time",
+          "whether a full pitch meeting makes sense"
+        ],
+        "brogue": [
+          "Thank you for agreeing to look at this before we talk further.",
+          "Since we met at the conference"
+        ]
+      }
+    },
+    {
+      "kind": "rewrite",
+      "task": "healthcare-innovation-strategist",
+      "persona": "A seed-stage partner at a healthcare venture fund who met the founder once at a conference and has agreed to review a short follow-up before deciding whether to schedule a full pitch meeting.",
+      "context": "You open this email in your inbox between partner meetings, with the subject line naming a remote-monitoring startup, and decide whether to forward it to your associate for diligence.",
+      "rep": 0,
+      "source": "Subject: Following up from our conversation: CardioLoop\n\nDear Dana,\n\nI hope this email finds you well. It was a real pleasure meeting you at the conference last month, and I wanted to take a moment to follow up and share a bit more about what we are building at CardioLoop. In today's rapidly evolving healthcare landscape, I believe our work may be of interest to you.\n\nCardioLoop is a remote monitoring platform designed to support heart failure patients. We recently completed a 90-day pilot at St. Alban's Health System with 212 patients, and I am pleased to share that the pilot demonstrated a 27% reduction in 30-day readmissions. We believe these results highlight the real potential of our approach to improve outcomes and reduce costs.\n\nWe are currently raising a $4M seed round, and we have already secured $1.6M in commitments. Given your expertise in this space, I would love the opportunity to connect and share more details about our vision.\n\nWould you be available for a 30-minute meeting during the week of December 7? Please let me know what works best for your schedule, and I would be happy to coordinate accordingly.\n\nThank you so much for your time and consideration. I look forward to hearing from you soon.\n\nBest regards,\n[Founder Name]",
+      "user": "Rewrite this draft so it reads like a person wrote it, for this reader: A seed-stage partner at a healthcare venture fund who met the founder once at a conference and has agreed to review a short follow-up before deciding whether to schedule a full pitch meeting.\n\nReply with only the finished text: no preamble, no notes, no list of changes.\n\n<draft>\nSubject: Following up from our conversation: CardioLoop\n\nDear Dana,\n\nI hope this email finds you well. It was a real pleasure meeting you at the conference last month, and I wanted to take a moment to follow up and share a bit more about what we are building at CardioLoop. In today's rapidly evolving healthcare landscape, I believe our work may be of interest to you.\n\nCardioLoop is a remote monitoring platform designed to support heart failure patients. We recently completed a 90-day pilot at St. Alban's Health System with 212 patients, and I am pleased to share that the pilot demonstrated a 27% reduction in 30-day readmissions. We believe these results highlight the real potential of our approach to improve outcomes and reduce costs.\n\nWe are currently raising a $4M seed round, and we have already secured $1.6M in commitments. Given your expertise in this space, I would love the opportunity to connect and share more details about our vision.\n\nWould you be available for a 30-minute meeting during the week of December 7? Please let me know what works best for your schedule, and I would be happy to coordinate accordingly.\n\nThank you so much for your time and consideration. I look forward to hearing from you soon.\n\nBest regards,\n[Founder Name]\n</draft>",
+      "outputs": {
+        "plain": "Subject: Following up from the conference: CardioLoop\n\nHi Dana,\n\nIt was good meeting you at the conference last month. I wanted to send a short follow-up on CardioLoop.\n\nWe make remote monitoring for heart failure patients. We ran a 90-day pilot with 212 patients at St. Alban's Health System, and 30-day readmissions dropped 27%.\n\nWe're raising a $4M seed round and have $1.6M committed so far. Given your work in this space, I'd like to walk you through the details and our plans.\n\nWould a 30-minute call the week of December 7 work for you? Let me know what fits your calendar and I'll make it work.\n\nThanks for reading. I appreciate your time.\n\nBest,\n[Founder Name]",
+        "no-ai-slop": "Subject: Following up from our conversation: CardioLoop\n\nHi Dana,\n\nIt was good to meet you at the conference last month. I wanted to follow up with more on CardioLoop.\n\nWe make a remote monitoring platform for heart failure patients. We just finished a 90-day pilot at St. Alban's Health System with 212 patients, and 30-day readmissions dropped 27%. We think that points to better outcomes and lower costs, and I'd like to walk you through the rest.\n\nWe're raising a $4M seed round and have $1.6M in commitments so far. Given your work in this space, I'd like to connect and share more about where we're headed.\n\nWould you have 30 minutes the week of December 7? Tell me what works for you and I'll make it fit.\n\nThanks for your time.\n\nBest,\n[Founder Name]",
+        "brogue": "Subject: Following up from the conference: CardioLoop\n\nHi Dana,\n\nIt was good to meet you at the conference last month. I'm following up with a bit more about CardioLoop, a remote monitoring platform for heart failure patients.\n\nWe ran a 90-day pilot at St. Alban's Health System with 212 patients. Over that period, 30-day readmissions fell by 27%.\n\nWe're raising a $4M seed round and have $1.6M in commitments so far.\n\nWould you have 30 minutes the week of December 7 for a call? If another time works better, let me know.\n\nBest,"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop",
+          "Read: /tmp/tmp1ekiobv9/plugin/skills/no-ai-slop/eval.md"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue",
+          "Bash: S=/tmp/claude-0/-tmp-tmpk2ok6n6m-work/7baf3a31-81b3-41f4-8b55-444f63c285cb/scratchpad\ncat > $S/request.txt <<'EOF'\nRewrite this draft so it reads like a person wrote it, for this reader: A seed-stage partner at a healthcare venture fund who met the founder once at a conference and has agreed to review a short follow-up before deciding whether to schedule a full pitch meeting.\n\nDraft:\nSubject: Following up from our conversation: CardioLoop\n\nDear Dana,\n\nI hope this email finds you well. It was a real pleasure meeting you at the conference last month, and I wanted to take a moment to follow up and share a bit more about what we are building at CardioLoop. In today's rapidly evolving healthcare landscape, I believe our work may be of interest to you.\n\nCardioLoop is a remote monitoring platform designed to support heart failure patients. We recently completed a 90-day pilot at St. Alban's Health System with 212 patients, and I am pleased to share that the pilot demonstrated a 27% reduction in 30-day readmissions. We believe these results highlight the real potential of our approach to improve outcomes and reduce costs.\n\nWe are currently raising a $4M seed round, and we have already secured $1.6M in commitments. Given your expertise in this space, I would love the opportunity to connect and share more details about our vision.\n\nWould you be available for a 30-minute meeting during the week of December 7? Please let me know what works best for your schedule, and I would be happy to coordinate accordingly.\n\nThank you so much for your time and consideration. I look forward to hearing from you soon.\n\nBest regards,\n[Founder Name]\nEOF\ncat > $S/draft.txt <<'EOF'\nSubject: Following up from the conference: CardioLoop\n\nHi Dana,\n\nIt was good to meet you at the conference last month. I'm following up with a bit more about CardioLoop, a remote monitoring platform for heart failure patients.\n\nWe ran a 90-day pilot at St. Alban's Health System with 212 patients. Over that period, 30-day readmissions fell by 27%.\n\nWe're raising a $4M seed round and have $1.6M in commitments so far.\n\nWould you have 30 minutes the week of December 7 for a call? If another time works better, let me know.\n\nBest,\nEOF\npython /tmp/tmpk2ok6n6m/plugin/skills/brogue/scripts/ground.py $S/request.txt $S/draft.txt"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": true,
+            "choice": "B",
+            "why": "B's \"If another time works better, let me know.\" and lean structure get to the ask without A's \"Thanks for reading. I appreciate your time\" and \"I'll make it work,\" which read as eager and padded for a busy partner."
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": true,
+            "choice": "A",
+            "why": "A gets straight to \"30-day readmissions fell by 27%\" and the ask, while B pads with \"Given your work in this space, I'd like to connect and share more about where we're headed\" and leaves a literal \"[Founder Name]\" placeholder in the signature."
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "I'll make it work",
+          "walk you through the details and our plans"
+        ],
+        "no-ai-slop": [],
+        "brogue": []
+      }
+    },
+    {
+      "kind": "write",
+      "task": "project-management-experiment-tracker",
+      "persona": "Dana Whitfield, the VP of Product who sponsors the checkout team and has to approve any change to the live checkout flow; she works with the writer weekly but does not read experiment dashboards.",
+      "context": "You see this as a Slack message in the #checkout-growth channel on Tuesday morning, when you are deciding whether the one-page checkout goes to all users this week.",
+      "rep": 0,
+      "source": "Write a Slack message to Dana recommending we ship the one-page checkout to 100% of users. The test ran Oct 27 to Nov 14 with 48,200 users split evenly; conversion went from 3.1% to 3.4% (+9.7% relative, p=0.01), and refund rate was flat at 1.2%. I want her sign-off by Thursday so engineering can roll out Monday Nov 23.",
+      "user": "Write a Slack message to Dana recommending we ship the one-page checkout to 100% of users. The test ran Oct 27 to Nov 14 with 48,200 users split evenly; conversion went from 3.1% to 3.4% (+9.7% relative, p=0.01), and refund rate was flat at 1.2%. I want her sign-off by Thursday so engineering can roll out Monday Nov 23.\n\nThe reader: Dana Whitfield, the VP of Product who sponsors the checkout team and has to approve any change to the live checkout flow; she works with the writer weekly but does not read experiment dashboards.\n\nReply with only the finished text: no preamble, no notes, no list of changes.",
+      "outputs": {
+        "plain": "Hi Dana, I'd like your sign-off to roll the one-page checkout out to 100% of users, with engineering starting the rollout Monday, Nov 23.\n\nWe ran it as a controlled test from Oct 27 to Nov 14, with 48,200 users split evenly between the current checkout and the one-page version.\n\n- **Conversion:** 3.1% → 3.4%, a 9.7% relative lift (+0.3 points). This is statistically significant (p = 0.01).\n- **Refunds:** flat at 1.2%, so the extra conversions aren't coming with more returns.\n\nCan you approve by Thursday, Nov 19? That gives engineering time to schedule the Monday rollout. I'm happy to walk you through the details in 10 minutes if that helps.",
+        "no-ai-slop": "Dana, I'd like to ship the one-page checkout to 100% of users. Can you sign off by Thursday? If you do, engineering can roll it out Monday, Nov 23.\n\nThe test ran Oct 27 to Nov 14 and split 48,200 users evenly between the current checkout and the one-page version. Conversion rose from 3.1% to 3.4%, a 9.7% relative lift, with p=0.01. Refunds stayed flat at 1.2%, so the higher conversion didn't come with more returns.\n\nIf you have questions before Thursday, send them my way and I'll answer them.",
+        "brogue": "Dana, I recommend we ship the one-page checkout to 100% of users.\n\nThe test ran Oct 27 to Nov 14 with 48,200 users, split evenly between the two versions. Conversion went from 3.1% to 3.4%, a 9.7% relative lift (p=0.01). The refund rate stayed flat at 1.2%.\n\nI need your sign-off by Thursday so engineering can roll out Monday, Nov 23."
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": false,
+            "choice": "B",
+            "why": "\"Can you approve by Thursday, Nov 19?\" plus \"the extra conversions aren't coming with more returns\" gives me the exact deadline and the meaning of the refund number without needing to read a dashboard, whereas A's \"I need your sign-off by Thursday\" leaves the date vague and its stats are bare."
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": false,
+            "choice": "A",
+            "why": "\"Refunds stayed flat at 1.2%, so the higher conversion didn't come with more returns\" tells me what the refund number means for my decision, and \"Can you sign off by Thursday? If you do, engineering can roll it out Monday, Nov 23\" asks me plainly and ties my approval to the rollout date."
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "Thursday, Nov 19",
+          "controlled test",
+          "between the current checkout and the one-page version",
+          "so the extra conversions aren't coming with more returns",
+          "That gives engineering time to schedule the Monday rollout",
+          "I'm happy to walk you through the details in 10 minutes"
+        ],
+        "no-ai-slop": [
+          "between the current checkout and the one-page version",
+          "so the higher conversion didn't come with more returns"
+        ],
+        "brogue": []
+      }
+    },
+    {
+      "kind": "rewrite",
+      "task": "project-management-experiment-tracker",
+      "persona": "Dana Whitfield, the VP of Product who sponsors the checkout team and has to approve any change to the live checkout flow; she works with the writer weekly but does not read experiment dashboards.",
+      "context": "You see this as a Slack message in the #checkout-growth channel on Tuesday morning, when you are deciding whether the one-page checkout goes to all users this week.",
+      "rep": 0,
+      "source": "Hi Dana,\n\nI hope your week is off to a great start! I wanted to take a moment to share an update on the one-page checkout experiment and to let you know where things stand.\n\nAs you may remember, we ran the test from October 27 to November 14, with 48,200 users split evenly between the existing checkout and the new one-page version. I'm pleased to share that the results are quite encouraging. Conversion rose from 3.1% to 3.4%, which is a relative lift of 9.7%, and the result is statistically significant (p=0.01). Importantly, the refund rate stayed flat at 1.2%, so it doesn't look like we're trading quality for volume.\n\nBased on these findings, I would like to recommend that we ship the one-page checkout to 100% of users. If you're able to provide your sign-off by Thursday, engineering would be able to begin the rollout on Monday, November 23.\n\nPlease let me know if you have any questions or would like to discuss any of this further. I'm always happy to hop on a call!\n\nThank you so much for your time and consideration.",
+      "user": "Rewrite this draft so it reads like a person wrote it, for this reader: Dana Whitfield, the VP of Product who sponsors the checkout team and has to approve any change to the live checkout flow; she works with the writer weekly but does not read experiment dashboards.\n\nReply with only the finished text: no preamble, no notes, no list of changes.\n\n<draft>\nHi Dana,\n\nI hope your week is off to a great start! I wanted to take a moment to share an update on the one-page checkout experiment and to let you know where things stand.\n\nAs you may remember, we ran the test from October 27 to November 14, with 48,200 users split evenly between the existing checkout and the new one-page version. I'm pleased to share that the results are quite encouraging. Conversion rose from 3.1% to 3.4%, which is a relative lift of 9.7%, and the result is statistically significant (p=0.01). Importantly, the refund rate stayed flat at 1.2%, so it doesn't look like we're trading quality for volume.\n\nBased on these findings, I would like to recommend that we ship the one-page checkout to 100% of users. If you're able to provide your sign-off by Thursday, engineering would be able to begin the rollout on Monday, November 23.\n\nPlease let me know if you have any questions or would like to discuss any of this further. I'm always happy to hop on a call!\n\nThank you so much for your time and consideration.\n</draft>",
+      "outputs": {
+        "plain": "Hi Dana,\n\nFollowing up on the one-page checkout test. It ran October 27 to November 14 with 48,200 users split evenly between the current checkout and the one-page version. Conversion went from 3.1% to 3.4%, about a 10% relative lift, and the difference is statistically significant (p=0.01). Refunds held steady at 1.2%, so the extra conversions aren't coming at the cost of quality.\n\nI'd like to recommend we roll the one-page checkout out to all users. If you can sign off by Thursday, November 19, engineering can start the rollout Monday, November 23.\n\nHappy to walk through anything or set up a quick call if that's easier.\n\nThanks,",
+        "no-ai-slop": "Hi Dana,\n\nQuick update on the one-page checkout test. We ran it from October 27 to November 14, splitting 48,200 users evenly between the current checkout and the one-page version. Conversion went from 3.1% to 3.4%, a 9.7% relative lift, and the difference is statistically significant (p=0.01). Refunds held flat at 1.2%, so we're not trading quality for volume.\n\nI recommend we ship the one-page checkout to 100% of users. If you can sign off by Thursday, engineering can start the rollout on Monday, November 23.\n\nHappy to walk through any of it before then.",
+        "brogue": "Hi Dana,\n\nI'd like to ship the one-page checkout to all users, and the test results support it.\n\nFrom October 27 to November 14, 48,200 users were split evenly between the current checkout and the one-page version. Conversion went from 3.1% to 3.4%, a relative lift of 9.7%, and the result is statistically significant (p=0.01). The refund rate held flat at 1.2%, so the higher conversion didn't come at the cost of quality.\n\nIf you can sign off by Thursday, engineering can start the rollout on Monday, November 23.\n\nI'm always happy to hop on a call if you'd like to talk it through.\n\nThanks,"
+      },
+      "tools": {
+        "plain": [],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue",
+          "Bash: S=/tmp/claude-0/-tmp-tmpclvavvec-work/20e32022-68b8-439d-9c40-1f484ebb2c3a/scratchpad\ncat > \"$S/request.txt\" <<'EOF'\nRewrite the draft for Dana Whitfield, VP of Product, who sponsors the checkout team and must approve changes to the live checkout flow. She works with the writer weekly but does not read experiment dashboards. Return only the finished text.\n\nFacts from the draft:\n- One-page checkout experiment ran October 27 to November 14.\n- 48,200 users, split evenly between existing checkout and new one-page version.\n- Conversion rose from 3.1% to 3.4%, relative lift 9.7%, statistically significant (p=0.01).\n- Refund rate flat at 1.2%.\n- Recommendation: ship the one-page checkout to 100% of users.\n- Sign-off needed by Thursday; engineering could begin rollout Monday, November 23.\n- Offer: happy to hop on a call.\nEOF\ncat > \"$S/draft.txt\" <<'EOF'\nHi Dana,\n\nI'd like to ship the one-page checkout to all users, and the test results support it.\n\nFrom October 27 to November 14, 48,200 users were split evenly between the current checkout and the one-page version. Conversion went from 3.1% to 3.4%, a relative lift of 9.7%, and the result is statistically significant (p=0.01). The refund rate held flat at 1.2%, so the higher conversion didn't come at the cost of quality.\n\nIf you can sign off by Thursday, engineering can start the rollout on Monday, November 23.\n\nI'm always happy to hop on a call if you'd like to talk it through.\n\nThanks,\nEOF\npython /tmp/tmpclvavvec/plugin/skills/brogue/scripts/ground.py \"$S/request.txt\" \"$S/draft.txt\""
+        ]
+      },
+      "ballots": {
+        "plain": [
+          {
+            "brogue_won": true,
+            "choice": "B",
+            "why": "\"I'd like to ship the one-page checkout to all users, and the test results support it\" gives me the ask and the basis up front, and the exact 9.7% lift plus the plain \"If you can sign off by Thursday\" make it quicker to decide on than A's recap-first \"Following up on the one-page checkout test\" and "
+          }
+        ],
+        "no-ai-slop": [
+          {
+            "brogue_won": false,
+            "choice": "B",
+            "why": "\"I recommend we ship the one-page checkout to 100% of users. If you can sign off by Thursday...\" puts the ask and the deadline together, and \"Happy to walk through any of it before then\" reads like a colleague, whereas A's \"the test results support it\" and \"I'm always happy to hop on a call\" feel mo"
+          }
+        ]
+      },
+      "unsupported": {
+        "plain": [
+          "Thursday, November 19"
+        ],
+        "no-ai-slop": [],
+        "brogue": []
+      }
+    }
+  ],
+  "skills": [
+    "plain",
+    "brogue",
+    "no-ai-slop"
+  ],
+  "fidelity_judge": "sonnet",
+  "fidelity_auditor": "v2"
+}

@@ -1,0 +1,1053 @@
+{
+  "mode": "agent",
+  "writer": "haiku",
+  "judge": "sonnet",
+  "reps": 1,
+  "set": "heldout",
+  "cells": [
+    {
+      "kind": "write",
+      "task": "cover-note",
+      "persona": "corporate-uk",
+      "context": "A short note at the top of a job application you are screening.",
+      "rep": 0,
+      "source": "Write a short cover note for a job application: 6 years as a backend engineer, mostly payments, applying for a staff engineer role at a UK fintech.",
+      "user": "Write a short cover note for a job application: 6 years as a backend engineer, mostly payments, applying for a staff engineer role at a UK fintech.\n\nThe reader: A UK professional in mid-career reading at work.\n\nReply with only the finished text: no preamble, no notes, no list of changes.",
+      "outputs": {
+        "plain": "Dear Hiring Manager,\n\nI am applying for the Staff Engineer role. For the past six years I have been a backend engineer, most of that time on payments systems, and I want to bring that depth to a UK fintech where reliability and correctness matter as much as speed.\n\nPayments work has taught me to treat money movement as a set of guarantees: idempotent request handling, reconciliation against external schemes and banks, and designing for partial failure so that a retry never becomes a double charge. I have led design work on services that process high volumes of transactions, and I have spent a lot of time with the people on the other side of those systems, including ops, support, and finance, because a payments bug is rarely only an engineering problem.\n\nAt staff level, I want to focus on the things that make a platform hold up over time: clear service boundaries, observability that tells you what happened to a payment rather than just that something failed, and migration plans that let teams change core flows without freezing the roadmap. I have mentored engineers through design reviews and have worked to make those reviews a shared habit rather than a gate.\n\nI would welcome the chance to talk about how my experience maps to your current challenges. Thank you for considering my application.\n\nYours sincerely,\n\n[Your name]",
+        "humanizer": "Dear Hiring Team,\n\nI'm applying for the Staff Engineer role. I've spent six years as a backend engineer, most of it on payments systems, and I'd like to bring that experience to your team.\n\nMost of my work has been on payment processing, settlement, and reconciliation. I've designed services that handle high transaction volumes, worked on the failure handling that keeps money from going missing when a downstream provider times out, and led migrations of legacy ledgers without interrupting live traffic. I also spend a lot of time helping other engineers get their changes into production safely, through design reviews, incident follow-up, and mentoring.\n\nI'm interested in your company because you're building payments infrastructure for UK businesses, and that's the problem I most want to keep working on. I'd welcome the chance to talk about how my experience fits what your team needs.\n\nThank you for considering my application. My CV is attached, and I can be reached at any time to discuss the role.\n\nKind regards,\n\n[Your name]",
+        "stop-slop": "I've spent six years as a backend engineer, most of it on payments systems: card authorisation, settlement, refunds, and the reconciliation work that keeps the ledger honest. I've worked on the places where a bad deploy shows up as a failed checkout or a mismatched balance, and I've learned to care about the boring parts, like idempotency, retries, and audit trails.\n\nI'm applying for the Staff Engineer role because I want to take on more of the technical direction, not just the code. Over the last two years I've led the design of our settlement service's move to event-driven processing, and I've written the design documents, run the reviews, and mentored three engineers through their first on-call rotations. I like that work, and I want to do more of it across a wider surface.\n\nI'd like to bring that experience to your payments platform. I know the UK payments landscape, including Faster Payments and the Open Banking flows, and I'm comfortable working closely with product and compliance to make trade-offs explicit. I'd welcome the chance to talk about what you're building and where I could help most.\n\nThank you for considering my application.",
+        "humanize-writing": "Dear Hiring Team,\n\nI'm applying for the Staff Engineer role. I've spent six years as a backend engineer, most of it on payments, so I know how much of the work is in the details: retries, reconciliation, idempotency, and the edge cases that only show up at scale.\n\nThat work has made me careful about correctness before speed. A failed transfer isn't a ticket to close later. It's a customer with money stuck in limbo. That's the mindset I'd bring to a fintech, where mistakes have real consequences.\n\nThe part of senior work I most want more of is the unglamorous stuff: setting technical direction, untangling services that have grown into each other, and making sure the next engineer can change a system without fear. I'd like to do that across a whole product area.\n\nI'd welcome the chance to talk about how my experience fits your payments work and what you're trying to fix next.\n\nThanks for your time.",
+        "no-ai-slop": "Dear Hiring Manager,\n\nI'm applying for the Staff Engineer role. I've spent six years as a backend engineer, most of it on payments. That work has taught me that the risk sits in the unglamorous parts: retries, ledgers, reconciliation, and what happens when a third party times out halfway through a transaction.\n\nI want a staff role because I'd rather shape how a team builds than only build the parts I'm handed. I'm good at reading a design closely, asking where it fails, and writing the answer down so the next engineer doesn't have to rediscover it.\n\nI'd welcome the chance to talk about the role and how I'd approach it.\n\nYours sincerely,\n\n[Name]",
+        "brogue": "Dear Hiring Manager,\n\nI am writing to apply for the staff engineer role. I have worked as a backend engineer for six years, most of them on payments, and I would welcome the chance to discuss how that experience could fit the role.\n\nThank you for considering my application. I would be glad to talk at a time that suits you.\n\nYours sincerely,\n\n[Your name]",
+        "unslop": "Dear Hiring Manager,\n\nI am applying for the Staff Engineer role. I have been a backend engineer for six years, most of it on payments, and I would like to bring that work to your team.\n\nPayments teaches a particular kind of care. A bug on a web page is an annoyance. A bug in a payments system means money went to the wrong account, or did not go at all, and someone has to explain that to a customer. I have spent most of my career on systems where a failed call has to be handled as carefully as a successful one. I like that work. At staff level I want to do more of it: deciding where the risk sits and making sure the rest of the team can see it too.\n\nThe role interests me because it is in a part of the market I already know. Fintech customers expect every product to work and their money to be where they think it is. I would like to help a team meet that standard without slowing it down.\n\nI would welcome the chance to talk about the role and what the team needs from its next staff engineer. My CV is attached.\n\nYours sincerely,"
+      },
+      "tools": {
+        "plain": [],
+        "humanizer": [
+          "Skill: under-test:humanizer"
+        ],
+        "stop-slop": [
+          "Skill: under-test:stop-slop"
+        ],
+        "humanize-writing": [
+          "Skill: under-test:humanize-writing"
+        ],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ],
+        "unslop": [
+          "Skill: under-test:unslop",
+          "Bash: ls /tmp/tmpce5ycxz0/plugin/skills/unslop/references/ 2>&1; cat /tmp/tmpce5ycxz0/plugin/skills/unslop/references/blacklis"
+        ]
+      },
+      "ballots": {},
+      "unsupported": {
+        "plain": [
+          "I have led design work on services that process high volumes of transactions",
+          "I have spent a lot of time with the people on the other side of those systems, including ops, support, and finance",
+          "I have mentored engineers through design reviews",
+          "have worked to make those reviews a shared habit rather than a gate",
+          "idempotent request handling, reconciliation against external schemes and banks, and designing for partial failure"
+        ],
+        "brogue": [],
+        "humanize-writing": [
+          "retries, reconciliation, idempotency, and the edge cases that only show up at scale",
+          "A failed transfer isn't a ticket to close later. It's a customer with money stuck in limbo.",
+          "setting technical direction, untangling services that have grown into each other"
+        ],
+        "humanizer": [
+          "Most of my work has been on payment processing, settlement, and reconciliation",
+          "I've designed services that handle high transaction volumes",
+          "worked on the failure handling that keeps money from going missing when a downstream provider times out",
+          "led migrations of legacy ledgers without interrupting live traffic",
+          "helping other engineers get their changes into production safely, through design reviews, incident follow-up, and mentoring",
+          "you're building payments infrastructure for UK businesses",
+          "My CV is attached"
+        ],
+        "no-ai-slop": [
+          "That work has taught me that the risk sits in the unglamorous parts: retries, ledgers, reconciliation, and what happens when a third party times out halfway through a transaction.",
+          "I'm good at reading a design closely, asking where it fails, and writing the answer down so the next engineer doesn't have to rediscover it."
+        ],
+        "stop-slop": [
+          "card authorisation, settlement, refunds, and the reconciliation work",
+          "Over the last two years I've led the design of our settlement service's move to event-driven processing",
+          "I've written the design documents, run the reviews",
+          "mentored three engineers through their first on-call rotations",
+          "I know the UK payments landscape, including Faster Payments and the Open Banking flows",
+          "comfortable working closely with product and compliance"
+        ],
+        "unslop": [
+          "My CV is attached.",
+          "I have spent most of my career on systems where a failed call has to be handled as carefully as a successful one."
+        ]
+      }
+    },
+    {
+      "kind": "rewrite",
+      "task": "cover-note",
+      "persona": "corporate-uk",
+      "context": "A short note at the top of a job application you are screening.",
+      "rep": 0,
+      "source": "Dear Hiring Manager,\n\nI'm applying for the Staff Engineer role at [Company]. I've spent six years as a backend engineer, most of it in payments, where correctness, reliability, and auditability matter as much as speed. I'd like to bring that experience to a team building in the UK fintech space.\n\nOver that time I've designed and operated systems that process [X] transactions a day, including [a payments orchestration layer / ledger / settlement pipeline]. I've led work on idempotent payment flows, reconciliation, and incident response, and I've learned that the hardest problems usually sit at the boundaries between services, with banks, card schemes, and downstream ledgers. I've also worked to raise the bar for the engineers around me through design reviews, mentoring, and writing the technical standards that teams actually use.\n\nWhat draws me to [Company] is [specific product, mission, or technical challenge]. I want to work on problems where engineering decisions have a direct effect on customers' money and trust, and where the technical direction needs someone who can align multiple teams, not just write the code.\n\nI'd welcome the chance to talk about how my experience could help [Company] with [specific goal from the job description]. Thank you for your time and consideration.\n\nBest regards,\n[Your name]\n[LinkedIn or portfolio link]\n\n---\n\nIf you share the company name, the job description, and a couple of concrete achievements with numbers, I can tailor this further and tighten it to fit one page.",
+      "user": "Rewrite this draft so it reads like a person wrote it, for this reader: A UK professional in mid-career reading at work.\n\nReply with only the finished text: no preamble, no notes, no list of changes.\n\n<draft>\nDear Hiring Manager,\n\nI'm applying for the Staff Engineer role at [Company]. I've spent six years as a backend engineer, most of it in payments, where correctness, reliability, and auditability matter as much as speed. I'd like to bring that experience to a team building in the UK fintech space.\n\nOver that time I've designed and operated systems that process [X] transactions a day, including [a payments orchestration layer / ledger / settlement pipeline]. I've led work on idempotent payment flows, reconciliation, and incident response, and I've learned that the hardest problems usually sit at the boundaries between services, with banks, card schemes, and downstream ledgers. I've also worked to raise the bar for the engineers around me through design reviews, mentoring, and writing the technical standards that teams actually use.\n\nWhat draws me to [Company] is [specific product, mission, or technical challenge]. I want to work on problems where engineering decisions have a direct effect on customers' money and trust, and where the technical direction needs someone who can align multiple teams, not just write the code.\n\nI'd welcome the chance to talk about how my experience could help [Company] with [specific goal from the job description]. Thank you for your time and consideration.\n\nBest regards,\n[Your name]\n[LinkedIn or portfolio link]\n\n---\n\nIf you share the company name, the job description, and a couple of concrete achievements with numbers, I can tailor this further and tighten it to fit one page.\n</draft>",
+      "outputs": {
+        "plain": "Dear Hiring Manager,\n\nI'm applying for the Staff Engineer role at [Company]. I've spent six years as a backend engineer, most of it in payments, where correctness, reliability and auditability matter as much as speed. I'd like to bring that experience to a team building in UK fintech.\n\nOver that time I've designed and run systems that handle [X] transactions a day, including [a payments orchestration layer / ledger / settlement pipeline]. I've led work on idempotent payment flows, reconciliation and incident response. The hardest problems I've hit have usually been at the boundaries between services: banks, card schemes, downstream ledgers. I've also tried to raise the bar for the engineers around me through design reviews, mentoring, and writing the technical standards teams actually use.\n\nWhat draws me to [Company] is [specific product, mission or technical challenge]. I want to work on problems where engineering decisions directly affect customers' money and trust, and where the technical direction needs someone who can bring several teams along, not just write the code.\n\nI'd welcome the chance to talk about how I could help [Company] with [specific goal from the job description]. Thanks for your time.\n\nBest regards,\n[Your name]\n[LinkedIn or portfolio link]",
+        "brogue": "Dear Hiring Manager,\n\nI am applying for the Staff Engineer role at [Company]. I have spent six years as a backend engineer, most of it in payments, where correctness, reliability and auditability matter as much as speed. I would like to bring that experience to a team building in UK fintech.\n\nOver that time I have designed and run systems that process [X] transactions a day, including [a payments orchestration layer / ledger / settlement pipeline]. I have led work on idempotent payment flows, reconciliation and incident response. The hardest problems I have seen tend to sit at the boundaries between services, with banks, card schemes and downstream ledgers. I have also tried to raise standards across the engineers around me through design reviews, mentoring and writing technical standards that teams actually use.\n\nWhat draws me to [Company] is [specific product, mission or technical challenge]. I want to work on problems where engineering decisions affect customers' money and trust directly, and where the technical direction needs someone who can align several teams, not just write the code.\n\nI would welcome the chance to talk about how my experience could help [Company] with [specific goal from the job description]. Thank you for your time.\n\nKind regards,\n[Your name]\n[LinkedIn or portfolio link]",
+        "humanizer": "Dear Hiring Manager,\n\nI'm applying for the Staff Engineer role at [Company]. I've spent six years as a backend engineer, most of it in payments, where correctness, reliability and auditability matter as much as speed. I'd like to bring that to a team building in UK fintech.\n\nI've designed and run systems that process [X] transactions a day, including [a payments orchestration layer / ledger / settlement pipeline]. I've led work on idempotent payment flows, reconciliation and incident response. The hardest problems I've seen tend to sit at the edges between services and the banks, card schemes and downstream ledgers those services talk to. I've also tried to lift the engineers around me through design reviews, mentoring and writing the technical standards teams actually follow.\n\nI'm drawn to [Company] because of [specific product, mission or technical challenge]. I want to work where engineering decisions affect customers' money and trust directly, and where the technical direction needs someone who can bring several teams along, not only write the code.\n\nI'd welcome the chance to talk about how I could help with [specific goal from the job description]. Thank you for your time.\n\nBest regards,\n[Your name]\n[LinkedIn or portfolio link]",
+        "no-ai-slop": "Dear Hiring Manager,\n\nI'm applying for the Staff Engineer role at [Company]. I've spent six years as a backend engineer, most of it in payments, where correctness, reliability and auditability matter as much as speed. I want to bring that to a team building in UK fintech.\n\nI've designed and run systems that process [X] transactions a day, including [a payments orchestration layer / ledger / settlement pipeline]. I've led work on idempotent payment flows, reconciliation and incident response. The hardest problems I've hit sit at the edges between services, where we deal with banks, card schemes and downstream ledgers. I've also tried to raise the standard around me through design reviews, mentoring, and writing technical standards people actually use.\n\n[Company] is working on [specific product, mission or technical challenge], which is why I'm applying. Engineering decisions there reach customers' money and trust directly. The role needs someone who can get several teams moving together, not only write the code.\n\nI'd welcome a conversation about how I could help with [specific goal from the job description]. Thank you for considering my application.\n\nBest regards,\n[Your name]\n[LinkedIn or portfolio link]",
+        "humanize-writing": "Dear Hiring Manager,\n\nI am applying for the Staff Engineer role at [Company]. I have spent six years as a backend engineer, most of it in payments, where correctness and reliability matter as much as speed and where an audit trail is not optional. I would like to bring that experience to a team building in UK fintech.\n\nOver that time I have designed and run systems that process [X] transactions a day, including [a payments orchestration layer / ledger / settlement pipeline]. I have led work on idempotent payment flows, reconciliation, and incident response. Most of the hard problems I have seen sit at the edges between services, where banks, card schemes, and downstream ledgers each have their own account of what happened. I have also helped the engineers around me through design reviews, mentoring, and writing the technical standards teams actually follow.\n\n[Company] is working on [specific product, mission, or technical challenge], which is why I am applying. I want to work where engineering decisions affect customers' money and trust directly, and where the technical direction needs someone who can bring several teams together, not only write the code.\n\nI would welcome the chance to talk about how my experience could help [Company] with [specific goal from the job description]. Thank you for your time and consideration.\n\nYours faithfully,\n[Your name]\n[LinkedIn or portfolio link]",
+        "stop-slop": "Dear Hiring Manager,\n\nI am applying for the Staff Engineer role at [Company]. I have spent six years as a backend engineer, most of it in payments, where a wrong number costs someone money and an outage reaches the whole business. I would like to bring that experience to a team building in UK fintech.\n\nI have designed and run systems that process [X] transactions a day, including [a payments orchestration layer / ledger / settlement pipeline]. I have led work on idempotent payment flows, reconciliation and incident response. Most of the hard problems I have faced sat at the edges between services, with banks, card schemes and downstream ledgers. I have also tried to lift the engineers around me through design reviews, mentoring, and technical standards that teams still follow a year later.\n\n[Company] is working on [specific product, mission, or technical challenge], and it interests me because engineering decisions there reach customers' money and their trust. I want a role that asks me to align several teams as well as write code.\n\nI would welcome a conversation about how I could help [Company] with [specific goal from the job description]. Thank you for your time.\n\nYours sincerely,\n\n[Your name]\n[LinkedIn or portfolio link]",
+        "unslop": "Dear Hiring Manager,\n\nI'm applying for the Staff Engineer role at [Company]. I've been a backend engineer for six years, most of it in payments. Payments work exposes sloppiness quickly. A double-charged customer or a ledger that doesn't balance gets noticed, so I've learned to care about correctness before speed. I'd like to do that work in the UK fintech sector, and this role looks like a good fit.\n\nI've designed and run systems that process [X] transactions a day, including [a payments orchestration layer / ledger / settlement pipeline]. I've built idempotent payment flows, owned reconciliation, and led incident response when things went wrong. Most of the hard problems I've faced sat at the edges between systems: a bank that times out, a card scheme that sends a message late, a downstream ledger that disagrees with ours. Getting those edges right has mattered more to me than the code inside any one service. I've also written technical standards my teams now follow, and I review designs and mentor engineers who are earlier in their careers.\n\nWhat interests me about [Company] is [specific product, mission or technical challenge]. I want to work somewhere that engineering decisions reach customers' money directly, and where the technical direction needs someone who can get several teams pointing the same way, not only write the code. I'd like to grow into that part of the role.\n\nI'd welcome the chance to talk about how I could help [Company] with [specific goal from the job description]. Thank you for taking the time to read this.\n\nYours faithfully,\n\n[Your name]\n[LinkedIn or portfolio link]"
+      },
+      "tools": {
+        "plain": [],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ],
+        "humanizer": [
+          "Skill: under-test:humanizer"
+        ],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "humanize-writing": [
+          "Skill: under-test:humanize-writing"
+        ],
+        "stop-slop": [
+          "Skill: under-test:stop-slop"
+        ],
+        "unslop": [
+          "Skill: under-test:unslop",
+          "Bash: cd /tmp/tmptf7ipa6s/plugin/skills/unslop && ls references && cat references/blacklist.md references/prose-benchmarks.md "
+        ]
+      },
+      "ballots": {},
+      "unsupported": {
+        "plain": [],
+        "brogue": [],
+        "humanize-writing": [
+          "where banks, card schemes, and downstream ledgers each have their own account of what happened"
+        ],
+        "humanizer": [],
+        "no-ai-slop": [],
+        "stop-slop": [
+          "where a wrong number costs someone money and an outage reaches the whole business",
+          "technical standards that teams still follow a year later"
+        ],
+        "unslop": [
+          "A double-charged customer or a ledger that doesn't balance gets noticed",
+          "a bank that times out, a card scheme that sends a message late, a downstream ledger that disagrees with ours",
+          "I've written technical standards my teams now follow",
+          "mentor engineers who are earlier in their careers",
+          "I've built idempotent payment flows, owned reconciliation"
+        ]
+      }
+    },
+    {
+      "kind": "write",
+      "task": "price-rise",
+      "persona": "neutral",
+      "context": "An email from a software product you pay for.",
+      "rep": 0,
+      "source": "Write an email telling customers the monthly price goes from $12 to $15 on 1 March. Annual plans keep their price until renewal.",
+      "user": "Write an email telling customers the monthly price goes from $12 to $15 on 1 March. Annual plans keep their price until renewal.\n\nThe reader: A general adult reader with no stated context.\n\nReply with only the finished text: no preamble, no notes, no list of changes.",
+      "outputs": {
+        "plain": "Subject: Our monthly plan price is changing on 1 March\n\nHello,\n\nWe're writing to let you know that the monthly price of your plan will increase from $12 to $15 per month, effective 1 March.\n\nIf you're on a monthly plan, the new price will apply to your billing starting with the first charge on or after 1 March. Nothing else about your plan changes: your features, usage limits, and billing date stay the same.\n\nIf you're on an annual plan, your price won't change. You'll keep your current rate until your plan renews, and the new monthly pricing won't apply to your annual plan at that point either. [Note: confirm this against your renewal terms before sending.]\n\nWe know price changes are never welcome, and we don't take this decision lightly. The increase helps us keep investing in the product and supporting you. If you have any questions, just reply to this email and we'll be glad to help.\n\nThank you for being a customer.\n\nWarm regards,\nThe Team",
+        "humanize-writing": "Subject: Our monthly price is going up to $15 on March 1\n\nHi,\n\nStarting March 1, the monthly price of your plan goes from $12 to $15. That's a $3 increase per month. Nothing changes before then, and you don't need to do anything to keep your current plan.\n\nIf you're on an annual plan, your price stays the same until your renewal date. The new monthly rate only applies to monthly subscribers, and it will apply to you once your annual term ends.\n\nIf you have questions about your billing or want to talk through your options, reply to this email and we'll help.\n\nThanks for being with us.\n\n[Your name]\n[Company]",
+        "humanizer": "Subject: Monthly plan price change effective 1 March\n\nHello,\n\nStarting 1 March, the monthly price of your plan will rise from $12 to $15. Nothing else about your plan changes, and you don't need to do anything.\n\nIf you're on an annual plan, your price stays the same until your plan renews. We'll let you know before the renewal date, so you won't see a new charge without notice.\n\nIf you have questions, reply to this email and we'll help.\n\nThank you for being a customer.\n\nThe team",
+        "brogue": "Subject: Change to monthly plan pricing from 1 March\n\nHello,\n\nFrom 1 March, the monthly plan price changes from $12 to $15.\n\nIf you are on an annual plan, your price stays the same. You keep your current annual price until your plan renews.\n\nThank you,",
+        "no-ai-slop": "Subject: Monthly plan price change on 1 March 2027\n\nHi,\n\nOn 1 March 2027, the monthly plan goes from $12 to $15 per month.\n\nIf you're on an annual plan, nothing changes now. You keep your current price until your plan renews.\n\nIf you have questions, reply to this email.\n\nThanks,\nThe team",
+        "stop-slop": "Subject: Monthly plan price change on 1 March 2027\n\nHi,\n\nOn 1 March 2027, the monthly price of our plan goes from $12 to $15.\n\nIf you pay monthly, your charge on and after that date will be $15. You don't need to do anything.\n\nIf you pay annually, your price doesn't change. You keep your current annual price until your plan renews.\n\nQuestions? Reply to this email and we'll answer them.\n\nThe team",
+        "unslop": "Subject: Monthly plan price change on 1 March 2027\n\nHi,\n\nFrom 1 March 2027, the monthly plan will cost $15 a month. It is $12 now.\n\nIf you're on the monthly plan, your price changes on that date. Nothing else about your plan changes.\n\nIf you're on an annual plan, your price stays the same. You keep your current price until your plan renews.\n\nWe know price changes aren't welcome. If you have questions, reply to this email and we'll answer them.\n\nThanks,\nThe team"
+      },
+      "tools": {
+        "plain": [],
+        "humanize-writing": [
+          "Skill: under-test:humanize-writing"
+        ],
+        "humanizer": [
+          "Skill: under-test:humanizer"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "stop-slop": [
+          "Skill: under-test:stop-slop"
+        ],
+        "unslop": [
+          "Skill: under-test:unslop",
+          "Bash: ls /tmp/tmpqrbpxbzh/plugin/skills/unslop/references/ 2>/dev/null; cat /tmp/tmpqrbpxbzh/plugin/skills/unslop/references/s",
+          "Bash: cd /tmp/tmpqrbpxbzh/plugin/skills/unslop/references/ && cat blacklist.md prose-benchmarks.md"
+        ]
+      },
+      "ballots": {},
+      "unsupported": {
+        "plain": [
+          "Nothing else about your plan changes: your features, usage limits, and billing date stay the same.",
+          "the new monthly pricing won't apply to your annual plan at that point either",
+          "The increase helps us keep investing in the product and supporting you.",
+          "the new price will apply to your billing starting with the first charge on or after 1 March"
+        ],
+        "brogue": [],
+        "humanize-writing": [
+          "Nothing changes before then, and you don't need to do anything to keep your current plan.",
+          "The new monthly rate only applies to monthly subscribers, and it will apply to you once your annual term ends."
+        ],
+        "humanizer": [
+          "Nothing else about your plan changes",
+          "you don't need to do anything",
+          "We'll let you know before the renewal date, so you won't see a new charge without notice",
+          "reply to this email and we'll help"
+        ],
+        "no-ai-slop": [
+          "1 March 2027",
+          "Monthly plan price change on 1 March 2027"
+        ],
+        "stop-slop": [
+          "1 March 2027",
+          "You don't need to do anything.",
+          "your charge on and after that date will be $15"
+        ],
+        "unslop": [
+          "1 March 2027",
+          "Nothing else about your plan changes.",
+          "reply to this email and we'll answer them"
+        ]
+      }
+    },
+    {
+      "kind": "rewrite",
+      "task": "price-rise",
+      "persona": "neutral",
+      "context": "An email from a software product you pay for.",
+      "rep": 0,
+      "source": "**Subject:** Changes to your monthly plan price starting 1 March\n\nHi [Customer name],\n\nWe're writing to let you know that the monthly price of your plan will increase from $12 to $15 per month, starting 1 March 2027.\n\nIf you're on a monthly plan, your next charge on or after 1 March will be $15. You don't need to take any action to keep your account active.\n\nIf you're on an annual plan, nothing changes. You'll keep your current rate until your plan renews, and the new pricing won't apply to your annual subscription before then.\n\nWe know price changes are never welcome, and we don't take this decision lightly. The increase helps us keep improving [product benefit, e.g., the features and support you rely on]. We're grateful for your continued trust.\n\nIf you have any questions, reply to this email or contact us at [support email or link].\n\nThank you for being a customer.\n\nBest regards,\n\n[Your name]\n[Company name]",
+      "user": "Rewrite this draft so it reads like a person wrote it, for this reader: A general adult reader with no stated context.\n\nReply with only the finished text: no preamble, no notes, no list of changes.\n\n<draft>\n**Subject:** Changes to your monthly plan price starting 1 March\n\nHi [Customer name],\n\nWe're writing to let you know that the monthly price of your plan will increase from $12 to $15 per month, starting 1 March 2027.\n\nIf you're on a monthly plan, your next charge on or after 1 March will be $15. You don't need to take any action to keep your account active.\n\nIf you're on an annual plan, nothing changes. You'll keep your current rate until your plan renews, and the new pricing won't apply to your annual subscription before then.\n\nWe know price changes are never welcome, and we don't take this decision lightly. The increase helps us keep improving [product benefit, e.g., the features and support you rely on]. We're grateful for your continued trust.\n\nIf you have any questions, reply to this email or contact us at [support email or link].\n\nThank you for being a customer.\n\nBest regards,\n\n[Your name]\n[Company name]\n</draft>",
+      "outputs": {
+        "plain": "Subject: Your monthly plan is going up to $15 on 1 March\n\nHi [Customer name],\n\nStarting 1 March 2027, the monthly price of your plan will go from $12 to $15.\n\nIf you're on a monthly plan, your next charge on or after 1 March will be $15. You don't need to do anything to keep your account active.\n\nIf you're on an annual plan, nothing changes for you. You'll keep your current rate until your plan renews, and the new price won't touch your annual subscription before then.\n\nWe know nobody likes paying more, and we didn't make this decision lightly. The increase will help us keep improving [product benefit, e.g., the features and support you rely on]. Thank you for sticking with us.\n\nIf you have any questions, just reply to this email or contact us at [support email or link].\n\nThanks for being a customer.\n\nBest,\n\n[Your name]\n[Company name]",
+        "brogue": "**Subject:** Your monthly plan price is changing on 1 March 2027\n\nHi [Customer name],\n\nFrom 1 March 2027, the monthly price of your plan will go up from $12 to $15 a month.\n\nIf you're on a monthly plan, your next charge on or after 1 March will be $15. You don't need to do anything to keep your account active.\n\nIf you're on an annual plan, nothing changes for you. You'll keep your current rate until your plan renews, and the new pricing won't apply to your annual plan before then.\n\nWe know price increases are never welcome. Thank you for being a customer, and for your continued trust.\n\nIf you have any questions, reply to this email or contact us at [support email or link].\n\nBest regards,\n\n[Your name]\n[Company name]",
+        "humanizer": "**Subject:** Changes to your monthly plan price from 1 March\n\nHi [Customer name],\n\nFrom 1 March 2027, the monthly price of your plan goes from $12 to $15.\n\nIf you pay monthly, your next charge on or after 1 March will be $15. Your account stays active, and you don't need to do anything.\n\nIf you pay annually, nothing changes now. You keep your current rate until your plan renews, and the new price applies from that renewal.\n\nWe know nobody likes paying more. The increase covers the features and support you use every day, and we appreciate that you've stayed with us.\n\nIf you have questions, reply to this email or contact us at [support email or link].\n\nThanks for being a customer.\n\nBest,\n\n[Your name]\n[Company name]",
+        "humanize-writing": "**Subject:** Changes to your monthly plan price starting 1 March\n\nHi [Customer name],\n\nStarting 1 March 2027, the monthly price of your plan goes from $12 to $15.\n\nIf you're on a monthly plan, your next charge on or after 1 March will be $15. You don't need to do anything to keep your account active.\n\nIf you're on an annual plan, nothing changes for now. You'll keep your current rate until your plan renews, and the new price won't apply to your annual subscription before then.\n\nWe know nobody likes a price increase. This one helps us keep improving [product benefit, e.g., the features and support you rely on]. Thanks for sticking with us.\n\nQuestions? Reply to this email or contact us at [support email or link].\n\nBest,\n\n[Your name]\n[Company name]",
+        "no-ai-slop": "**Subject:** Your monthly plan price is going up on 1 March\n\nHi [Customer name],\n\nFrom 1 March 2027, the monthly price of your plan goes from $12 to $15.\n\nIf you pay monthly, your first charge on or after 1 March will be $15. You don't need to do anything to keep your account active.\n\nIf you pay annually, nothing changes right away. You keep your current rate until your plan renews, and the new price only applies from that renewal.\n\nWe know nobody likes a price increase. The extra money goes toward [product benefit, e.g., the features and support you use]. Thanks for being a customer.\n\nQuestions? Reply to this email or contact us at [support email or link].\n\n[Your name]\n[Company name]",
+        "stop-slop": "**Subject:** Your monthly plan price changes on 1 March 2027\n\nHi [Customer name],\n\nFrom 1 March 2027, the monthly price of your plan goes from $12 to $15.\n\nIf you pay monthly, your next charge on or after 1 March will be $15. You don't need to do anything to keep your account active.\n\nIf you pay annually, nothing changes now. You'll keep your current rate until your plan renews, and the new price won't apply to your annual plan before then.\n\nWe're making this change to keep [product benefit, e.g., the features and support you use every day].\n\nIf you have questions, reply to this email or contact us at [support email or link].\n\nThanks for being a customer.\n\nBest,\n\n[Your name]\n[Company name]",
+        "unslop": "**Subject:** Your monthly plan price is going up on 1 March\n\nHi [Customer name],\n\nFrom 1 March 2027, the monthly price of your plan goes from $12 to $15.\n\nIf you're on a monthly plan, your next charge on or after 1 March will be $15. You don't need to do anything to keep your account active.\n\nIf you're on an annual plan, your price stays the same for now. You keep your current rate until your plan renews, and the new price applies from then.\n\nWe know this isn't welcome news. The increase pays for [what the increase covers, e.g., the features and support you use].\n\nIf you have questions, reply to this email or contact us at [support email or link].\n\nBest,\n\n[Your name]\n[Company name]"
+      },
+      "tools": {
+        "plain": [],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ],
+        "humanizer": [
+          "Skill: under-test:humanizer"
+        ],
+        "humanize-writing": [
+          "Skill: under-test:humanize-writing"
+        ],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "stop-slop": [
+          "Skill: under-test:stop-slop"
+        ],
+        "unslop": [
+          "Skill: under-test:unslop",
+          "Read: /tmp/tmp8nbobgpe/plugin/skills/unslop/references/blacklist.md",
+          "Read: /tmp/tmp8nbobgpe/plugin/skills/unslop/references/prose-benchmarks.md",
+          "Read: /tmp/tmp8nbobgpe/plugin/skills/unslop/references/style-profile.md"
+        ]
+      },
+      "ballots": {},
+      "unsupported": {
+        "plain": [],
+        "brogue": [],
+        "humanize-writing": [],
+        "humanizer": [
+          "the new price applies from that renewal",
+          "features and support you use every day"
+        ],
+        "no-ai-slop": [],
+        "stop-slop": [],
+        "unslop": []
+      }
+    },
+    {
+      "kind": "write",
+      "task": "apology-outage",
+      "persona": "support-empathetic",
+      "context": "A message from a service you rely on, after it went down.",
+      "rep": 0,
+      "source": "Write a message to users after a 3-hour outage on Tuesday caused by an expired certificate. No data was lost. Certificate renewal is now automated.",
+      "user": "Write a message to users after a 3-hour outage on Tuesday caused by an expired certificate. No data was lost. Certificate renewal is now automated.\n\nThe reader: Someone stressed or upset who needs help, in any region.\n\nReply with only the finished text: no preamble, no notes, no list of changes.",
+      "outputs": {
+        "plain": "Subject: Service outage on Tuesday, now resolved\n\nWe're sorry. On Tuesday, our service was unavailable for about three hours. The cause was an expired security certificate, a digital credential that lets your browser trust our site. When it expired, connections to the service were blocked until we replaced it.\n\nYour data is safe. Nothing was lost, changed, or exposed during the outage. Any work you had saved before the outage is still there.\n\nWe've fixed the cause. Certificates are now renewed automatically before they expire, and we've added alerts so our team is notified well ahead of any renewal date. This specific problem shouldn't happen again.\n\nIf you were unable to sign in or finish something on Tuesday, you can try again now. If something still isn't working, or you lost time because of the outage and want to talk it through, reply to this message and a real person will help you. We'll make it right where we can.\n\nThank you for your patience. We know an outage like this is disruptive, and we're sorry it happened.",
+        "humanize-writing": "Subject: Service outage on Tuesday, and the fix\n\nWe're sorry. On Tuesday, our service was down for about three hours. The cause was an expired security certificate, the file that lets your browser trust that our site is really ours. When it lapsed, connections to the service started failing.\n\nNo data was lost. Everything you saved before the outage is where you left it.\n\nThe fix is in place, and we've changed how this gets handled. Certificate renewal is now automated, so it no longer depends on someone remembering a date. We've also added alerts that warn us well before any certificate runs out.\n\nIf you were locked out or couldn't finish something on Tuesday, reply to this email and tell us what happened. We'll look into it and help you pick up where you left off.",
+        "humanizer": "Subject: Yesterday's outage, and what we've changed\n\nHi,\n\nOn Tuesday, our service was down for about three hours. The cause was an expired security certificate. A certificate is a digital credential that lets your browser trust our site, and ours was not renewed on time, so connections failed.\n\nI know this landed at a bad moment for some of you. If you were waiting on something from us during those hours, I'm sorry.\n\nYour data is safe. Nothing was lost or changed, and everything you saved before the outage is where you left it. Anything you started during the outage may need to be submitted again. If something still looks wrong, reply to this email or contact support, and we'll look into it with you.\n\nRenewal is now automated, so this specific failure shouldn't happen again. We've also set up alerts that warn us well before a certificate is due to expire.\n\nThank you for your patience. If you have questions, or you need help catching up on anything you missed, just write back.\n\n[Name]\n[Team]",
+        "brogue": "Subject: Tuesday's outage\n\nWe're sorry. Our service was down for three hours on Tuesday. The cause was an expired security certificate, the file that lets your browser confirm it's connected to the right site. Once it expired, connections to the service failed.\n\nNo data was lost. Everything you had stored before the outage is still there.\n\nCertificate renewal is now automated, so this cause should not come up again.\n\nCheck before sending:\n- The text has no way for readers to get help if they still have problems. Add a support address or link, and say what to do.\n- It doesn't say when on Tuesday the outage began or ended. Add the times if readers will want them.",
+        "no-ai-slop": "Subject: Tuesday's outage: what happened and what we changed\n\nOur service was down for about three hours on Tuesday. The cause was an expired security certificate. A certificate is the digital credential that lets browsers and apps trust our site. When ours expired, connections to the service failed.\n\nWe're sorry. You needed the service, and it wasn't there.\n\nNo data was lost. Everything saved before, during, and after the outage is intact.\n\nCertificate renewal is now automated, so the certificate renews on its own before it expires.\n\nIf you're still seeing errors or something looks wrong on your end, reply to this message and we'll look into it.",
+        "stop-slop": "**Subject: Tuesday's outage: no data was lost**\n\nHello,\n\nOn Tuesday, our service was down for three hours. First, the good news: no data was lost. Everything you saved, created, or sent before, during, and after the outage is still there.\n\nThe cause was an expired security certificate. A certificate is a digital file that proves our site is who it says it is and keeps your connection to us encrypted. When ours expired, browsers and apps blocked access to protect you. We renewed it, and service came back.\n\nWe have also changed how renewals work. The certificate now renews itself automatically before it expires, so no one has to remember a date.\n\nYou don't need to do anything. If you noticed something wrong since Tuesday, contact our support team and we will help you check it.\n\nWe're sorry for the disruption and for the worry it may have caused.",
+        "unslop": "Subject: What happened on Tuesday\n\nWe're sorry. On Tuesday, our service was down for three hours. The cause was an expired security certificate. A certificate is the file that lets your browser confirm it's really talking to us. When ours expired, connections failed until we renewed it.\n\nNo data was lost.\n\nWe've now automated certificate renewal, so this particular failure should not happen again.\n\nIf you're still having trouble, or something you were doing didn't go through, contact us and we'll help you sort it out. Thank you for your patience while we fixed it."
+      },
+      "tools": {
+        "plain": [],
+        "humanize-writing": [
+          "Skill: under-test:humanize-writing"
+        ],
+        "humanizer": [
+          "Skill: under-test:humanizer"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "stop-slop": [
+          "Skill: under-test:stop-slop"
+        ],
+        "unslop": [
+          "Skill: under-test:unslop"
+        ]
+      },
+      "ballots": {},
+      "unsupported": {
+        "plain": [
+          "Nothing was lost, changed, or exposed during the outage",
+          "we've added alerts so our team is notified well ahead of any renewal date",
+          "This specific problem shouldn't happen again",
+          "reply to this message and a real person will help you",
+          "We'll make it right where we can",
+          "connections to the service were blocked until we replaced it"
+        ],
+        "brogue": [
+          "Everything you had stored before the outage is still there.",
+          "Once it expired, connections to the service failed.",
+          "so this cause should not come up again"
+        ],
+        "humanize-writing": [
+          "We've also added alerts that warn us well before any certificate runs out.",
+          "so it no longer depends on someone remembering a date",
+          "reply to this email and tell us what happened. We'll look into it and help you pick up where you left off."
+        ],
+        "humanizer": [
+          "Anything you started during the outage may need to be submitted again.",
+          "We've also set up alerts that warn us well before a certificate is due to expire.",
+          "Nothing was lost or changed, and everything you saved before the outage is where you left it.",
+          "so connections failed",
+          "Subject: Yesterday's outage"
+        ],
+        "no-ai-slop": [
+          "Everything saved before, during, and after the outage is intact.",
+          "the certificate renews on its own before it expires",
+          "reply to this message and we'll look into it"
+        ],
+        "stop-slop": [
+          "Everything you saved, created, or sent before, during, and after the outage is still there.",
+          "browsers and apps blocked access to protect you",
+          "We renewed it, and service came back.",
+          "before it expires, so no one has to remember a date",
+          "contact our support team and we will help you check it",
+          "You don't need to do anything."
+        ],
+        "unslop": [
+          "this particular failure should not happen again",
+          "connections failed until we renewed it",
+          "contact us and we'll help you sort it out"
+        ]
+      }
+    },
+    {
+      "kind": "rewrite",
+      "task": "apology-outage",
+      "persona": "support-empathetic",
+      "context": "A message from a service you rely on, after it went down.",
+      "rep": 0,
+      "source": "Subject: Service outage on Tuesday: what happened and what we've changed\n\nHi everyone,\n\nOn Tuesday, we had a service outage that lasted about three hours. During that time, [service name] was unavailable or intermittently unreachable for many of you, and we know how disruptive that was. We're sorry.\n\n**What happened:** An security certificate that allows our service to communicate securely expired. When it expired, connections to our service began failing. The fix was to renew and install the certificate, which we completed once the problem was identified.\n\n**Impact:** No data was lost. Your information was safe throughout the outage. Some requests made during the outage may have failed, so if you saw an error, please try the action again. If anything still looks wrong on your account, contact [support email].\n\n**What we've changed:** Certificate renewal is now automated, so this kind of expiration should not happen again. We have also [optional: added monitoring and alerts for certificate expiration dates so our team is warned well in advance].\n\nThank you for your patience. If you have questions, reply to this message or reach us at [support email].\n\nSincerely,\n[Name]\n[Team/Company]",
+      "user": "Rewrite this draft so it reads like a person wrote it, for this reader: Someone stressed or upset who needs help, in any region.\n\nReply with only the finished text: no preamble, no notes, no list of changes.\n\n<draft>\nSubject: Service outage on Tuesday: what happened and what we've changed\n\nHi everyone,\n\nOn Tuesday, we had a service outage that lasted about three hours. During that time, [service name] was unavailable or intermittently unreachable for many of you, and we know how disruptive that was. We're sorry.\n\n**What happened:** An security certificate that allows our service to communicate securely expired. When it expired, connections to our service began failing. The fix was to renew and install the certificate, which we completed once the problem was identified.\n\n**Impact:** No data was lost. Your information was safe throughout the outage. Some requests made during the outage may have failed, so if you saw an error, please try the action again. If anything still looks wrong on your account, contact [support email].\n\n**What we've changed:** Certificate renewal is now automated, so this kind of expiration should not happen again. We have also [optional: added monitoring and alerts for certificate expiration dates so our team is warned well in advance].\n\nThank you for your patience. If you have questions, reply to this message or reach us at [support email].\n\nSincerely,\n[Name]\n[Team/Company]\n</draft>",
+      "outputs": {
+        "plain": "Subject: Tuesday's outage: what happened and what we've changed\n\nHi everyone,\n\nOn Tuesday, [service name] went down for about three hours. Many of you couldn't reach it, or it kept cutting in and out, and we know how much that got in the way. We're sorry.\n\n**What happened:** A security certificate that lets our service connect securely expired. Once it did, connections started failing. We renewed and installed a new certificate as soon as we found the cause.\n\n**Impact:** No data was lost, and your information stayed safe the whole time. Some requests made during the outage may have failed. If you got an error, please try again. If anything still looks wrong with your account, contact [support email].\n\n**What we've changed:** Certificate renewal is now automated, so this kind of expiration shouldn't happen again. [Optional: We've also added alerts that warn our team well before any certificate expires.]\n\nThank you for your patience. If you have questions, just reply to this message or write to us at [support email].\n\nSincerely,\n[Name]\n[Team/Company]",
+        "humanizer": "Subject: Tuesday's outage: what happened and what we've changed\n\nHi everyone,\n\nOn Tuesday, [service name] was down for about three hours. Many of you couldn't reach it, or it kept cutting out, and we know that got in the way of your day. We're sorry.\n\n**What happened:** The security certificate that lets our service connect securely expired. Once it did, connections started failing. We renewed and installed a new certificate as soon as we tracked down the cause.\n\n**Impact:** No data was lost, and your information stayed safe the whole time. Some requests made during the outage may have failed. If you saw an error, please try again. If anything still looks wrong on your account, contact [support email].\n\n**What we've changed:** Certificate renewal is now automatic, so an expiration like this shouldn't happen again. We've also [optional: set up alerts that warn our team well before any certificate expires].\n\nThank you for bearing with us. If you have questions, just reply to this message or write to [support email].\n\n[Name]\n[Team/Company]",
+        "brogue": "Subject: Tuesday's outage: what happened and what we've changed\n\nHi everyone,\n\nOn Tuesday, [service name] was down for about three hours. For many of you it was unavailable, or it kept cutting in and out. We know how much that got in your way, and we're sorry.\n\nA security certificate that lets our service connect securely expired, and once it did, connections to the service started failing. We renewed and installed the certificate as soon as we identified the problem.\n\nNo data was lost, and your information was safe throughout the outage. Some requests made during that time may have failed. If you saw an error, please try the action again. If anything still looks wrong on your account, contact [support email].\n\nCertificate renewal is now automated, so this kind of expiration shouldn't happen again.\n\nThank you for your patience. If you have questions, reply to this message or write to us at [support email].\n\nSincerely,\n[Name]\n[Team/Company]",
+        "stop-slop": "Subject: Tuesday's outage: what happened and what we changed\n\nHi everyone,\n\nOn Tuesday, [service name] was down for about three hours. Many of you couldn't get in, or the service kept cutting out. We know how much that got in the way, and we're sorry.\n\nThe cause was an expired security certificate. That certificate lets our service connect securely, so when it lapsed, connections started failing. We renewed and installed a new one as soon as we found the problem.\n\nYour data is safe. Nothing was lost. Some requests failed during the outage, so if you got an error, please try again. If anything on your account looks wrong, contact [support email].\n\nWe've automated certificate renewal, so this shouldn't happen again. We've also [optional: set up alerts that warn our team well before any certificate expires].\n\nThank you for your patience. If you have questions, reply to this message or write to [support email].\n\nSincerely,\n[Name]\n[Team/Company]",
+        "humanize-writing": "Subject: Tuesday's outage: what happened and what we've changed\n\nHi everyone,\n\nOn Tuesday, [service name] was down for about three hours, and for many of you it stopped responding entirely. We know how stressful that was, especially if you were relying on it. We're sorry.\n\nYour data is safe. Nothing was lost during the outage. Some things you tried during that time may have failed, so if you saw an error, please try the action again. If anything still looks wrong on your account, contact [support email].\n\nHere's what happened. A security certificate, the digital ID that lets our service connect securely, expired. Once it did, connections to the service started failing. We renewed and installed a new certificate as soon as we found the problem.\n\nTo keep this from happening again, certificate renewal is now automatic. [Optional: We've also added alerts for upcoming expiration dates, so our team hears about them well before one runs out.]\n\nIf you have questions, reply to this email or write to [support email]. We're happy to help.\n\nSincerely,\n[Name]\n[Team/Company]",
+        "no-ai-slop": "Subject: Service outage on Tuesday: what happened and what we've changed\n\nHi everyone,\n\nOn Tuesday, [service name] went down for about three hours. Many of you couldn't reach it, or it kept dropping in and out. I know how much that got in the way, and I'm sorry.\n\n**What happened**\n\nA security certificate that lets our service connect securely expired. Once it expired, connections to the service started failing. We renewed and installed a new certificate as soon as we found the cause.\n\n**Is your data OK?**\n\nYes. No data was lost, and your information stayed safe through the outage. Some requests failed during those three hours. If you saw an error, try the action again. If something still looks wrong on your account, contact [support email].\n\n**What we've changed**\n\nCertificate renewal is now automated, so this kind of expiration shouldn't happen again. [optional: We've also added alerts for certificate expiration dates, so our team hears about an upcoming expiry well before it happens.]\n\nThank you for your patience. If you have questions, reply to this email or write to [support email].\n\n[Name]\n[Team/Company]",
+        "unslop": "Subject: Tuesday's outage: what happened and what we changed\n\nHi everyone,\n\nOn Tuesday, [service name] was down for about three hours. Many of you couldn't get in, or the service kept cutting out. We know that was stressful, especially if you were relying on it for work. We're sorry.\n\n**What happened**\nA security certificate expired. That certificate lets our service connect securely, so once it expired, connections started failing. We renewed and installed a new one as soon as we found the problem.\n\n**Your data**\nNo data was lost. Your information was safe the whole time.\n\nSome actions may have failed during the outage. If you saw an error, please try again. If something still looks wrong on your account, contact us at [support email].\n\n**What we've changed**\nCertificate renewal is now automatic, so this kind of expiration should not happen again.\n\nIf you have questions, reply to this email or write to [support email].\n\nSincerely,\n[Name]\n[Team/Company]"
+      },
+      "tools": {
+        "plain": [],
+        "humanizer": [
+          "Skill: under-test:humanizer"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ],
+        "stop-slop": [
+          "Skill: under-test:stop-slop"
+        ],
+        "humanize-writing": [
+          "Skill: under-test:humanize-writing"
+        ],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "unslop": [
+          "Skill: under-test:unslop",
+          "Read: /tmp/tmp9rl9y3zf/plugin/skills/unslop/references/blacklist.md",
+          "Read: /tmp/tmp9rl9y3zf/plugin/skills/unslop/references/prose-benchmarks.md",
+          "Read: /tmp/tmp9rl9y3zf/plugin/skills/unslop/references/style-profile.md"
+        ]
+      },
+      "ballots": {},
+      "unsupported": {
+        "plain": [],
+        "brogue": [],
+        "humanize-writing": [
+          "for many of you it stopped responding entirely",
+          "the digital ID that lets our service connect securely",
+          "as soon as we found the problem"
+        ],
+        "humanizer": [],
+        "no-ai-slop": [],
+        "stop-slop": [
+          "We renewed and installed a new one as soon as we found the problem."
+        ],
+        "unslop": [
+          "especially if you were relying on it for work",
+          "We renewed and installed a new one as soon as we found the problem"
+        ]
+      }
+    },
+    {
+      "kind": "write",
+      "task": "investor-update",
+      "persona": "corporate-us",
+      "context": "A monthly update from a startup you invested in.",
+      "rep": 0,
+      "source": "Write the opening of a monthly investor update: revenue $84,000, up from $71,000; 2 enterprise deals slipped to next quarter; runway 14 months.",
+      "user": "Write the opening of a monthly investor update: revenue $84,000, up from $71,000; 2 enterprise deals slipped to next quarter; runway 14 months.\n\nThe reader: A US manager or executive in their 40s or 50s reading at work, short on time.\n\nReply with only the finished text: no preamble, no notes, no list of changes.",
+      "outputs": {
+        "plain": "Revenue reached $84,000 this month, up from $71,000 last month, an 18% increase. Two enterprise deals that we expected to close this month have slipped into next quarter. We are still working through their approvals, and both remain active. We have 14 months of runway.",
+        "brogue": "Revenue for the month was $84,000, up from $71,000. Two enterprise deals slipped to next quarter. Runway is 14 months.",
+        "humanize-writing": "Revenue for the month was $84,000, up from $71,000 last month, an increase of $13,000. Two enterprise deals we expected to close this month have slipped to next quarter. We have 14 months of runway.",
+        "humanizer": "Revenue for the month was $84,000, up from $71,000 the month before, a gain of about 18%. Two enterprise deals we expected this quarter have slipped to next quarter. Runway is 14 months.",
+        "stop-slop": "Revenue reached $84,000 this month, up 18% from $71,000 last month.\n\nTwo enterprise deals slipped into next quarter. Runway stands at 14 months.",
+        "no-ai-slop": "Revenue came in at $84,000 this month, up from $71,000, an 18% increase.\n\nTwo enterprise deals slipped to next quarter, so they won't count toward this month's results.\n\nWe have 14 months of runway.",
+        "unslop": "Revenue for the month was $84,000, up from $71,000. That is an increase of $13,000, or about 18%.\n\nTwo enterprise deals we expected to close this month have slipped to next quarter. Whether that is only timing, I don't know yet.\n\nRunway is 14 months."
+      },
+      "tools": {
+        "plain": [],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ],
+        "humanize-writing": [
+          "Skill: under-test:humanize-writing"
+        ],
+        "humanizer": [
+          "Skill: under-test:humanizer"
+        ],
+        "stop-slop": [
+          "Skill: under-test:stop-slop"
+        ],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "unslop": [
+          "Skill: under-test:unslop",
+          "Read: /tmp/tmphpg8bnwd/plugin/skills/unslop/references/blacklist.md",
+          "Read: /tmp/tmphpg8bnwd/plugin/skills/unslop/references/prose-benchmarks.md",
+          "Read: /tmp/tmphpg8bnwd/plugin/skills/unslop/references/style-profile.md"
+        ]
+      },
+      "ballots": {},
+      "unsupported": {
+        "plain": [
+          "an 18% increase",
+          "that we expected to close this month",
+          "We are still working through their approvals, and both remain active"
+        ],
+        "brogue": [],
+        "humanize-writing": [
+          "Two enterprise deals we expected to close this month"
+        ],
+        "humanizer": [
+          "a gain of about 18%",
+          "the month before",
+          "Two enterprise deals we expected this quarter"
+        ],
+        "no-ai-slop": [
+          "an 18% increase",
+          "so they won't count toward this month's results"
+        ],
+        "stop-slop": [
+          "up 18%",
+          "last month"
+        ],
+        "unslop": [
+          "Two enterprise deals we expected to close this month"
+        ]
+      }
+    },
+    {
+      "kind": "rewrite",
+      "task": "investor-update",
+      "persona": "corporate-us",
+      "context": "A monthly update from a startup you invested in.",
+      "rep": 0,
+      "source": "**Subject: [Company] Monthly Update, [Month] 2026**\n\nHi all,\n\n[Month] closed with revenue of $84,000, up 18% from $71,000 last month. Growth came from expansion within existing accounts and new self-serve signups. Two enterprise deals that we expected to close this month slipped into next quarter. Both prospects remain engaged, and we're working through their procurement timelines now. The delay pushes some expected revenue out, but it doesn't change the underlying pipeline. We currently have 14 months of runway.",
+      "user": "Rewrite this draft so it reads like a person wrote it, for this reader: A US manager or executive in their 40s or 50s reading at work, short on time.\n\nReply with only the finished text: no preamble, no notes, no list of changes.\n\n<draft>\n**Subject: [Company] Monthly Update, [Month] 2026**\n\nHi all,\n\n[Month] closed with revenue of $84,000, up 18% from $71,000 last month. Growth came from expansion within existing accounts and new self-serve signups. Two enterprise deals that we expected to close this month slipped into next quarter. Both prospects remain engaged, and we're working through their procurement timelines now. The delay pushes some expected revenue out, but it doesn't change the underlying pipeline. We currently have 14 months of runway.\n</draft>",
+      "outputs": {
+        "plain": "**Subject: [Company] Monthly Update, [Month] 2026**\n\nHi all,\n\nWe closed [Month] at $84,000 in revenue, up 18% from $71,000 last month. Most of the growth came from existing customers expanding and from new self-serve signups.\n\nTwo enterprise deals we expected to close this month slipped into next quarter. Both prospects are still engaged and working through their procurement timelines. That pushes some revenue out, but the deals are still in the pipeline.\n\nWe have 14 months of runway.",
+        "brogue": "**Subject: [Company] Monthly Update, [Month] 2026**\n\nHi all,\n\n[Month] revenue came in at $84,000, up 18% from $71,000 last month. Growth came from expansion within existing accounts and new self-serve signups.\n\nTwo enterprise deals we expected to close this month slipped into next quarter. Both prospects are still engaged, and we're working through their procurement timelines now. That moves some expected revenue later, but it doesn't change the underlying pipeline.\n\nWe have 14 months of runway.",
+        "humanizer": "Subject: [Company] Monthly Update, [Month] 2026\n\nHi all,\n\nRevenue for [Month] was $84,000, up 18% from $71,000 last month. Most of the growth came from existing accounts expanding and from new self-serve signups.\n\nTwo enterprise deals we expected to close this month have moved to next quarter. Both prospects are still engaged, and we're working through their procurement timelines. That pushes some revenue out. The pipeline itself is unchanged.\n\nWe have 14 months of runway.",
+        "humanize-writing": "**Subject: [Company] Monthly Update, [Month] 2026**\n\nHi all,\n\n[Month] revenue came in at $84,000, up 18% from $71,000 last month. The growth came from existing accounts expanding and new self-serve signups.\n\nTwo enterprise deals we expected to close this month slipped into next quarter. Both prospects are still engaged, and we're working through their procurement timelines. That pushes some revenue out, but the pipeline itself hasn't changed.\n\nWe have 14 months of runway.",
+        "no-ai-slop": "**Subject: [Company] Monthly Update, [Month] 2026**\n\nHi all,\n\n[Month] revenue was $84,000, up 18% from $71,000 last month. Growth came from existing accounts expanding and new self-serve signups.\n\nTwo enterprise deals we expected to close this month slipped to next quarter. Both prospects are still engaged, and we're working through their procurement timelines. That pushes some revenue out, but the pipeline is intact. We have 14 months of runway.",
+        "stop-slop": "**Subject: [Company] Monthly Update, [Month] 2026**\n\nHi all,\n\n[Month] revenue came in at $84,000, up 18% from $71,000 in [Last Month]. Growth came from existing accounts expanding and from new self-serve signups.\n\nTwo enterprise deals we expected to close this month slipped into next quarter. Both prospects remain engaged, and we're working through their procurement timelines. That pushes some expected revenue later, but the pipeline itself hasn't changed.\n\nWe have 14 months of runway.",
+        "unslop": "**Subject: [Company] Monthly Update, [Month] 2026**\n\nHi all,\n\n[Month] revenue came in at $84,000, up 18% from $71,000 last month. Growth came from existing accounts expanding and from new self-serve signups.\n\nTwo enterprise deals we expected to close this month slipped into next quarter. Both prospects are still engaged, and we're working through their procurement timelines. That pushes some revenue out, but the pipeline is unchanged.\n\nWe have 14 months of runway."
+      },
+      "tools": {
+        "plain": [],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ],
+        "humanizer": [
+          "Skill: under-test:humanizer"
+        ],
+        "humanize-writing": [
+          "Skill: under-test:humanize-writing"
+        ],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "stop-slop": [
+          "Skill: under-test:stop-slop"
+        ],
+        "unslop": [
+          "Skill: under-test:unslop"
+        ]
+      },
+      "ballots": {},
+      "unsupported": {
+        "plain": [],
+        "brogue": [],
+        "humanize-writing": [],
+        "humanizer": [],
+        "no-ai-slop": [],
+        "stop-slop": [],
+        "unslop": []
+      }
+    },
+    {
+      "kind": "write",
+      "task": "decline-invite",
+      "persona": "corporate-in",
+      "context": "A reply to a speaking invitation you sent.",
+      "rep": 0,
+      "source": "Write a reply declining an invitation to speak at a conference in Bengaluru in March, because of a prior commitment. Offer to join next year.",
+      "user": "Write a reply declining an invitation to speak at a conference in Bengaluru in March, because of a prior commitment. Offer to join next year.\n\nThe reader: A senior professional in India, 45 to 60, reading formal business correspondence.\n\nReply with only the finished text: no preamble, no notes, no list of changes.",
+      "outputs": {
+        "plain": "Dear [Name],\n\nThank you for the invitation to speak at the conference in Bengaluru in March. I am honoured that you thought of me, and I have read the programme outline with real interest.\n\nUnfortunately, I have a prior commitment on those dates and will not be able to take part this year. I am sorry to miss the opportunity to contribute to the discussion.\n\nI would very much welcome the chance to join the conference next year. If you are planning the next edition, please keep me in mind, and I would be glad to discuss a session that fits the theme. Should it help your planning, I am happy to suggest a few possible topics in advance.\n\nThank you again for the kind invitation. I wish you and the organising team every success with the event.\n\nWith warm regards,\n\n[Your Name]\n[Your Designation]\n[Organisation]\n[Contact Details]",
+        "brogue": "Dear [Name],\n\nThank you for inviting me to speak at the conference in Bengaluru in March. I am honoured to have been considered, but I regret that I will not be able to accept.\n\nI have a prior commitment in March that I am unable to move. I would very much like to take part in a future edition, and I would be glad to join you next year, if that suits the organisers.\n\nThank you again for thinking of me. I wish the event every success.\n\nYours sincerely,\n\n[Your name]",
+        "humanizer": "Dear [Name],\n\nThank you for the invitation to speak at the conference in Bengaluru in March. I am honoured that you thought of me, and the subject you have chosen is one I care about.\n\nUnfortunately, I have a prior commitment on those dates and cannot accept. I am sorry to disappoint you, especially with so little notice on my side.\n\nI would very much like to take part next year. If the programme has a similar slot, please keep me in mind, and I will be glad to discuss timing and format well in advance.\n\nWith warm regards,\n\n[Your name]",
+        "humanize-writing": "Thank you for inviting me to speak at the conference in Bengaluru in March. I appreciate that you thought of me, and I am sorry to say that I cannot accept.\n\nI have a prior commitment on those dates that I am unable to change. I would have liked to be part of the programme.\n\nI would be glad to join you next year. If the organisers plan a future edition, please let me know the timing and format, and I will make every effort to keep those dates free. Thank you again for the invitation.",
+        "no-ai-slop": "Dear [Name],\n\nThank you for inviting me to speak at [Conference] in Bengaluru in March. I appreciate you thinking of me.\n\nI have a prior commitment in March that I cannot move, so I will have to decline. I am sorry to miss the event.\n\nI would be glad to join you next year. If the organising team is planning the next edition, please keep me in mind. I can confirm topics and dates early so we have time to prepare.\n\nThank you again, and I wish the conference every success.\n\nYours sincerely,\n[Your name]",
+        "stop-slop": "Dear [Name],\n\nThank you for inviting me to speak at the [Conference Name] in Bengaluru in March. I am honoured to be considered, and I have read the programme with interest.\n\nI have a prior commitment on those dates, so I cannot accept. The conference's focus on [topic] is close to work I care about, and I regret missing it.\n\nI would like to join you next year. If the organisers plan to invite speakers early, please keep me in mind, and let me know whom I should contact to begin that conversation sooner.\n\nThank you again for thinking of me. I wish the event every success.\n\nYours sincerely,\n\n[Your Name]",
+        "unslop": "Thank you for your invitation to speak at the conference in Bengaluru in March. I am grateful that the organizers thought of me.\n\nI have a prior commitment in March that I cannot move, so I must decline this time.\n\nI would be glad to take part in a future edition. If a later year suits the organizers, please write to me then, and I will do my best to make the dates work. I wish the conference every success.\n\nYours faithfully,"
+      },
+      "tools": {
+        "plain": [],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ],
+        "humanizer": [
+          "Skill: under-test:humanizer"
+        ],
+        "humanize-writing": [
+          "Skill: under-test:humanize-writing"
+        ],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "stop-slop": [
+          "Skill: under-test:stop-slop"
+        ],
+        "unslop": [
+          "Skill: under-test:unslop"
+        ]
+      },
+      "ballots": {},
+      "unsupported": {
+        "plain": [
+          "I have read the programme outline with real interest",
+          "I am happy to suggest a few possible topics in advance",
+          "a session that fits the theme"
+        ],
+        "brogue": [],
+        "humanize-writing": [
+          "If the organisers plan a future edition, please let me know the timing and format, and I will make every effort to keep those dates free."
+        ],
+        "humanizer": [
+          "the subject you have chosen is one I care about",
+          "especially with so little notice on my side",
+          "If the programme has a similar slot"
+        ],
+        "no-ai-slop": [
+          "I can confirm topics and dates early so we have time to prepare."
+        ],
+        "stop-slop": [
+          "I have read the programme with interest",
+          "If the organisers plan to invite speakers early",
+          "The conference's focus on [topic] is close to work I care about"
+        ],
+        "unslop": [
+          "I will do my best to make the dates work"
+        ]
+      }
+    },
+    {
+      "kind": "rewrite",
+      "task": "decline-invite",
+      "persona": "corporate-in",
+      "context": "A reply to a speaking invitation you sent.",
+      "rep": 0,
+      "source": "Subject: Re: Invitation to speak at [Conference Name], Bengaluru\n\nDear [Organizer's Name],\n\nThank you for inviting me to speak at [Conference Name] in March. I'm honored to have been considered, and I'm sorry to say I won't be able to attend this year. I have a prior commitment that falls during those dates.\n\nI'd really like to be part of the event in the future, so please keep me in mind for next year's edition. If it would help with planning, I'm happy to talk about possible topics or formats then. I'd also be glad to suggest other speakers in the meantime.\n\nThank you again for thinking of me, and I wish you a successful conference.\n\nBest regards,\n[Your Name]",
+      "user": "Rewrite this draft so it reads like a person wrote it, for this reader: A senior professional in India, 45 to 60, reading formal business correspondence.\n\nReply with only the finished text: no preamble, no notes, no list of changes.\n\n<draft>\nSubject: Re: Invitation to speak at [Conference Name], Bengaluru\n\nDear [Organizer's Name],\n\nThank you for inviting me to speak at [Conference Name] in March. I'm honored to have been considered, and I'm sorry to say I won't be able to attend this year. I have a prior commitment that falls during those dates.\n\nI'd really like to be part of the event in the future, so please keep me in mind for next year's edition. If it would help with planning, I'm happy to talk about possible topics or formats then. I'd also be glad to suggest other speakers in the meantime.\n\nThank you again for thinking of me, and I wish you a successful conference.\n\nBest regards,\n[Your Name]\n</draft>",
+      "outputs": {
+        "plain": "Dear [Organizer's Name],\n\nThank you for the invitation to speak at [Conference Name] in March. I am honoured that you thought of me, but I regret that I will not be able to attend this year, as I have a prior commitment on those dates.\n\nI would be glad to take part in a future edition, so I hope you will keep me in mind for next year. If it helps with planning, I am happy to discuss possible topics or formats at that time. In the meantime, I would also be pleased to suggest other speakers who may be suitable.\n\nThank you once again for considering me, and I wish you a successful conference.\n\nWarm regards,\n[Your Name]",
+        "brogue": "Subject: Re: Invitation to speak at [Conference Name], Bengaluru\n\nDear [Organizer's Name],\n\nThank you for inviting me to speak at [Conference Name] in March. I am honoured to have been considered, but I regret that I will not be able to attend this year, as I have a prior commitment on those dates.\n\nI would be glad to take part in a future edition, so I hope you will keep me in mind for next year's conference. If it would help your planning, I would be happy to discuss possible topics or formats at that stage. In the meantime, I would also be glad to suggest other speakers who may be suitable.\n\nThank you once again for thinking of me. I wish you a successful conference.\n\nYours sincerely,\n[Your Name]",
+        "humanizer": "Subject: Re: Invitation to speak at [Conference Name], Bengaluru\n\nDear [Organizer's Name],\n\nThank you for inviting me to speak at [Conference Name] in March. I am grateful to have been considered, but I will not be able to attend this year because I have a prior commitment on those dates.\n\nI would like to take part in the event in future, so please keep me in mind for next year. If it helps with planning, I am glad to discuss possible topics or formats then. In the meantime, I can suggest other speakers.\n\nThank you again for thinking of me. I wish you a successful conference.\n\nBest regards,\n[Your Name]",
+        "stop-slop": "Subject: Re: Invitation to speak at [Conference Name], Bengaluru\n\nDear [Organizer's Name],\n\nThank you for inviting me to speak at [Conference Name] in March. I am honoured to have been considered, but I regret that I cannot attend this year. I have a prior commitment on those dates.\n\nI would like to take part in the event in future, so please keep me in mind for next year's edition. If it would help your planning, I am glad to discuss possible topics or formats at that time. In the meantime, I would be happy to suggest other speakers.\n\nThank you again for thinking of me. I wish you a successful conference.\n\nYours sincerely,\n[Your Name]",
+        "humanize-writing": "Subject: Re: Invitation to speak at [Conference Name], Bengaluru\n\nDear [Organizer's Name],\n\nThank you for inviting me to speak at [Conference Name] in March. I am grateful to have been considered. Regrettably, I will not be able to attend this year, as I have a prior commitment on those dates.\n\nI would welcome the opportunity to take part in a future edition, so I hope you will keep me in mind for next year. If it would be useful for planning, I would be glad to discuss possible topics or formats at that time. In the meantime, I would be happy to suggest other speakers who may be suitable.\n\nThank you again for thinking of me. I wish you every success with the conference.\n\nBest regards,\n[Your Name]",
+        "no-ai-slop": "Subject: Re: Invitation to speak at [Conference Name], Bengaluru\n\nDear [Organizer's Name],\n\nThank you for inviting me to speak at [Conference Name] in March. I am grateful to have been considered. Unfortunately, I will not be able to attend this year, as I have a prior commitment on those dates.\n\nI would like to take part in the event in the future, so please keep me in mind for next year's edition. If it helps with planning, I would be happy to discuss possible topics or formats then. In the meantime, I would be glad to suggest other speakers.\n\nThank you again for thinking of me. I wish you a successful conference.\n\nBest regards,\n[Your Name]",
+        "unslop": "Subject: Re: Invitation to speak at [Conference Name], Bengaluru\n\nDear [Organizer's Name],\n\nThank you for inviting me to speak at [Conference Name] in March. I am grateful to have been considered. I regret that I will not be able to attend this year, as I have a prior commitment on those dates.\n\nI would very much like to take part in the event in future, so please keep me in mind for next year's edition. If it would help your planning, I would be glad to discuss possible topics or formats at that time. In the meantime, I would also be happy to suggest other speakers.\n\nThank you again for thinking of me. I wish you a successful conference.\n\nBest regards,\n[Your Name]"
+      },
+      "tools": {
+        "plain": [],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ],
+        "humanizer": [
+          "Skill: under-test:humanizer"
+        ],
+        "stop-slop": [
+          "Skill: under-test:stop-slop"
+        ],
+        "humanize-writing": [
+          "Skill: under-test:humanize-writing"
+        ],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "unslop": [
+          "Skill: under-test:unslop"
+        ]
+      },
+      "ballots": {},
+      "unsupported": {
+        "plain": [],
+        "brogue": [
+          "suggest other speakers who may be suitable"
+        ],
+        "humanize-writing": [],
+        "humanizer": [],
+        "no-ai-slop": [],
+        "stop-slop": [],
+        "unslop": []
+      }
+    },
+    {
+      "kind": "write",
+      "task": "pr-description",
+      "persona": "technical-terse",
+      "context": "A pull request description you have been asked to review.",
+      "rep": 0,
+      "source": "Write a pull request description: replaces the hand-rolled retry loop with exponential backoff, max 5 attempts, and adds a test for the 429 path.",
+      "user": "Write a pull request description: replaces the hand-rolled retry loop with exponential backoff, max 5 attempts, and adds a test for the 429 path.\n\nThe reader: A working engineer who wants the answer and will read the code.\n\nReply with only the finished text: no preamble, no notes, no list of changes.",
+      "outputs": {
+        "plain": "## Replace hand-rolled retry loop with exponential backoff\n\nThe previous retry logic was a fixed loop. This replaces it with exponential backoff, capped at 5 attempts total. Once the cap is reached, the last error is returned to the caller unchanged.\n\n### Changes\n\n- Retries now wait exponentially longer between attempts, and stop after the fifth attempt.\n- The old loop's retry condition is kept. Only retryable failures are retried; other errors fail immediately.\n\n### Tests\n\n- Added a test for the 429 path. It simulates a rate-limited response, checks that the request is retried, and checks that the retry delay grows between attempts.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+        "brogue": "Replace the hand-rolled retry loop with exponential backoff, capped at 5 attempts. Adds a test for the 429 path.\n\n## What changed\n\nThe retry loop is replaced with exponential backoff. Each failed attempt waits longer than the one before it, and the loop gives up after the fifth attempt.\n\n## Testing\n\nAdds a test that covers the 429 response path.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+        "humanizer": "Replaces the hand-rolled retry loop with exponential backoff, capped at 5 attempts. Adds a test for the 429 path.\n\nThe old loop retried on a fixed delay, so a rate-limited caller hammered the endpoint at the same rate it was being throttled. The new version waits longer after each failed attempt and stops after the fifth.\n\n- Retries use exponential backoff. Each wait doubles from the previous one.\n- The attempt limit is 5, counting the first request.\n- A 429 response is retried like other retryable failures. The test covers this path.\n\nReview focus: the retry predicate and the backoff bounds. The test checks that a 429 followed by a success returns the success, and that five consecutive 429s return the final error without a sixth request.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+        "humanize-writing": "The workspace at `/tmp/tmpqqewkpwr/work` is empty and not a git repo, so I couldn't read the diff. This description uses only what you told me. Check it against the code before opening the PR.\n\nReplaces the hand-rolled retry loop with exponential backoff, capped at 5 attempts. The old loop is removed; retries now go through the backoff path.\n\nAdds a test for the 429 path. It checks that a rate-limited response is retried with backoff and that the request stops after the fifth attempt.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+        "no-ai-slop": "Replace the hand-rolled retry loop with exponential backoff, capped at 5 attempts.\n\nAdds a test for the 429 (rate-limited) path so that response is covered.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+        "stop-slop": "## Replace retry loop with exponential backoff\n\nThe hand-rolled retry loop is replaced with exponential backoff. Each request makes at most 5 attempts in total. Each failed attempt waits longer than the one before it.\n\n## Changes\n\n- Retries use exponential backoff in place of the old loop.\n- Attempts stop at 5 in total, including the first request.\n- A new test covers the 429 response path and checks that the request is retried after a rate-limit response.\n\n## Review\n\n- Check the backoff sequence on the final failure path. The call should give up after the fifth attempt and return the error.\n- Check the 429 test. It should fail on the old loop and pass on the new one.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+        "unslop": "Replaces the hand-rolled retry loop with exponential backoff. Each call now makes at most 5 attempts, with the delay growing between attempts.\n\nAdds a test for the 429 (Too Many Requests) path, so retries on rate-limit responses are covered.\n\nCallers now get a failure after the fifth attempt. Check any that depended on the old retry behavior.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)"
+      },
+      "tools": {
+        "plain": [
+          "Bash: ls -la && grep -rniE \"retry|backoff|429\" --include=* . 2>/dev/null | head -60"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ],
+        "humanizer": [
+          "Skill: under-test:humanizer"
+        ],
+        "humanize-writing": [
+          "Skill: under-test:humanize-writing",
+          "Bash: ls -la && grep -rniE \"retry|backoff|429|too many requests\" --include=* -l . 2>/dev/null | head -50"
+        ],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop",
+          "Bash: ls -la && (git status 2>&1 | head -5) && find . -maxdepth 3 -type f -not -path '*/.git/*' | head -100"
+        ],
+        "stop-slop": [
+          "Skill: under-test:stop-slop"
+        ],
+        "unslop": [
+          "Skill: under-test:unslop"
+        ]
+      },
+      "ballots": {},
+      "unsupported": {
+        "plain": [
+          "The previous retry logic was a fixed loop.",
+          "Once the cap is reached, the last error is returned to the caller unchanged.",
+          "The old loop's retry condition is kept. Only retryable failures are retried; other errors fail immediately.",
+          "It simulates a rate-limited response, checks that the request is retried, and checks that the retry delay grows between attempts."
+        ],
+        "brogue": [
+          "Each failed attempt waits longer than the one before it",
+          "🤖 Generated with [Claude Code](https://claude.com/claude-code)"
+        ],
+        "humanize-writing": [
+          "The old loop is removed; retries now go through the backoff path.",
+          "It checks that a rate-limited response is retried with backoff and that the request stops after the fifth attempt."
+        ],
+        "humanizer": [
+          "The old loop retried on a fixed delay, so a rate-limited caller hammered the endpoint at the same rate it was being throttled.",
+          "Each wait doubles from the previous one.",
+          "The attempt limit is 5, counting the first request.",
+          "A 429 response is retried like other retryable failures.",
+          "The test checks that a 429 followed by a success returns the success",
+          "five consecutive 429s return the final error without a sixth request",
+          "Review focus: the retry predicate and the backoff bounds."
+        ],
+        "no-ai-slop": [],
+        "stop-slop": [
+          "including the first request",
+          "Each failed attempt waits longer than the one before it",
+          "checks that the request is retried after a rate-limit response",
+          "The call should give up after the fifth attempt and return the error",
+          "It should fail on the old loop and pass on the new one"
+        ],
+        "unslop": [
+          "Callers now get a failure after the fifth attempt.",
+          "Check any that depended on the old retry behavior.",
+          "so retries on rate-limit responses are covered"
+        ]
+      }
+    },
+    {
+      "kind": "rewrite",
+      "task": "pr-description",
+      "persona": "technical-terse",
+      "context": "A pull request description you have been asked to review.",
+      "rep": 0,
+      "source": "## Replace hand-rolled retry loop with exponential backoff\n\n### Summary\n\nReplaces the existing hand-rolled retry loop with exponential backoff, capped at 5 attempts. Adds a test covering the 429 (Too Many Requests) path.\n\n### Changes\n\n- Swapped the manual retry loop for an exponential backoff retry with a maximum of 5 attempts.\n- Retries are now scheduled with increasing delays between attempts instead of retrying immediately.\n- Added a test that simulates a 429 response and verifies that the request is retried with backoff and stops after the 5th attempt.\n\n### Testing\n\n- Added a unit test for the 429 path.\n- Existing retry tests pass.\n- <!-- Add any manual verification you ran, or delete this line -->\n\n### Notes for reviewers\n\n- <!-- Call out the base delay, multiplier, and jitter settings if they're configurable, and any behavior change for non-429 errors. -->\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+      "user": "Rewrite this draft so it reads like a person wrote it, for this reader: A working engineer who wants the answer and will read the code.\n\nReply with only the finished text: no preamble, no notes, no list of changes.\n\n<draft>\n## Replace hand-rolled retry loop with exponential backoff\n\n### Summary\n\nReplaces the existing hand-rolled retry loop with exponential backoff, capped at 5 attempts. Adds a test covering the 429 (Too Many Requests) path.\n\n### Changes\n\n- Swapped the manual retry loop for an exponential backoff retry with a maximum of 5 attempts.\n- Retries are now scheduled with increasing delays between attempts instead of retrying immediately.\n- Added a test that simulates a 429 response and verifies that the request is retried with backoff and stops after the 5th attempt.\n\n### Testing\n\n- Added a unit test for the 429 path.\n- Existing retry tests pass.\n- <!-- Add any manual verification you ran, or delete this line -->\n\n### Notes for reviewers\n\n- <!-- Call out the base delay, multiplier, and jitter settings if they're configurable, and any behavior change for non-429 errors. -->\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n</draft>",
+      "outputs": {
+        "plain": "## Swap the hand-rolled retry loop for exponential backoff\n\nReplaces the manual retry loop with exponential backoff, capped at 5 attempts. Adds a test for the 429 path.\n\n### What changed\n\n- The manual loop is now an exponential backoff retry, max 5 attempts.\n- Retries wait between attempts instead of firing back to back.\n- New test: a 429 response gets retried with backoff and stops after the 5th attempt.\n\n### Testing\n\n- Unit test for the 429 path.\n- Existing retry tests pass.\n<!-- Add any manual verification you ran, or delete this line -->\n\n### For reviewers\n\n<!-- Base delay, multiplier, and jitter if they're configurable. Note any change for non-429 errors. -->\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+        "brogue": "## Replace hand-rolled retry loop with exponential backoff\n\nThis replaces the hand-rolled retry loop with exponential backoff, capped at 5 attempts. Retries now wait increasing amounts of time between attempts instead of firing immediately.\n\nI added a test for the 429 (Too Many Requests) path. It checks that the request is retried with backoff and stops after the 5th attempt. The existing retry tests still pass.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+        "humanizer": "## Replace hand-rolled retry loop with exponential backoff\n\nReplaces the hand-rolled retry loop with exponential backoff, capped at 5 attempts. A 429 (Too Many Requests) now waits longer before each retry instead of retrying immediately.\n\n### Changes\n\n- Swap the manual loop for exponential backoff with a maximum of 5 attempts.\n- Add a test for the 429 path: a simulated 429 is retried with backoff and stops after the fifth attempt.\n\n### Testing\n\n- New unit test for the 429 path.\n- Existing retry tests pass.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+        "humanize-writing": "## Replace hand-rolled retry loop with exponential backoff\n\nThe manual retry loop is replaced with exponential backoff, capped at 5 attempts. Retries now wait longer between each attempt instead of firing immediately.\n\nA new test simulates a 429 (Too Many Requests) response and checks that the request is retried with backoff and stops after the 5th attempt.\n\n### Testing\n\n- New unit test for the 429 path.\n- Existing retry tests pass.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+        "no-ai-slop": "## Replace hand-rolled retry loop with exponential backoff\n\nSwaps the hand-rolled retry loop for exponential backoff, capped at 5 attempts. Retries now wait longer between attempts instead of firing back immediately. A new test covers the 429 (Too Many Requests) path and checks that retries back off and stop after the 5th attempt.\n\nTesting:\n- New unit test for the 429 path.\n- Existing retry tests pass.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+        "stop-slop": "## Replace hand-rolled retry loop with exponential backoff\n\n### Summary\n\nSwaps the hand-rolled retry loop for exponential backoff, capped at 5 attempts. Adds a test for the 429 (Too Many Requests) path.\n\n### Changes\n\n- Replaced the manual retry loop with exponential backoff, max 5 attempts.\n- Retries now wait between attempts instead of firing immediately.\n- New test sends a 429 and checks that the request retries with backoff and stops at attempt 5.\n\n### Testing\n\n- Unit test for the 429 path.\n- Existing retry tests pass.\n- <!-- Manual verification, if any. Otherwise delete this line. -->\n\n### Notes for reviewers\n\n- <!-- Base delay, multiplier, and jitter if configurable. Any change for non-429 errors. -->\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+        "unslop": "## Use exponential backoff for retries\n\nReplaces the hand-rolled retry loop with exponential backoff, capped at 5 attempts. Adds a test for the 429 (Too Many Requests) path.\n\n### What changed\n\n- The manual retry loop is replaced with exponential backoff. Max 5 attempts.\n- Retries wait an increasing delay between attempts instead of firing immediately.\n- New test: a 429 response is retried with backoff and stops after the 5th attempt.\n\n### Testing\n\n- New unit test for the 429 path.\n- Existing retry tests pass.\n- <!-- Manual verification, if any. Otherwise delete this line. -->\n\n### Notes for reviewers\n\n- <!-- Base delay, multiplier, and jitter, if configurable. Any change in behavior for non-429 errors. -->\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)"
+      },
+      "tools": {
+        "plain": [],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ],
+        "humanizer": [
+          "Skill: under-test:humanizer"
+        ],
+        "humanize-writing": [
+          "Skill: under-test:humanize-writing"
+        ],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "stop-slop": [
+          "Skill: under-test:stop-slop"
+        ],
+        "unslop": [
+          "Skill: under-test:unslop"
+        ]
+      },
+      "ballots": {},
+      "unsupported": {
+        "plain": [],
+        "brogue": [],
+        "humanize-writing": [],
+        "humanizer": [],
+        "no-ai-slop": [],
+        "stop-slop": [],
+        "unslop": []
+      }
+    },
+    {
+      "kind": "write",
+      "task": "neighbour-note",
+      "persona": "casual-in",
+      "context": "A message in your apartment building's group chat.",
+      "rep": 0,
+      "source": "Write a message to the building group chat: the water will be off on Saturday from 10am to 1pm for tank cleaning, so fill buckets beforehand.",
+      "user": "Write a message to the building group chat: the water will be off on Saturday from 10am to 1pm for tank cleaning, so fill buckets beforehand.\n\nThe reader: An adult in urban India, 20s or 30s, chatting with someone they consider a peer.\n\nReply with only the finished text: no preamble, no notes, no list of changes.",
+      "outputs": {
+        "plain": "Building water notice: Saturday 10am–1pm, water supply will be off for tank cleaning. Please fill buckets and drums before 10 so we're covered. Thanks!",
+        "brogue": "Hi all, quick heads-up: water will be off this Saturday from 10am to 1pm for tank cleaning. Please fill buckets beforehand.",
+        "humanize-writing": "Heads up: water off this Saturday, 10am to 1pm, for the tank cleaning. Fill buckets before then if you need water during those hours.",
+        "no-ai-slop": "Water off this Saturday, 10am to 1pm, for the tank cleaning. Fill buckets before then.",
+        "humanizer": "Heads up: water will be off this Saturday, 10am to 1pm, for the tank cleaning. Fill buckets before then if you need water during that window.",
+        "stop-slop": "Water off this Saturday, 10am to 1pm, for the tank cleaning. Fill buckets before then.",
+        "unslop": "Water will be off this Saturday from 10am to 1pm for tank cleaning. Fill your buckets before then."
+      },
+      "tools": {
+        "plain": [],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ],
+        "humanize-writing": [
+          "Skill: under-test:humanize-writing"
+        ],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "humanizer": [
+          "Skill: under-test:humanizer"
+        ],
+        "stop-slop": [
+          "Skill: under-test:stop-slop"
+        ],
+        "unslop": [
+          "Skill: under-test:unslop"
+        ]
+      },
+      "ballots": {},
+      "unsupported": {
+        "plain": [
+          "drums",
+          "so we're covered"
+        ],
+        "brogue": [],
+        "humanize-writing": [],
+        "humanizer": [],
+        "no-ai-slop": [],
+        "stop-slop": [],
+        "unslop": [
+          "this Saturday"
+        ]
+      }
+    },
+    {
+      "kind": "rewrite",
+      "task": "neighbour-note",
+      "persona": "casual-in",
+      "context": "A message in your apartment building's group chat.",
+      "rep": 0,
+      "source": "Here's a message you can post to the building group chat:\n\n\"Heads up, everyone: the water will be off this Saturday from 10am to 1pm while we clean the tank. Please fill any buckets or containers beforehand so you have water for drinking, cooking, and flushing during that time. Thanks!\"",
+      "user": "Rewrite this draft so it reads like a person wrote it, for this reader: An adult in urban India, 20s or 30s, chatting with someone they consider a peer.\n\nReply with only the finished text: no preamble, no notes, no list of changes.\n\n<draft>\nHere's a message you can post to the building group chat:\n\n\"Heads up, everyone: the water will be off this Saturday from 10am to 1pm while we clean the tank. Please fill any buckets or containers beforehand so you have water for drinking, cooking, and flushing during that time. Thanks!\"\n</draft>",
+      "outputs": {
+        "plain": "Heads up all, water's going to be off this Saturday 10 to 1 while they clean the tank. Fill up buckets and bottles before then so you're set for drinking, cooking and flushing. Thanks!",
+        "humanize-writing": "Hey all, water's going to be off this Saturday from 10 to 1 while they clean the tank. Fill up buckets or bottles before then so you've got enough for drinking, cooking and flushing. Thanks!",
+        "brogue": "Hi all, water will be off this Saturday from 10am to 1pm because the tank is being cleaned. Fill up buckets and containers before then so you have water for drinking, cooking and flushing. Thanks!",
+        "humanizer": "Hey all, water's going off this Saturday from 10 to 1 while they clean the tank. Fill up buckets or bottles before then so you've got enough for drinking, cooking, and flushing. Thanks!",
+        "no-ai-slop": "Hi all, quick heads up: water will be off this Saturday from 10am to 1pm because they're cleaning the tank. Fill up some buckets and bottles before then so you're covered for drinking, cooking and flushing. Thanks!",
+        "stop-slop": "Hi all, water will be off this Saturday from 10 to 1 while they clean the overhead tank. Fill a few buckets before 10 for drinking, cooking and flushing. Thanks!",
+        "unslop": "Water's going to be off this Saturday, 10am to 1pm, while they clean the tank. Fill up buckets and bottles before then so you've got enough for drinking, cooking, and flushing."
+      },
+      "tools": {
+        "plain": [],
+        "humanize-writing": [
+          "Skill: under-test:humanize-writing"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ],
+        "humanizer": [
+          "Skill: under-test:humanizer"
+        ],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "stop-slop": [
+          "Skill: under-test:stop-slop"
+        ],
+        "unslop": [
+          "Skill: under-test:unslop"
+        ]
+      },
+      "ballots": {},
+      "unsupported": {
+        "plain": [],
+        "brogue": [],
+        "humanize-writing": [
+          "while they clean the tank"
+        ],
+        "humanizer": [
+          "while they clean the tank"
+        ],
+        "no-ai-slop": [
+          "bottles"
+        ],
+        "stop-slop": [
+          "overhead tank"
+        ],
+        "unslop": [
+          "they clean the tank"
+        ]
+      }
+    },
+    {
+      "kind": "write",
+      "task": "feedback-junior",
+      "persona": "casual-us",
+      "context": "Feedback from your manager on a document you wrote.",
+      "rep": 0,
+      "source": "Write feedback to a junior colleague on their first design doc: the problem statement is clear, the alternatives section is missing, and the rollout plan needs dates.",
+      "user": "Write feedback to a junior colleague on their first design doc: the problem statement is clear, the alternatives section is missing, and the rollout plan needs dates.\n\nThe reader: A US adult in their 20s or 30s reading something from a peer, on a phone.\n\nReply with only the finished text: no preamble, no notes, no list of changes.",
+      "outputs": {
+        "plain": "Hey, thanks for sending the design doc over. The problem statement is clear, and that's a real strength. A reader can tell within a paragraph what's broken and why it matters, so keep doing that.\n\nTwo things to work on before this is ready for review.\n\n**The alternatives section is missing.** This is the part reviewers will look for first. Even if you think your approach is obviously right, list the other options you considered, including the do-nothing option, and say why you didn't pick each one. You don't need many. Two or three real alternatives with a sentence or two each is plenty. It also protects you: when someone asks \"did you think about X?\" and the answer is already in the doc, the review moves on quickly.\n\n**The rollout plan needs dates.** Right now it says things like \"first we'll ship to a small group, then expand.\" Put calendar dates on each step, even rough ones, and say who owns each step and what would make you pause or roll back. A plan with dates lets people tell you whether the timeline works for them. A plan without dates leaves everyone guessing.\n\nIf it helps, send me a revised draft when you have one and I'll read through it. Nice work getting the first one this far.",
+        "humanize-writing": "Your problem statement is the strongest part of this doc. It says who is affected, what breaks, and why it matters now, in a few sentences, and a reader can tell what problem you're solving before they get to the proposal. Keep that clarity in the rest of the doc.\n\nThe alternatives section is missing. Right now the doc argues for one approach without showing what else you looked at. Reviewers will ask \"why not X?\" and the answer should already be on the page. Pick two or three realistic options, including doing nothing, and for each one write a short paragraph on what it costs, what it fixes, and where it falls short. Then say which one you picked and why. Even if the choice feels obvious to you, writing out the rejected options makes the doc much easier to approve.\n\nThe rollout plan needs dates. \"Phase 1, then phase 2\" tells people the order but not the timing, so nobody can plan around it. Put a calendar date on each phase, name the person who owns it, and say what has to be true before the next phase starts. If a date is a guess, say so and say what would move it. A plan with a rough date is more useful than one with none.\n\nOnce those two sections are in, send it back and I'll read it again.",
+        "brogue": "Nice work on your first design doc. The problem statement is clear: I can tell what's broken and who it affects, and that's the part people most often get wrong.\n\nTwo things to fix before it goes to review.\n\nThe alternatives section is missing. Even if you're sure about the approach, reviewers will ask what else you considered and why you didn't pick it. Write down two or three other options, including ones you dismissed quickly, and give a line or two on why each lost. That answers the question before anyone asks it.\n\nThe rollout plan needs dates. Right now it describes what happens in each phase but not when. Put a date on each step and name who owns it. If a step depends on something else, like a review or another team's release, say so. A plan with dates is one people can check you against.",
+        "humanizer": "Thanks for sending the design doc. The problem statement is clear. A reader can tell what's broken and why it matters, and that's the hardest part to get right.\n\nTwo things before this is ready for review.\n\nFirst, add an alternatives section. Right now the doc jumps straight to one approach, so a reviewer can't tell whether you looked at other options or why you passed on them. List two or three real alternatives, say what each would cost, and say why you picked this one. Even a option you rejected in a sentence helps. It also tends to surface constraints you hadn't thought about.\n\nSecond, the rollout plan needs dates. \"Phase 1, then phase 2\" doesn't tell anyone when to expect anything or what has to be true before each step starts. Put a calendar date on each phase, name who owns it, and note what would make you pause or roll back. If the dates feel uncertain, say so and give the assumption behind them. That's more useful to a reviewer than a vague plan.\n\nOnce those two are in, I'm happy to read it again. Nice work on the problem framing.",
+        "no-ai-slop": "Thanks for sending this over. The problem statement is clear. I can tell what's broken and who it hurts, which makes the rest of the doc easier to review.\n\nTwo things need work before this goes to review.\n\nThe alternatives section is missing. Right now the doc argues for one approach without saying what else we looked at. Add two or three real options, what each would cost, and why you didn't pick it. If the honest answer is \"we didn't have time to build it,\" write that down. Reviewers will ask, and it's better to answer in the doc than in the meeting.\n\nThe rollout plan needs dates. \"Phase 1, then phase 2\" doesn't tell anyone when anything happens. Put a date on each phase and name an owner for it. If you don't know the date yet, pick a provisional one and label it as a guess. An editable date beats a blank.\n\nOnce those two are in, send it back and I'll give it a full read.",
+        "stop-slop": "Your problem statement is clear. Someone reading it knows what you're solving and why it matters, and that's the hardest part to get right. Keep doing that.\n\nThe alternatives section is missing. Right now the doc argues for one path without showing what else you considered. Add two or three options, one line each on what they cost and where they fall short, then say why you picked yours. Reviewers will ask about these first, so it's faster to answer them in the doc.\n\nThe rollout plan needs dates. \"Phase 1, then phase 2\" tells us the order but not when anything happens. Put a calendar date on each phase, name who owns it, and note what has to be true before the next phase starts. If a date feels uncertain, write the date you're aiming for and say what could move it.\n\nSend me a revised draft when you've got those in. Happy to look at it before the review meeting.",
+        "unslop": "Hey, I read the doc. The problem statement is clear. It says what's broken, who it hurts, and why now, and I didn't have to guess what you meant. Keep that.\n\nTwo things need work before this goes to review.\n\nThe alternatives section is missing. Right now the doc argues for one approach without saying what else we could do. Add two or three real options, including \"do nothing.\" For each, write a sentence on what it costs and why it doesn't win. If you can't name a rejected option, that tells us we haven't looked hard enough yet.\n\nThe rollout plan needs dates. \"Phase 1: soft launch\" doesn't tell anyone when anything happens. Put a calendar date on each phase, an owner next to it, and the criteria for moving to the next phase. Also say what we do if it goes wrong. If you're unsure of a date, pick one and mark it as a guess. A guess with a date is easier to review than a blank.\n\nSend it back once those are in and I'll do another pass. Nice work on a first doc."
+      },
+      "tools": {
+        "plain": [],
+        "humanize-writing": [
+          "Skill: under-test:humanize-writing"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ],
+        "humanizer": [
+          "Skill: under-test:humanizer"
+        ],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "stop-slop": [
+          "Skill: under-test:stop-slop"
+        ],
+        "unslop": [
+          "Skill: under-test:unslop",
+          "Bash: cd /tmp/tmpqnpd4b7k/plugin/skills/unslop && ls -la references/ && cat references/style-profile.md 2>/dev/null; echo \"---"
+        ]
+      },
+      "ballots": {},
+      "unsupported": {
+        "plain": [
+          "Right now it says things like \"first we'll ship to a small group, then expand.\""
+        ],
+        "brogue": [
+          "I can tell what's broken and who it affects",
+          "Right now it describes what happens in each phase but not when",
+          "name who owns it",
+          "If a step depends on something else, like a review or another team's release, say so"
+        ],
+        "humanize-writing": [
+          "It says who is affected, what breaks, and why it matters now, in a few sentences",
+          "\"Phase 1, then phase 2\" tells people the order but not the timing",
+          "send it back and I'll read it again"
+        ],
+        "humanizer": [
+          "Right now the doc jumps straight to one approach",
+          "\"Phase 1, then phase 2\" doesn't tell anyone when to expect anything",
+          "A reader can tell what's broken and why it matters"
+        ],
+        "no-ai-slop": [
+          "\"Phase 1, then phase 2\" doesn't tell anyone when anything happens",
+          "send it back and I'll give it a full read",
+          "I can tell what's broken and who it hurts",
+          "Right now the doc argues for one approach"
+        ],
+        "stop-slop": [
+          "\"Phase 1, then phase 2\" tells us the order",
+          "Reviewers will ask about these first",
+          "Happy to look at it before the review meeting"
+        ],
+        "unslop": [
+          "It says what's broken, who it hurts, and why now",
+          "I didn't have to guess what you meant",
+          "\"Phase 1: soft launch\" doesn't tell anyone when anything happens",
+          "Send it back once those are in and I'll do another pass",
+          "Right now the doc argues for one approach without saying what else we could do"
+        ]
+      }
+    },
+    {
+      "kind": "rewrite",
+      "task": "feedback-junior",
+      "persona": "casual-us",
+      "context": "Feedback from your manager on a document you wrote.",
+      "rep": 0,
+      "source": "Here's feedback you can adapt for your colleague:\n\n---\n\nThanks for sending over your first design doc. I can tell you put real thought into it, and a lot of this is already in good shape.\n\n**What's working: the problem statement**\n\nThe problem statement is clear. It says what's broken, who it affects, and why it matters now, without jumping to a solution. That's the hardest part of a design doc, and you got it right. Keep writing problem statements this way.\n\n**Needs work: the alternatives section is missing**\n\nA design doc is mainly a record of a decision, and the alternatives section is where a reviewer checks that you considered other options. Without it, reviewers have to guess whether you looked at anything besides your proposal, and they'll often ask questions you've already answered.\n\nFor each alternative you considered, including \"do nothing,\" try to cover:\n- A one-sentence description\n- The main advantages and disadvantages\n- Why you didn't choose it\n\nEven options you rejected quickly are worth a line. If the reason is \"too much work for the benefit,\" say that. It shows the decision was deliberate. If you're unsure what counts as an alternative, ask yourself, \"What would a reasonable engineer on the team propose instead?\" and write that down.\n\n**Needs work: the rollout plan needs dates**\n\nThe rollout plan describes the right phases, but without dates it's hard for anyone to plan around the work or hold it accountable. For each phase, add:\n- A target start and end date (or a week number if exact dates aren't set yet)\n- The owner or team responsible\n- The exit criteria, meaning how you'll know the phase succeeded before moving on\n\nIf the dates depend on something outside your control, like another team's release, note that dependency explicitly. Reviewers will then know which dates are firm and which are estimates.\n\n**Next steps**\n\n1. Add an alternatives section, even a rough one. Ask one teammate who knows the space to help you fill gaps.\n2. Add dates and owners to the rollout plan. Estimates are fine. Mark them as estimates.\n3. Send the revised draft to me before it goes to the wider review.\n\nNice work on the first draft. The structure is solid, and these additions will make it much easier for reviewers to say yes.",
+      "user": "Rewrite this draft so it reads like a person wrote it, for this reader: A US adult in their 20s or 30s reading something from a peer, on a phone.\n\nReply with only the finished text: no preamble, no notes, no list of changes.\n\n<draft>\nHere's feedback you can adapt for your colleague:\n\n---\n\nThanks for sending over your first design doc. I can tell you put real thought into it, and a lot of this is already in good shape.\n\n**What's working: the problem statement**\n\nThe problem statement is clear. It says what's broken, who it affects, and why it matters now, without jumping to a solution. That's the hardest part of a design doc, and you got it right. Keep writing problem statements this way.\n\n**Needs work: the alternatives section is missing**\n\nA design doc is mainly a record of a decision, and the alternatives section is where a reviewer checks that you considered other options. Without it, reviewers have to guess whether you looked at anything besides your proposal, and they'll often ask questions you've already answered.\n\nFor each alternative you considered, including \"do nothing,\" try to cover:\n- A one-sentence description\n- The main advantages and disadvantages\n- Why you didn't choose it\n\nEven options you rejected quickly are worth a line. If the reason is \"too much work for the benefit,\" say that. It shows the decision was deliberate. If you're unsure what counts as an alternative, ask yourself, \"What would a reasonable engineer on the team propose instead?\" and write that down.\n\n**Needs work: the rollout plan needs dates**\n\nThe rollout plan describes the right phases, but without dates it's hard for anyone to plan around the work or hold it accountable. For each phase, add:\n- A target start and end date (or a week number if exact dates aren't set yet)\n- The owner or team responsible\n- The exit criteria, meaning how you'll know the phase succeeded before moving on\n\nIf the dates depend on something outside your control, like another team's release, note that dependency explicitly. Reviewers will then know which dates are firm and which are estimates.\n\n**Next steps**\n\n1. Add an alternatives section, even a rough one. Ask one teammate who knows the space to help you fill gaps.\n2. Add dates and owners to the rollout plan. Estimates are fine. Mark them as estimates.\n3. Send the revised draft to me before it goes to the wider review.\n\nNice work on the first draft. The structure is solid, and these additions will make it much easier for reviewers to say yes.\n</draft>",
+      "outputs": {
+        "plain": "Thanks for sending over your first design doc. You clearly put a lot of thought into it, and a good chunk of it is already in solid shape.\n\nThe problem statement works. It says what's broken, who it affects, and why it matters now, and it doesn't jump straight to a fix. That's the hardest part of a design doc, so nice job.\n\nThe alternatives section is missing, and that's the big one. A design doc is basically a record of a decision, and reviewers want to see that you looked at other options. Without that section, they have to guess, and they'll end up asking questions you already answered.\n\nFor each option you looked at (include \"do nothing\"), try to get down:\n- One sentence on what it is\n- The main pros and cons\n- Why you didn't go with it\n\nEven the ones you tossed out fast are worth a line. If the reason was \"too much work for what we'd get,\" say that. It shows you actually thought it through. Not sure what counts? Ask yourself what another engineer on the team would propose instead, and write that down.\n\nThe rollout plan also needs dates. The phases look right, but without dates nobody can plan around them or hold anyone to them. For each phase, add:\n- A start and end date, or a week number if the dates aren't locked yet\n- An owner or team\n- Exit criteria, so it's clear how you'll know a phase worked before moving on\n\nIf a date depends on something you don't control, like another team's release, call that out. Then reviewers know which dates are firm and which are guesses.\n\nNext steps:\n1. Add an alternatives section, even a rough one. Grab a teammate who knows the space to help fill the gaps.\n2. Add dates and owners to the rollout plan. Estimates are fine, just label them as estimates.\n3. Send me the revised draft before it goes to the wider review.\n\nGood work on the first draft. The structure is there, and these additions will make it a lot easier for reviewers to say yes.",
+        "humanize-writing": "Thanks for sending over your first design doc. You clearly put real thought into it, and a lot of it is already in good shape.\n\nThe problem statement works. It says what's broken, who it hits, and why it matters now, and it doesn't jump to a fix. That's the hardest part of a design doc, and you nailed it. Keep writing them that way.\n\nThe alternatives section is missing. A design doc is mostly a record of a decision, and reviewers use this section to check that you looked at other options. Without it, they have to guess, and they'll ask questions you've already answered.\n\nFor each alternative (include \"do nothing\"), try to cover:\n- A one-sentence description\n- The main pros and cons\n- Why you didn't pick it\n\nEven the ones you tossed quickly are worth a line. If the reason was \"too much work for the benefit,\" say that. It shows you decided on purpose. Not sure what counts? Ask yourself what a reasonable engineer on the team would propose instead, and write that down.\n\nThe rollout plan has the right phases but no dates. Without dates, nobody can plan around the work or hold it to anything. For each phase, add:\n- A start and end date, or a week number if the dates aren't set yet\n- The owner or team\n- Exit criteria: how you'll know the phase worked before moving on\n\nIf a date depends on something you don't control, like another team's release, say so. Reviewers can then tell which dates are firm and which are guesses.\n\nNext steps:\n1. Add an alternatives section, even a rough one. Ask a teammate who knows the space to help fill the gaps.\n2. Add dates and owners to the rollout plan. Estimates are fine, just label them.\n3. Send me the revised draft before it goes to the wider review.\n\nNice work on the first draft. The structure is solid, and these additions will make it a lot easier for reviewers to say yes.",
+        "humanizer": "Thanks for sending your first design doc. You put real thought into it, and a lot of it is already in good shape.\n\nThe problem statement works. It says what's broken, who it hits, and why it matters now, and it doesn't jump to a fix. That's the hardest part of a design doc, so keep writing them this way.\n\nThe alternatives section is missing, and that's the main gap. Reviewers use it to check that you looked at other options. Without it, they have to guess, and they'll end up asking questions you've already answered.\n\nFor each option you considered (include \"do nothing\"), try to cover:\n- One sentence on what it is\n- The main upsides and downsides\n- Why you passed on it\n\nQuick rejects still count. If the reason was \"too much work for what we'd get,\" say so. It shows you decided on purpose. If you're not sure what counts as an alternative, ask yourself what a reasonable engineer on the team would propose instead, and write that down.\n\nThe rollout plan has the right phases but no dates. Without dates, nobody can plan around the work or hold anyone to it. For each phase, add:\n- A start and end date, or a week number if the dates aren't set\n- The owner or team\n- Exit criteria, so it's clear how you'll know the phase worked before moving on\n\nIf a date depends on something you don't control, like another team's release, call that out. Reviewers can then tell which dates are firm and which are guesses.\n\nNext steps:\n1. Add an alternatives section, even a rough one. Ask a teammate who knows the space to help fill the gaps.\n2. Add dates and owners to the rollout plan. Estimates are fine, just label them.\n3. Send me the revised draft before it goes to wider review.\n\nNice work on the first draft. The structure is solid, and these additions will make it a lot easier for reviewers to say yes.",
+        "brogue": "Thanks for sending over your first design doc. You put real thought into it, and a lot of it is already in good shape.\n\n**The problem statement is working**\n\nIt says what's broken, who it affects, and why it matters now, without jumping to a solution. That's the hardest part of a design doc, and you got it right. Keep writing problem statements this way.\n\n**The alternatives section is missing**\n\nA design doc is mostly a record of a decision, and the alternatives section is where reviewers check that you looked at other options. Without it, they have to guess whether you considered anything besides your proposal, and they'll often ask questions you've already answered.\n\nFor each alternative, including \"do nothing,\" try to cover:\n\n- A one-sentence description\n- The main pros and cons\n- Why you didn't pick it\n\nEven options you rejected quickly are worth a line. If the reason was \"too much work for the benefit,\" say that. It shows the call was deliberate. If you're not sure what counts as an alternative, ask yourself, \"What would a reasonable engineer on the team propose instead?\" and write that down.\n\n**The rollout plan needs dates**\n\nThe phases are the right ones, but without dates it's hard for anyone to plan around the work or hold it accountable. For each phase, add:\n\n- A target start and end date, or a week number if exact dates aren't set yet\n- The owner or team responsible\n- Exit criteria, meaning how you'll know the phase worked before moving on\n\nIf a date depends on something outside your control, like another team's release, say so. Reviewers will know which dates are firm and which are estimates.\n\n**Next steps**\n\n1. Add an alternatives section, even a rough one. Ask one teammate who knows the space to help fill the gaps.\n2. Add dates and owners to the rollout plan. Estimates are fine, just mark them as estimates.\n3. Send me the revised draft before it goes to the wider review.\n\nNice work on the first draft. The structure is solid, and these additions will make it a lot easier for reviewers to say yes.",
+        "no-ai-slop": "Thanks for sending the first design doc. You clearly put real thought into it, and a lot of it is already in good shape.\n\nThe problem statement is the strongest part. It says what's broken, who it hits, and why it matters now, and it doesn't jump to a solution. That's the hardest section to get right, so keep writing them this way.\n\nThe alternatives section is missing, and it matters more than it looks. A design doc is mostly a record of a decision, and reviewers use the alternatives section to check that you looked at other options. Without it, they have to guess, and they'll ask questions you've already answered.\n\nFor each option you considered (including \"do nothing\"), try to cover:\n- One sentence on what it is\n- The main pros and cons\n- Why you didn't pick it\n\nQuick rejects are still worth a line. If the reason was \"too much work for the benefit,\" say that. It shows you made the call on purpose. If you're not sure what counts as an alternative, ask yourself what a reasonable engineer on the team would propose instead, and write that down.\n\nThe rollout plan has the right phases but no dates. Without dates, nobody can plan around the work or hold it to anything. For each phase, add:\n- A target start and end date, or a week number if the dates aren't set yet\n- The owner or team\n- Exit criteria: how you'll know the phase worked before moving on\n\nIf a date depends on something you don't control, like another team's release, say so. Reviewers can then tell which dates are firm and which are guesses.\n\nNext steps:\n1. Add an alternatives section, even a rough one. Ask a teammate who knows the space to help fill the gaps.\n2. Add dates and owners to the rollout plan. Estimates are fine, just label them as estimates.\n3. Send me the revised draft before it goes to wider review.\n\nGood first draft. The structure is solid, and these additions will make it a lot easier for reviewers to say yes.",
+        "stop-slop": "Thanks for sending over your first design doc. A lot of it is already in good shape.\n\n**The problem statement is solid.**\nIt says what's broken, who it hits, and why it matters now. It doesn't jump to a fix. That's the hardest part of a design doc, and you nailed it. Keep doing that.\n\n**The alternatives section is missing.**\nThis is where reviewers check whether you looked at anything besides your idea. Without it, they'll guess, and they'll ask questions you already answered in your head.\n\nFor each option you considered (include \"do nothing\"), jot down:\n- One sentence on what it is\n- The main pros and cons\n- Why you passed on it\n\nQuick rejects still count. If the reason was \"too much work for what we'd get,\" say that. It shows you chose on purpose. Not sure what counts? Ask yourself what another engineer on the team would propose instead, and write that down.\n\n**The rollout plan needs dates.**\nThe phases look right. Without dates, nobody can plan around them or hold anyone to them. For each phase, add:\n- A start and end date, or a week number if the dates aren't locked\n- The owner or team\n- Exit criteria: how you'll know the phase worked before moving on\n\nIf a date hangs on something outside your control, like another team's release, say so. Reviewers can then tell which dates are firm and which are guesses.\n\n**Next steps**\n1. Add an alternatives section, even a rough one. Grab one teammate who knows the space and ask what you missed.\n2. Put dates and owners on the rollout plan. Estimates are fine, just label them.\n3. Send me the revised draft before it goes to the wider review.\n\nThe structure is solid. These additions will make it a lot easier for reviewers to say yes.",
+        "unslop": "Thanks for sending the design doc. A lot of it is in good shape.\n\nThe problem statement works. It says what's broken, who it hits, and why it matters now, and it doesn't jump to a fix. That's the hard part, so keep writing them that way.\n\nThe alternatives section is missing. Reviewers use it to check whether you considered anything besides your proposal. Without it, they'll guess, and they'll ask questions you've already answered.\n\nFor each option you looked at (include \"do nothing\"), add:\n- One sentence on what it is\n- The main pros and cons\n- Why you didn't pick it\n\nQuick rejects still count. If the reason was \"too much work for the benefit,\" say that. It shows you decided on purpose. If you're not sure what counts as an alternative, ask what a reasonable engineer on the team would propose instead, and write that down.\n\nThe rollout plan needs dates. The phases are right, but without dates nobody can plan around them or hold anyone to them. For each phase, add:\n- Start and end dates, or week numbers if the dates aren't set yet\n- The owner or team\n- Exit criteria: how you'll know the phase worked before moving on\n\nIf a date depends on something you don't control, like another team's release, say so. Then reviewers can tell which dates are firm and which are guesses.\n\nNext steps:\n1. Add a rough alternatives section. Ask someone who knows the space to help fill the gaps.\n2. Add dates and owners to the rollout plan. Estimates are fine, just label them.\n3. Send me the revised draft before it goes to wider review.\n\nThe structure is solid. These changes should make it easier for reviewers to sign off."
+      },
+      "tools": {
+        "plain": [],
+        "humanize-writing": [
+          "Skill: under-test:humanize-writing"
+        ],
+        "humanizer": [
+          "Skill: under-test:humanizer"
+        ],
+        "brogue": [
+          "Skill: under-test:brogue"
+        ],
+        "no-ai-slop": [
+          "Skill: under-test:no-ai-slop"
+        ],
+        "stop-slop": [
+          "Skill: under-test:stop-slop"
+        ],
+        "unslop": [
+          "Skill: under-test:unslop",
+          "Read: /tmp/tmpca46u23o/plugin/skills/unslop/references/blacklist.md",
+          "Read: /tmp/tmpca46u23o/plugin/skills/unslop/references/prose-benchmarks.md",
+          "Read: /tmp/tmpca46u23o/plugin/skills/unslop/references/style-profile.md"
+        ]
+      },
+      "ballots": {},
+      "unsupported": {
+        "plain": [],
+        "brogue": [],
+        "humanize-writing": [],
+        "humanizer": [],
+        "no-ai-slop": [],
+        "stop-slop": [
+          "they'll ask questions you already answered in your head",
+          "Grab one teammate who knows the space and ask what you missed"
+        ],
+        "unslop": []
+      }
+    }
+  ],
+  "skills": [
+    "plain",
+    "brogue",
+    "humanize-writing",
+    "humanizer",
+    "no-ai-slop",
+    "stop-slop",
+    "unslop"
+  ],
+  "fidelity_judge": "sonnet"
+}

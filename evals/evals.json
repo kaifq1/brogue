@@ -1,0 +1,42 @@
+{
+  "skill_name": "brogue",
+  "note": "Prompts for with-skill versus no-skill runs (see anthropics/skills skill-creator). Results are in evals/README.md.",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "clean this up before i send it to the team, it sounds like chatgpt wrote it (it did). file is examples/ai_draft.md",
+      "expected_output": "A shorter update with no chatbot residue or staged contrasts. Contains 14 minutes, 6 and 22%, and no number, name or source that the draft lacks.",
+      "files": ["examples/ai_draft.md"],
+      "assertions": [
+        "scripts/lint.py scores the output below 10",
+        "The output contains '14', '6' and '22%'",
+        "The output contains no number absent from the input",
+        "The output does not name a study, a tool or a person absent from the input",
+        "The reply is the text alone, with no preamble or change list"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Same update as examples/ai_draft.md but it's going to our India country head, he's about 55 and very formal. Write the version for him.",
+      "expected_output": "Formal register, British spelling, no contractions, same facts. No inserted regional phrases.",
+      "files": ["examples/ai_draft.md"],
+      "assertions": [
+        "The output contains no contractions",
+        "The output contains no American-only spellings",
+        "The output contains none of: 'do the needful', 'kindly revert', 'prepone'",
+        "The output contains '14', '6' and '22%' and no other statistics"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "can you tighten this? examples/human_draft.md. it's my weekly note to my manager",
+      "expected_output": "Returned nearly unchanged. The author's doubt about April and the remark about Priya's team survive.",
+      "files": ["examples/human_draft.md"],
+      "assertions": [
+        "At least 80% of the input sentences appear verbatim in the output",
+        "The output still mentions Priya and still says to wait for April",
+        "The output contains no fact absent from the input"
+      ]
+    }
+  ]
+}
