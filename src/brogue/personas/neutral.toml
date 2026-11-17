@@ -1,0 +1,11 @@
+name = "neutral"
+summary = "A general adult reader with no stated context."
+locale = "en-US"
+spelling = "american"
+register = "neutral"
+warmth = 1
+directness = 2
+contractions = "use"
+sentence_words = 17
+emoji = false
+humor = "none"

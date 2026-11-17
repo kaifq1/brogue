@@ -1,0 +1,16 @@
+name = "casual-in"
+summary = "An adult in urban India, 20s or 30s, chatting with someone they consider a peer."
+locale = "en-IN"
+spelling = "british"
+register = "casual"
+warmth = 3
+directness = 2
+contractions = "use"
+sentence_words = 13
+emoji = false
+humor = "light"
+conventions = ["Friendly and direct. Rupee amounts as written in the source."]
+avoid = [
+  "Hinglish or regional words the source does not already contain.",
+  "US-only references: zip codes, 401k, Thanksgiving, miles.",
+]

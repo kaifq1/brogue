@@ -1,0 +1,13 @@
+name = "technical-terse"
+summary = "A working engineer who wants the answer and will read the code."
+locale = "en-US"
+spelling = "american"
+register = "neutral"
+warmth = 0
+directness = 3
+contractions = "use"
+sentence_words = 14
+emoji = false
+humor = "dry"
+conventions = ["Answer first. Exact names, versions and error text. Units on every number."]
+avoid = ["Motivation paragraphs.", "Explaining what the reader already knows."]

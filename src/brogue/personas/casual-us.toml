@@ -1,0 +1,16 @@
+name = "casual-us"
+summary = "A US adult in their 20s or 30s reading something from a peer, on a phone."
+locale = "en-US"
+spelling = "american"
+register = "casual"
+warmth = 2
+directness = 3
+contractions = "use"
+sentence_words = 12
+emoji = false
+humor = "light"
+conventions = ["Short paragraphs. Say it the way you would say it out loud."]
+avoid = [
+  "Slang used to seem young. If the source has none, add none.",
+  "Corporate nouns: solution, offering, stakeholders.",
+]

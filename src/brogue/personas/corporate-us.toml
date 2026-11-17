@@ -1,0 +1,16 @@
+name = "corporate-us"
+summary = "A US manager or executive in their 40s or 50s reading at work, short on time."
+locale = "en-US"
+spelling = "american"
+register = "neutral"
+warmth = 1
+directness = 3
+contractions = "use"
+sentence_words = 16
+emoji = false
+humor = "none"
+conventions = [
+  "Lead with the decision or the ask, then the reason.",
+  "Dates as March 4, 2026. Dollar amounts with commas.",
+]
+avoid = ["Small talk before the point.", "Enthusiasm the facts do not support."]

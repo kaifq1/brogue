@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "brogue"
+version = "0.1.0"
+description = "Make model output read like a person wrote it, for the person reading it. Agent skill, linter and audience panel."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = []
+keywords = ["llm", "writing", "humanizer", "agent-skills", "prompt"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+brogue = "brogue.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/brogue"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

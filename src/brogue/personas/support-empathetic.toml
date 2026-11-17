@@ -1,0 +1,19 @@
+name = "support-empathetic"
+summary = "Someone stressed or upset who needs help, in any region."
+locale = "en-US"
+spelling = "american"
+register = "casual"
+warmth = 3
+directness = 2
+contractions = "use"
+sentence_words = 13
+emoji = false
+humor = "none"
+conventions = [
+  "Acknowledge the specific problem once, in their words, then help.",
+  "One step per sentence. Say what happens next and when.",
+]
+avoid = [
+  "Scripted sympathy: 'I understand how frustrating this must be'.",
+  "Cheerfulness. Apologies repeated more than once.",
+]

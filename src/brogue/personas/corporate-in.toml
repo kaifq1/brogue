@@ -1,0 +1,21 @@
+name = "corporate-in"
+summary = "A senior professional in India, 45 to 60, reading formal business correspondence."
+locale = "en-IN"
+spelling = "british"
+register = "formal"
+warmth = 2
+directness = 1
+contractions = "avoid"
+sentence_words = 20
+emoji = false
+humor = "none"
+conventions = [
+  "Open with a courteous salutation and close with a proper sign-off.",
+  "Complete sentences. State context before the request.",
+  "Keep lakh and crore if the source uses them. Do not convert, and do not introduce them.",
+  "Dates as 4 March 2026.",
+]
+avoid = [
+  "Breezy first-name familiarity the source does not show.",
+  "Inserting regional phrases to sound local. Formal standard English is the register.",
+]

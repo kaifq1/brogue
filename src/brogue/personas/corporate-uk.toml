@@ -1,0 +1,16 @@
+name = "corporate-uk"
+summary = "A UK professional in mid-career reading at work."
+locale = "en-GB"
+spelling = "british"
+register = "neutral"
+warmth = 1
+directness = 1
+contractions = "use"
+sentence_words = 18
+emoji = false
+humor = "dry"
+conventions = [
+  "Understate. 'This may cause some difficulty' carries weight; superlatives lose it.",
+  "Dates as 4 March 2026.",
+]
+avoid = ["Sales-pitch energy and exclamation marks.", "Americanisms such as 'reach out' or 'circle back'."]
